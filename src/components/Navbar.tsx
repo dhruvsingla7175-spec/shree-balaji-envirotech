@@ -1,16 +1,63 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import { cn } from "@/lib/utils";
+
+const navItems = [
+  { label: "Home", id: "hero" },
+  { label: "Benefits", id: "benefits" },
+  { label: "About", id: "about" },
+  { label: "Contact", id: "contact" },
+];
+
+// Custom nav link component
+const NavButton = ({ 
+  children, 
+  onClick, 
+  isScrolled, 
+  isActive 
+}: { 
+  children: React.ReactNode; 
+  onClick: () => void; 
+  isScrolled: boolean; 
+  isActive: boolean;
+}) => (
+  <button
+    onClick={onClick}
+    className={cn(
+      "relative font-medium transition-colors group",
+      isScrolled ? "text-foreground" : "text-primary-foreground",
+      isActive && "text-secondary"
+    )}
+  >
+    {children}
+    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+  </button>
+);
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Active section detection
+      const sections = navItems.map(item => document.getElementById(item.id));
+      const scrollPosition = window.scrollY + 100;
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(navItems[i].id);
+          break;
+        }
+      }
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,88 +71,113 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-subtle py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Shree Balaji Envirotech LLP" className="h-12 w-auto rounded-full" />
-            <div className={`hidden sm:block ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              <div className="font-bold text-lg leading-tight">Shree Balaji</div>
-              <div className="text-xs opacity-80">Envirotech LLP</div>
+    <>
+      {/* Top bar */}
+      <div className="hidden md:block bg-primary text-primary-foreground py-2">
+        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+          <div className="flex items-center gap-2">
+            <Phone className="w-4 h-4" />
+            <a href="tel:+918360410158" className="hover:underline">+91 83604 10158</a>
+            <span className="mx-2">|</span>
+            <a href="mailto:dhruv@shreebalajienvirotech.com" className="hover:underline">dhruv@shreebalajienvirotech.com</a>
+          </div>
+          <div className="text-primary-foreground/90">
+            🌿 Sustainable Energy for a Greener Tomorrow
+          </div>
+        </div>
+      </div>
+      
+      <nav
+        className={`fixed top-0 md:top-10 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled
+            ? "bg-card/98 backdrop-blur-lg shadow-elevated py-3 md:top-0"
+            : "bg-transparent py-4"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div 
+              className="flex items-center gap-3 cursor-pointer group"
+              onClick={() => scrollToSection("hero")}
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-secondary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                <img 
+                  src={logo} 
+                  alt="Shree Balaji Envirotech LLP" 
+                  className="h-12 w-auto rounded-full relative z-10 transition-transform group-hover:scale-105" 
+                />
+              </div>
+              <div className={`hidden sm:block transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+                <div className="font-bold text-lg leading-tight">Shree Balaji</div>
+                <div className="text-xs opacity-80">Envirotech LLP</div>
+              </div>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <NavButton
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  isScrolled={isScrolled}
+                  isActive={activeSection === item.id}
+                >
+                  {item.label}
+                </NavButton>
+              ))}
+              <Button
+                onClick={() => scrollToSection("contact")}
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-elevated hover:scale-105 transition-all"
+              >
+                Get Quote
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className={`md:hidden p-2 rounded-lg transition-colors ${
+                isScrolled 
+                  ? "text-foreground hover:bg-muted" 
+                  : "text-primary-foreground hover:bg-primary-foreground/10"
+              }`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen ? "max-h-96 opacity-100 mt-4 pb-4" : "max-h-0 opacity-0"
+          }`}>
+            <div className="space-y-2 bg-card/95 backdrop-blur-lg rounded-xl p-4 shadow-elevated">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`block w-full text-left font-medium py-3 px-4 rounded-lg transition-all ${
+                    activeSection === item.id 
+                      ? "bg-primary text-primary-foreground" 
+                      : "text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+              <Button
+                onClick={() => scrollToSection("contact")}
+                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground mt-2"
+              >
+                Get Quote
+              </Button>
             </div>
           </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {[
-              { label: "Home", id: "hero" },
-              { label: "Benefits", id: "benefits" },
-              { label: "About", id: "about" },
-              { label: "Contact", id: "contact" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-secondary ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-subtle"
-            >
-              Get Quote
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
-            {[
-              { label: "Home", id: "hero" },
-              { label: "Benefits", id: "benefits" },
-              { label: "About", id: "about" },
-              { label: "Contact", id: "contact" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left font-medium py-2 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-            >
-              Get Quote
-            </Button>
-          </div>
-        )}
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
