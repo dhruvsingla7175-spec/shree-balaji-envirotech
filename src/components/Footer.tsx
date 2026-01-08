@@ -80,19 +80,19 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3 text-primary-foreground/80">
                 <Phone className="w-4 h-4 text-secondary" />
-                <a href="tel:+911234567890" className="hover:text-secondary transition-colors">
-                  +91 123 456 7890
+                <a href="tel:+918360410158" className="hover:text-secondary transition-colors">
+                  +91 83604 10158
                 </a>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/80">
                 <Mail className="w-4 h-4 text-secondary" />
-                <a href="mailto:info@balajienvirontech.com" className="hover:text-secondary transition-colors">
-                  info@balajienvirontech.com
+                <a href="mailto:dhruv@shreebalajienvirotech.com" className="hover:text-secondary transition-colors">
+                  dhruv@shreebalajienvirotech.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 text-secondary mt-0.5" />
-                <span>Industrial Area, Your City, State, India</span>
+                <span>Bathinda, Punjab, India</span>
               </li>
             </ul>
           </div>
