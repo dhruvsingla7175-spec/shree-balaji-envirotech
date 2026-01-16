@@ -1,6 +1,29 @@
+import { motion, type Easing } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, ChevronDown, Sparkles, Shield, Award } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+
+const easeOut: Easing = [0.0, 0.0, 0.2, 1];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOut } }
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1, ease: easeOut } }
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
+};
+
+const scaleIn = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 0.6, ease: easeOut } }
+};
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -20,8 +43,19 @@ const Hero = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large ambient blobs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: easeOut }}
+          className="absolute top-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-float" 
+        />
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.3, ease: easeOut }}
+          className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" 
+          style={{ animationDelay: '1s' }} 
+        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-foreground/5 rounded-full blur-3xl" />
         
         {/* Grid pattern overlay */}
@@ -32,8 +66,11 @@ const Hero = () => {
         
         {/* Floating particles */}
         {[...Array(8)].map((_, i) => (
-          <div
+          <motion.div
             key={i}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 + i * 0.1, ease: easeOut }}
             className="absolute rounded-full animate-float"
             style={{
               width: `${8 + i * 4}px`,
@@ -51,15 +88,20 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-8 animate-slide-up">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-card/90 backdrop-blur-md rounded-full border border-secondary/30 shadow-elevated">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="text-center lg:text-left space-y-8"
+          >
+            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-5 py-2.5 bg-card/90 backdrop-blur-md rounded-full border border-secondary/30 shadow-elevated">
               <Sparkles className="w-4 h-4 text-secondary animate-pulse" />
               <span className="text-sm font-semibold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
                 Sustainable Energy Solutions
               </span>
-            </div>
+            </motion.div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
+            <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
               <span className="text-primary-foreground">Premium</span>
               <br />
               <span className="bg-gradient-to-r from-secondary via-accent to-secondary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease-in-out_infinite]">
@@ -67,14 +109,14 @@ const Hero = () => {
               </span>
               <br />
               <span className="text-primary-foreground">Solutions</span>
-            </h1>
+            </motion.h1>
             
-            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-xl leading-relaxed">
+            <motion.p variants={fadeInUp} className="text-lg md:text-xl text-primary-foreground/90 max-w-xl leading-relaxed">
               Leading the way in sustainable energy with <strong className="text-secondary">high-quality</strong>, eco-friendly biomass pellets. 
               Powering industries while protecting our planet.
-            </p>
+            </motion.p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 onClick={scrollToContact}
@@ -92,35 +134,47 @@ const Hero = () => {
                 <Leaf className="mr-2 w-5 h-5" />
                 Learn More
               </Button>
-            </div>
+            </motion.div>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap items-center gap-4 pt-6 justify-center lg:justify-start">
+            <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4 pt-6 justify-center lg:justify-start">
               {[
                 { icon: Shield, text: "ISO Certified" },
                 { icon: Award, text: "Quality Assured" },
                 { icon: Leaf, text: "100% Eco-Friendly" },
               ].map((badge, i) => (
-                <div 
+                <motion.div 
                   key={i} 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1 + i * 0.1, duration: 0.4, ease: easeOut }}
                   className="flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-lg border border-primary-foreground/20"
                 >
                   <badge.icon className="w-4 h-4 text-secondary" />
                   <span className="text-primary-foreground/90 text-sm font-medium">{badge.text}</span>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Logo with enhanced presentation */}
-          <div className="flex justify-center lg:justify-end animate-fade-in">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={scaleIn}
+            className="flex justify-center lg:justify-end"
+          >
             <div className="relative group">
               {/* Glow effects */}
               <div className="absolute inset-0 bg-gradient-gold rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-700 scale-110" />
               <div className="absolute -inset-6 bg-secondary/20 rounded-full blur-2xl animate-pulse-subtle" />
               
               {/* Main logo container */}
-              <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md rounded-3xl p-6 border border-secondary/20 shadow-elevated">
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md rounded-3xl p-6 border border-secondary/20 shadow-elevated"
+              >
                 <img 
                   src={logo} 
                   alt="Shree Balaji Envirotech LLP Logo" 
@@ -128,24 +182,32 @@ const Hero = () => {
                 />
                 
                 {/* Floating badge */}
-                <div className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full shadow-elevated flex items-center gap-2 animate-bounce-subtle">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2, duration: 0.5, ease: easeOut }}
+                  className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full shadow-elevated flex items-center gap-2 animate-bounce-subtle"
+                >
                   <span className="text-lg">🌱</span>
                   <span className="font-bold text-sm">Green Energy</span>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <button 
+      <motion.button 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.6, ease: easeOut }}
         onClick={scrollToStats}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors cursor-pointer group"
       >
         <span className="text-xs font-medium uppercase tracking-widest">Scroll Down</span>
         <ChevronDown className="w-6 h-6 animate-bounce" />
-      </button>
+      </motion.button>
     </section>
   );
 };
