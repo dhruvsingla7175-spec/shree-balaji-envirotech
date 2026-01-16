@@ -1,5 +1,23 @@
+import { motion, type Easing } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Leaf, Zap, DollarSign, Shield, Flame, Droplets } from "lucide-react";
+
+const easeOut: Easing = [0.0, 0.0, 0.2, 1];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } }
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } }
+};
+
+const scaleIn = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: easeOut } }
+};
 
 const benefits = [
   {
@@ -44,11 +62,29 @@ const Benefits = () => {
   return (
     <section id="benefits" className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: easeOut }}
+        className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" 
+      />
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, delay: 0.2, ease: easeOut }}
+        className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" 
+      />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+          className="text-center mb-16"
+        >
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
             Why Choose Us
           </span>
@@ -58,29 +94,36 @@ const Benefits = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Sustainable, efficient, and economical - the perfect energy solution for modern industries
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {benefits.map((benefit, index) => (
-            <Card 
-              key={index}
-              className="group p-8 hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 bg-card border-border relative overflow-hidden"
-            >
-              {/* Hover gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              <div className={`mb-6 inline-flex p-4 bg-gradient-to-br ${benefit.color} rounded-2xl shadow-subtle group-hover:scale-110 transition-transform duration-300`}>
-                <benefit.icon className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground group-hover:text-primary transition-colors">
-                {benefit.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
-            </Card>
+            <motion.div key={index} variants={scaleIn}>
+              <Card 
+                className="group p-8 hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 bg-card border-border relative overflow-hidden h-full"
+              >
+                {/* Hover gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                <div className={`mb-6 inline-flex p-4 bg-gradient-to-br ${benefit.color} rounded-2xl shadow-subtle group-hover:scale-110 transition-transform duration-300`}>
+                  <benefit.icon className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-card-foreground group-hover:text-primary transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
