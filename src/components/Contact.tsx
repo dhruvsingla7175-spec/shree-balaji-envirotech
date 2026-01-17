@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const easeOut: Easing = [0.0, 0.0, 0.2, 1];
@@ -62,9 +62,18 @@ const Contact = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Get in <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-6">
             Ready to switch to sustainable energy? Contact us today for premium biomass pellet solutions
           </p>
+          <a
+            href="https://wa.me/message/RRKAEOM2TS3EM1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Chat on WhatsApp
+          </a>
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
