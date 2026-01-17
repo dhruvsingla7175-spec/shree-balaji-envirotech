@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, MessageCircle, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const easeOut: Easing = [0.0, 0.0, 0.2, 1];
 
@@ -23,18 +24,93 @@ const scaleIn = {
   visible: { scale: 1, opacity: 1, transition: { duration: 0.5, ease: easeOut } }
 };
 
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+}
+
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    company: "",
+    industry: "",
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+    }
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[+]?[\d\s-]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = "Please enter a valid phone number";
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    
+    if (!validateForm()) {
+      toast({
+        title: "Please fix the errors",
+        description: "Some fields need your attention",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    toast({
+      title: "Message sent successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+    
+    // Reset after showing success
+    setTimeout(() => {
+      setFormData({ name: "", email: "", phone: "", company: "", industry: "", message: "" });
+      setIsSubmitted(false);
+    }, 3000);
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData({ ...formData, [field]: value });
+    if (errors[field as keyof FormErrors]) {
+      setErrors({ ...errors, [field]: undefined });
+    }
   };
 
   return (
@@ -47,6 +123,7 @@ const Contact = () => {
         transition={{ duration: 1.2, ease: easeOut }}
         className="absolute top-0 left-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" 
       />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
@@ -157,75 +234,143 @@ const Contact = () => {
                 <Send className="w-5 h-5 text-primary" />
                 Send us a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1, duration: 0.4, ease: easeOut }}
-                  className="grid sm:grid-cols-2 gap-5"
+              
+              {isSubmitted ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-12"
                 >
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Full Name</label>
-                    <Input
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="bg-muted/50"
-                    />
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-primary" />
                   </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-muted/50"
-                    />
+                  <h4 className="text-xl font-semibold mb-2">Message Sent!</h4>
+                  <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">
+                        Full Name <span className="text-destructive">*</span>
+                      </label>
+                      <Input
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className={`bg-muted/50 ${errors.name ? 'border-destructive focus-visible:ring-destructive' : ''}`}
+                      />
+                      {errors.name && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" /> {errors.name}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">
+                        Email <span className="text-destructive">*</span>
+                      </label>
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className={`bg-muted/50 ${errors.email ? 'border-destructive focus-visible:ring-destructive' : ''}`}
+                      />
+                      {errors.email && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" /> {errors.email}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.4, ease: easeOut }}
-                >
-                  <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
-                  <Input
-                    placeholder="+91 xxxxx xxxxx"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-muted/50"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.4, ease: easeOut }}
-                >
-                  <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                  <Textarea
-                    placeholder="Tell us about your requirements..."
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="bg-muted/50"
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.4, ease: easeOut }}
-                >
-                  <Button type="submit" size="lg" className="w-full bg-gradient-green hover:opacity-90 text-primary-foreground shadow-elevated group">
-                    Send Message
-                    <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">
+                        Phone <span className="text-destructive">*</span>
+                      </label>
+                      <Input
+                        placeholder="+91 xxxxx xxxxx"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className={`bg-muted/50 ${errors.phone ? 'border-destructive focus-visible:ring-destructive' : ''}`}
+                      />
+                      {errors.phone && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" /> {errors.phone}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-2 block">Company Name</label>
+                      <Input
+                        placeholder="Your company"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange('company', e.target.value)}
+                        className="bg-muted/50"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Industry</label>
+                    <select
+                      value={formData.industry}
+                      onChange={(e) => handleInputChange('industry', e.target.value)}
+                      className="w-full h-10 px-3 rounded-md border border-input bg-muted/50 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                    >
+                      <option value="">Select your industry</option>
+                      <option value="textile">Textile Mill</option>
+                      <option value="brick">Brick Kiln</option>
+                      <option value="food">Food Processing</option>
+                      <option value="dairy">Dairy Processing</option>
+                      <option value="paper">Paper Mill</option>
+                      <option value="rice">Rice Mill</option>
+                      <option value="distillery">Distillery</option>
+                      <option value="poultry">Poultry Farm</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Message <span className="text-destructive">*</span>
+                    </label>
+                    <Textarea
+                      placeholder="Tell us about your fuel requirements, current usage, and any specific needs..."
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      className={`bg-muted/50 ${errors.message ? 'border-destructive focus-visible:ring-destructive' : ''}`}
+                    />
+                    {errors.message && (
+                      <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" /> {errors.message}
+                      </p>
+                    )}
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-green hover:opacity-90 text-primary-foreground shadow-elevated group"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
                   </Button>
-                </motion.div>
-              </form>
+                </form>
+              )}
             </Card>
           </motion.div>
         </div>
