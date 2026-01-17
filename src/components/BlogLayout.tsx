@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Phone, Mail, MapPin, Calendar, Clock, User } from 'lucide-react';
+import { ArrowLeft, Phone, Mail, MapPin, Calendar, Clock, User, ChevronRight, Home } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Button } from './ui/button';
@@ -32,6 +32,11 @@ const BlogLayout = ({
   breadcrumbs = [],
   showCTA = true,
 }: BlogLayoutProps) => {
+  const location = useLocation();
+  const isAwarenessPage = location.pathname.startsWith('/awareness');
+  const backLink = isAwarenessPage ? '/' : '/blog';
+  const backLabel = isAwarenessPage ? 'Back to Home' : 'Back to Blog';
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -47,31 +52,35 @@ const BlogLayout = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="mb-6"
+            aria-label="Breadcrumb"
           >
-            <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+            <ol className="flex items-center gap-1.5 text-sm text-muted-foreground flex-wrap">
               <li>
-                <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                <Link to="/" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                  <Home className="w-4 h-4" />
+                  <span>Home</span>
+                </Link>
               </li>
               {breadcrumbs.map((crumb, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span>/</span>
+                <li key={index} className="flex items-center gap-1.5">
+                  <ChevronRight className="w-4 h-4 text-muted-foreground/50" />
                   <Link to={crumb.href} className="hover:text-primary transition-colors">
                     {crumb.label}
                   </Link>
                 </li>
               ))}
-              <li className="flex items-center gap-2">
-                <span>/</span>
-                <span className="text-foreground font-medium truncate max-w-[200px]">{title}</span>
+              <li className="flex items-center gap-1.5">
+                <ChevronRight className="w-4 h-4 text-muted-foreground/50" />
+                <span className="text-foreground font-medium truncate max-w-[250px] md:max-w-[400px]">{title}</span>
               </li>
             </ol>
           </motion.nav>
 
           {/* Back Button */}
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-6">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Blog</span>
+            <Link to={backLink} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group">
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span>{backLabel}</span>
             </Link>
           </motion.div>
 

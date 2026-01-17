@@ -31,7 +31,7 @@ const IndustrialFuelCostsPunjab = () => {
       <BlogLayout
         title="Industrial Fuel Costs Crushing Your Punjab Business?"
         subtitle="How rising coal, diesel, and LPG prices are eating into profits—and the local solution that saves 20-40%"
-        breadcrumbs={[{ label: 'Awareness', href: '/blog' }]}
+        breadcrumbs={[{ label: 'Awareness', href: '/awareness/industrial-fuel-costs-punjab' }]}
       >
         {/* Pain Point */}
         <section className="mb-12">

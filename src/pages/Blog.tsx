@@ -51,6 +51,23 @@ const Blog = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 relative z-10">
+          {/* Breadcrumbs */}
+          <motion.nav 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-6"
+          >
+            <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+              <li>
+                <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>/</span>
+                <span className="text-foreground font-medium">Blog</span>
+              </li>
+            </ol>
+          </motion.nav>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

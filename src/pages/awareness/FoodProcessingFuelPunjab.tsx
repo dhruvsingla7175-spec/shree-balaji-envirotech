@@ -35,7 +35,7 @@ const FoodProcessingFuelPunjab = () => {
       <BlogLayout
         title="Food Processing Units in Punjab: Are High Fuel Costs Eating Your Margins?"
         subtitle="How rice mills, flour mills, and food processors in Punjab are cutting steam costs by 25-40% with local biomass pellets"
-        breadcrumbs={[{ label: 'Awareness', href: '/blog' }]}
+        breadcrumbs={[{ label: 'Awareness', href: '/awareness/food-processing-fuel-punjab' }]}
       >
         {/* Pain Point */}
         <section className="mb-12">
