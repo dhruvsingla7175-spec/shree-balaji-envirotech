@@ -8,6 +8,7 @@ import Comparison from "@/components/Comparison";
 import Demand from "@/components/Demand";
 import About from "@/components/About";
 import Team from "@/components/Team";
+import Testimonials from "@/components/Testimonials";
 import Partners from "@/components/Partners";
 import HomeFAQ from "@/components/HomeFAQ";
 import Contact from "@/components/Contact";
@@ -26,6 +27,7 @@ const Index = () => {
       <Demand />
       <About />
       <Team />
+      <Testimonials />
       <Partners />
       <HomeFAQ />
       <Contact />
