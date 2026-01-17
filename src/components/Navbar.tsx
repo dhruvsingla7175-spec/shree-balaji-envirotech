@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
+import { getAwarenessPages } from "@/data/blogPosts";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,12 +21,11 @@ const navItems = [
   { label: "Contact", id: "contact" },
 ];
 
-const awarenessPages = [
-  { label: "Industrial Fuel Costs Punjab", href: "/awareness/industrial-fuel-costs-punjab" },
-  { label: "Textile Mills Fuel Punjab", href: "/awareness/textile-mills-fuel-punjab" },
-  { label: "Brick Kilns Biomass Punjab", href: "/awareness/brick-kilns-biomass-punjab" },
-  { label: "Food Processing Fuel Punjab", href: "/awareness/food-processing-fuel-punjab" },
-];
+const slugToLabel = (slug: string) =>
+  slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 
 // Custom nav link component
 const NavButton = ({ 
@@ -56,6 +56,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+
+  const awarenessLinks = getAwarenessPages()
+    .map((p) => ({
+      label: slugToLabel(p.slug),
+      href: p.awarenessPath || `/awareness/${p.slug}`,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -166,8 +173,8 @@ const Navbar = () => {
                   <ChevronDown className="w-4 h-4" />
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56">
-                  {awarenessPages.map((page) => (
+                <DropdownMenuContent align="end" className="w-64">
+                  {awarenessLinks.map((page) => (
                     <DropdownMenuItem key={page.href} asChild>
                       <Link to={page.href} className="cursor-pointer">
                         {page.label}
@@ -230,7 +237,7 @@ const Navbar = () => {
               {/* Mobile Awareness Links */}
               <div className="border-t border-border pt-2 mt-2">
                 <div className="text-sm text-muted-foreground px-4 py-2">Awareness</div>
-                {awarenessPages.map((page) => (
+                {awarenessLinks.map((page) => (
                   <Link
                     key={page.href}
                     to={page.href}
