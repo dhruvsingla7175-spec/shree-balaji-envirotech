@@ -351,10 +351,10 @@ const StubbleBurningSolution = () => {
                 Call: +91 83604 10158
               </a>
               <a
-                href="mailto:dhruv@shreebalajienvirotech.com"
+                href="mailto:shreebalajienvirotech@gmail.com"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
               >
-                Email: dhruv@shreebalajienvirotech.com
+                Email: shreebalajienvirotech@gmail.com
               </a>
             </div>
           </div>
