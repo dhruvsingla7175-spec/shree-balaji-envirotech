@@ -11,6 +11,8 @@ export interface BlogPost {
   readTime: string;
   category: 'guide' | 'awareness' | 'industry' | 'local';
   featured?: boolean;
+  isAwareness?: boolean;
+  awarenessPath?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -97,8 +99,150 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+// Awareness pages (industry-specific landing pages)
+export const awarenessPages: BlogPost[] = [
+  {
+    slug: 'textile-mills-fuel-punjab',
+    title: 'Textile Mills Punjab: Cut Fuel Costs 40% with Biomass Pellets',
+    metaTitle: 'Textile Mills Fuel Punjab | Biomass Pellets Ludhiana',
+    metaDescription: 'Punjab textile mills losing lakhs to coal costs. Switch to biomass pellets - save 25-40% on boiler fuel. Supplier in Bathinda serving Ludhiana.',
+    primaryKeyword: 'textile mill fuel Punjab',
+    secondaryKeywords: ['biomass pellets Ludhiana', 'dyeing boiler fuel', 'textile coal alternative'],
+    excerpt: 'How rising coal and diesel prices are hitting Punjab\'s textile industry—and the local biomass solution saving mills 25-40%.',
+    publishDate: 'January 15, 2025',
+    modifiedDate: '2025-01-15',
+    readTime: '8 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/textile-mills-fuel-punjab',
+  },
+  {
+    slug: 'brick-kilns-biomass-punjab',
+    title: 'Brick Kilns Punjab: Switch to Biomass Pellets & Save 35%',
+    metaTitle: 'Brick Kilns Biomass Punjab | Coal Alternative Bathinda',
+    metaDescription: 'Punjab brick kilns facing coal shortages and pollution penalties. Switch to biomass pellets for cleaner, cheaper fuel. Supplier in Bathinda.',
+    primaryKeyword: 'brick kiln fuel Punjab',
+    secondaryKeywords: ['biomass pellets brick kiln', 'coal alternative brick', 'Punjab brick industry'],
+    excerpt: 'How biomass pellets help brick kilns in Punjab reduce costs and meet pollution norms.',
+    publishDate: 'January 14, 2025',
+    modifiedDate: '2025-01-14',
+    readTime: '7 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/brick-kilns-biomass-punjab',
+  },
+  {
+    slug: 'food-processing-fuel-punjab',
+    title: 'Food Processing Units Punjab: Cut Steam Costs with Biomass',
+    metaTitle: 'Food Processing Fuel Punjab | Biomass Pellets Boiler',
+    metaDescription: 'Punjab food processing units spending lakhs on boiler fuel. Switch to biomass pellets for 30-40% savings. Bathinda supplier.',
+    primaryKeyword: 'food processing fuel Punjab',
+    secondaryKeywords: ['biomass boiler food industry', 'steam generation pellets', 'food factory fuel'],
+    excerpt: 'How biomass pellets offer food processing units a cleaner, cheaper alternative to traditional fuels.',
+    publishDate: 'January 13, 2025',
+    modifiedDate: '2025-01-13',
+    readTime: '7 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/food-processing-fuel-punjab',
+  },
+  {
+    slug: 'rice-mills-fuel-punjab',
+    title: 'Rice Mills Punjab: Cut Parboiling Fuel Costs 35% with Biomass',
+    metaTitle: 'Rice Mills Fuel Punjab | Biomass Pellets Amritsar',
+    metaDescription: 'Punjab rice mills spending lakhs on coal for parboiling. Switch to biomass pellets - save 30-40% on boiler fuel. Supplier in Bathinda serving Amritsar belt.',
+    primaryKeyword: 'rice mill fuel Punjab',
+    secondaryKeywords: ['biomass pellets Amritsar', 'parboiling boiler fuel', 'rice mill coal alternative'],
+    excerpt: 'How rising coal prices impact Punjab\'s rice milling industry—and the local biomass solution saving mills 30-40%.',
+    publishDate: 'January 17, 2025',
+    modifiedDate: '2025-01-17',
+    readTime: '8 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/rice-mills-fuel-punjab',
+  },
+  {
+    slug: 'dairy-plants-fuel-punjab',
+    title: 'Dairy Plants Punjab: Cut Steam Costs 35% with Biomass Pellets',
+    metaTitle: 'Dairy Plants Fuel Punjab | Biomass Pellets Ludhiana',
+    metaDescription: 'Punjab dairy processing plants spending lakhs on fuel. Switch to biomass pellets - save 30-40% on boiler costs. Supplier in Bathinda serving all Punjab.',
+    primaryKeyword: 'dairy plant fuel Punjab',
+    secondaryKeywords: ['biomass pellets dairy industry', 'pasteurization boiler fuel', 'milk processing coal alternative'],
+    excerpt: 'How rising energy prices impact Punjab\'s dairy industry—and the biomass solution saving plants 30-40%.',
+    publishDate: 'January 17, 2025',
+    modifiedDate: '2025-01-17',
+    readTime: '8 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/dairy-plants-fuel-punjab',
+  },
+  {
+    slug: 'paper-mills-fuel-punjab',
+    title: 'Paper Mills Punjab: Cut Fuel Costs 35% with Biomass Pellets',
+    metaTitle: 'Paper Mills Fuel Punjab | Sustainable Paper Production',
+    metaDescription: 'Punjab paper mills spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Supplier in Bathinda.',
+    primaryKeyword: 'paper mill fuel Punjab',
+    secondaryKeywords: ['biomass pellets paper industry', 'paper drying boiler fuel', 'kraft paper coal alternative'],
+    excerpt: 'How rising fuel costs impact paper manufacturing—and the biomass solution saving mills 25-35%.',
+    publishDate: 'January 17, 2025',
+    modifiedDate: '2025-01-17',
+    readTime: '8 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/paper-mills-fuel-punjab',
+  },
+  {
+    slug: 'distilleries-fuel-punjab',
+    title: 'Distilleries Punjab: Cut Fuel Costs 30% with Biomass Pellets',
+    metaTitle: 'Distilleries Fuel Punjab | Ethanol Production Biomass',
+    metaDescription: 'Punjab distilleries spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Sustainable ethanol production.',
+    primaryKeyword: 'distillery fuel Punjab',
+    secondaryKeywords: ['biomass pellets distillery', 'ethanol production fuel', 'ENA boiler coal alternative'],
+    excerpt: 'How rising energy prices impact ethanol and spirit production—and the biomass solution saving distilleries 25-35%.',
+    publishDate: 'January 17, 2025',
+    modifiedDate: '2025-01-17',
+    readTime: '8 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/distilleries-fuel-punjab',
+  },
+  {
+    slug: 'poultry-farms-fuel-punjab',
+    title: 'Poultry Farms Punjab: Cut Heating Costs 45% with Biomass Pellets',
+    metaTitle: 'Poultry Farms Fuel Punjab | Brooder Fuel Alternative',
+    metaDescription: 'Punjab poultry farms spending lakhs on LPG and diesel heating. Switch to biomass pellets - save 40-50% on brooding fuel. Supplier in Bathinda.',
+    primaryKeyword: 'poultry farm fuel Punjab',
+    secondaryKeywords: ['biomass pellets poultry', 'brooder heating fuel', 'poultry LPG alternative'],
+    excerpt: 'How expensive LPG and diesel impact poultry farming—and the biomass solution saving farms 40-50%.',
+    publishDate: 'January 17, 2025',
+    modifiedDate: '2025-01-17',
+    readTime: '7 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/poultry-farms-fuel-punjab',
+  },
+  {
+    slug: 'industrial-fuel-costs-punjab',
+    title: 'Industrial Fuel Costs Punjab: Comprehensive Cost Saving Guide',
+    metaTitle: 'Industrial Fuel Costs Punjab | Biomass Pellets Solution',
+    metaDescription: 'Punjab industries paying too much for fuel. Complete guide to reducing fuel costs with biomass pellets. Bathinda supplier.',
+    primaryKeyword: 'industrial fuel costs Punjab',
+    secondaryKeywords: ['reduce fuel costs Punjab', 'industrial biomass', 'coal alternative industries'],
+    excerpt: 'A comprehensive guide to understanding and reducing industrial fuel costs in Punjab with biomass pellets.',
+    publishDate: 'January 12, 2025',
+    modifiedDate: '2025-01-12',
+    readTime: '10 min read',
+    category: 'awareness',
+    isAwareness: true,
+    awarenessPath: '/awareness/industrial-fuel-costs-punjab',
+  },
+];
+
+// Combined list for display
+export const allPosts = [...blogPosts, ...awarenessPages];
+
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find(post => post.slug === slug);
+  return allPosts.find(post => post.slug === slug);
 };
 
 export const getFeaturedPosts = (): BlogPost[] => {
@@ -106,5 +250,9 @@ export const getFeaturedPosts = (): BlogPost[] => {
 };
 
 export const getPostsByCategory = (category: BlogPost['category']): BlogPost[] => {
-  return blogPosts.filter(post => post.category === category);
+  return allPosts.filter(post => post.category === category);
+};
+
+export const getAwarenessPages = (): BlogPost[] => {
+  return awarenessPages;
 };
