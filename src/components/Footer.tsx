@@ -1,9 +1,16 @@
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 import { Leaf, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const location = useLocation();
+  
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== '/') {
+      window.location.href = `/#${id}`;
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -57,17 +64,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Resources */}
           <div>
             <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
               <span className="w-8 h-0.5 bg-secondary rounded-full" />
-              Our Products
+              Resources
             </h4>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li>Wood Biomass Pellets</li>
-              <li>Agricultural Waste Pellets</li>
-              <li>Industrial Grade Pellets</li>
-              <li>Premium Heating Pellets</li>
+              <li>
+                <Link to="/blog" className="hover:text-secondary transition-colors">Blog & Guides</Link>
+              </li>
+              <li>
+                <Link to="/blog/biomass-pellets-complete-guide-punjab" className="hover:text-secondary transition-colors">Biomass Pellets Guide</Link>
+              </li>
+              <li>
+                <Link to="/blog/biomass-pellet-price-punjab-2025" className="hover:text-secondary transition-colors">2025 Pricing</Link>
+              </li>
+              <li>
+                <Link to="/awareness/industrial-fuel-costs-punjab" className="hover:text-secondary transition-colors">Reduce Fuel Costs</Link>
+              </li>
             </ul>
           </div>
 
