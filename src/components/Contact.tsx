@@ -98,8 +98,8 @@ const Contact = () => {
                 icon: Mail,
                 title: "Email Us",
                 subtitle: "24 hour response",
-                value: "dhruv@shreebalajienvirotech.com",
-                href: "mailto:dhruv@shreebalajienvirotech.com",
+                value: "shreebalajienvirotech@gmail.com",
+                href: "mailto:shreebalajienvirotech@gmail.com",
                 gradient: "bg-gradient-gold",
               },
               {

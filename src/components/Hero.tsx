@@ -129,7 +129,7 @@ const Hero = () => {
                 size="lg" 
                 variant="outline" 
                 onClick={scrollToAbout}
-                className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50 h-14 transition-all duration-300"
+                className="border-2 border-secondary/50 text-secondary hover:bg-secondary/10 hover:border-secondary h-14 transition-all duration-300"
               >
                 <Leaf className="mr-2 w-5 h-5" />
                 Learn More

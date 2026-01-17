@@ -171,7 +171,7 @@ const BlogLayout = ({
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="mailto:dhruv@shreebalajienvirotech.com">
+                  <a href="mailto:shreebalajienvirotech@gmail.com">
                     <Mail className="w-4 h-4 mr-2" />
                     Email Us
                   </a>

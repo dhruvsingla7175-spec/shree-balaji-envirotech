@@ -95,7 +95,7 @@ const Navbar = () => {
             <Phone className="w-4 h-4" />
             <a href="tel:+918360410158" className="hover:underline">+91 83604 10158</a>
             <span className="mx-2">|</span>
-            <a href="mailto:dhruv@shreebalajienvirotech.com" className="hover:underline">dhruv@shreebalajienvirotech.com</a>
+            <a href="mailto:shreebalajienvirotech@gmail.com" className="hover:underline">shreebalajienvirotech@gmail.com</a>
           </div>
           <div className="text-primary-foreground/90">
             🌿 Sustainable Energy for a Greener Tomorrow
