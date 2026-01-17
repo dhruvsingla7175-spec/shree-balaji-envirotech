@@ -52,10 +52,13 @@ export default {
         'gradient-green': 'var(--gradient-green)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-gold': 'var(--gradient-gold)',
+        'gradient-section': 'var(--gradient-section)',
+        'pattern': 'var(--bg-pattern)',
       },
       boxShadow: {
         'elevated': 'var(--shadow-elevated)',
         'subtle': 'var(--shadow-subtle)',
+        'card': 'var(--shadow-card)',
       },
       borderRadius: {
         lg: "var(--radius)",
