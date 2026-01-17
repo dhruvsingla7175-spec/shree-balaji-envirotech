@@ -95,7 +95,7 @@ const Footer = () => {
               <span className="w-8 h-0.5 bg-secondary rounded-full" />
               Government Links
             </h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
                 <a href="https://biomassexchange.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">SAMARTH Mission</a>
               </li>
@@ -106,13 +106,16 @@ const Footer = () => {
                 <a href="https://pspcl.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">PSPCL</a>
               </li>
               <li>
-                <a href="https://powermin.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Ministry of Power</a>
+                <a href="https://cpcb.nic.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">CPCB</a>
+              </li>
+              <li>
+                <a href="https://ppcb.punjab.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">PPCB</a>
               </li>
               <li>
                 <a href="https://mnre.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">MNRE</a>
               </li>
               <li>
-                <a href="https://peda.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">PEDA</a>
+                <a href="https://moef.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">MoEFCC</a>
               </li>
             </ul>
           </div>
