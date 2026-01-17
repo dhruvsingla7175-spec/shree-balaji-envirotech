@@ -76,8 +76,10 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top bar */}
-      <div className="hidden md:block bg-primary text-primary-foreground py-2">
+      {/* Top bar - fixed and hides on scroll */}
+      <div className={`hidden md:block fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground py-2 transition-all duration-500 ${
+        isScrolled ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}>
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4" />
@@ -92,10 +94,10 @@ const Navbar = () => {
       </div>
       
       <nav
-        className={`fixed top-0 md:top-10 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-card/98 backdrop-blur-lg shadow-elevated py-3 md:top-0"
-            : "bg-transparent py-4"
+            ? "top-0 bg-card/98 backdrop-blur-lg shadow-elevated py-3"
+            : "top-0 md:top-10 bg-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4">
