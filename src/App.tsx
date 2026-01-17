@@ -13,6 +13,9 @@ import BiomassPelletPrice2025 from "./pages/blog/BiomassPelletPrice2025";
 import BiomassSuppliersNearBathinda from "./pages/blog/BiomassSuppliersNearBathinda";
 import RiceHuskPellets from "./pages/blog/RiceHuskPellets";
 import IndustrialFuelCostsPunjab from "./pages/awareness/IndustrialFuelCostsPunjab";
+import TextileMillsFuelPunjab from "./pages/awareness/TextileMillsFuelPunjab";
+import BrickKilnsBiomassPunjab from "./pages/awareness/BrickKilnsBiomassPunjab";
+import FoodProcessingFuelPunjab from "./pages/awareness/FoodProcessingFuelPunjab";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/blog/biomass-pellet-suppliers-near-bathinda" element={<BiomassSuppliersNearBathinda />} />
           <Route path="/blog/rice-husk-pellets-benefits-manufacturing" element={<RiceHuskPellets />} />
           <Route path="/awareness/industrial-fuel-costs-punjab" element={<IndustrialFuelCostsPunjab />} />
+          <Route path="/awareness/textile-mills-fuel-punjab" element={<TextileMillsFuelPunjab />} />
+          <Route path="/awareness/brick-kilns-biomass-punjab" element={<BrickKilnsBiomassPunjab />} />
+          <Route path="/awareness/food-processing-fuel-punjab" element={<FoodProcessingFuelPunjab />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -78,10 +78,13 @@ const Footer = () => {
                 <Link to="/blog/biomass-pellets-complete-guide-punjab" className="hover:text-secondary transition-colors">Biomass Pellets Guide</Link>
               </li>
               <li>
-                <Link to="/blog/biomass-pellet-price-punjab-2025" className="hover:text-secondary transition-colors">2025 Pricing</Link>
+                <Link to="/awareness/textile-mills-fuel-punjab" className="hover:text-secondary transition-colors">For Textile Mills</Link>
               </li>
               <li>
-                <Link to="/awareness/industrial-fuel-costs-punjab" className="hover:text-secondary transition-colors">Reduce Fuel Costs</Link>
+                <Link to="/awareness/brick-kilns-biomass-punjab" className="hover:text-secondary transition-colors">For Brick Kilns</Link>
+              </li>
+              <li>
+                <Link to="/awareness/food-processing-fuel-punjab" className="hover:text-secondary transition-colors">For Food Processors</Link>
               </li>
             </ul>
           </div>
