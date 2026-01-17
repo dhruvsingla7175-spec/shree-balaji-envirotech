@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="absolute top-10 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -85,6 +85,34 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/awareness/food-processing-fuel-punjab" className="hover:text-secondary transition-colors">For Food Processors</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Government Links */}
+          <div>
+            <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
+              <span className="w-8 h-0.5 bg-secondary rounded-full" />
+              Government Links
+            </h4>
+            <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li>
+                <a href="https://biomassexchange.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">SAMARTH Mission</a>
+              </li>
+              <li>
+                <a href="https://www.ntpc.co.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">NTPC Limited</a>
+              </li>
+              <li>
+                <a href="https://pspcl.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">PSPCL</a>
+              </li>
+              <li>
+                <a href="https://powermin.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Ministry of Power</a>
+              </li>
+              <li>
+                <a href="https://mnre.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">MNRE</a>
+              </li>
+              <li>
+                <a href="https://peda.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">PEDA</a>
               </li>
             </ul>
           </div>

@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "What is the role of the SAMARTH Mission?",
-    answer: "The SAMARTH Mission aims to promote sustainable biomass utilization in power generation, enhancing the overall efficiency and reducing reliance on coal. It facilitates farmers in selling agro-residue and supports the biomass ecosystem."
+    answer: "The SAMARTH Mission (https://biomassexchange.gov.in) aims to promote sustainable biomass utilization in power generation, enhancing the overall efficiency and reducing reliance on coal. It facilitates farmers in selling agro-residue and supports the biomass ecosystem."
   },
   {
     question: "How does biomass co-firing reduce emissions?",
@@ -109,7 +109,7 @@ const faqs = [
   // Government Support
   {
     question: "What financial assistance is available for biomass manufacturing?",
-    answer: "Various government schemes provide financial assistance for setting up biomass plants. You can access information about these schemes through the SAMARTH Mission portal, government conferences, seminars, and workshops organized by the Ministry of Power. Contact your local agricultural office for more details."
+    answer: "Various government schemes provide financial assistance for setting up biomass plants. You can access information about these schemes through the SAMARTH Mission portal (https://biomassexchange.gov.in), government conferences, seminars, and workshops organized by the Ministry of Power (https://powermin.gov.in). Contact your local agricultural office for more details."
   }
 ];
 
