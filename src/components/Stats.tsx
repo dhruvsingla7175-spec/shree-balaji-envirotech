@@ -7,7 +7,7 @@ const stats = [
   { value: 5000, suffix: "+", label: "Tons Produced" },
   { value: 100, suffix: "%", label: "Eco-Friendly" },
   { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 24, suffix: "/7", label: "Support" },
+  { value: 24, suffix: "/7", label: "Running Industry" },
 ];
 
 const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string }) => {
