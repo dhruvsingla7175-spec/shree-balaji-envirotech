@@ -9,10 +9,12 @@ import Demand from "@/components/Demand";
 import About from "@/components/About";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
+import CaseStudies from "@/components/CaseStudies";
 import Partners from "@/components/Partners";
 import HomeFAQ from "@/components/HomeFAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -28,10 +30,12 @@ const Index = () => {
       <About />
       <Team />
       <Testimonials />
+      <CaseStudies />
       <Partners />
       <HomeFAQ />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
