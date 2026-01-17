@@ -37,6 +37,31 @@ const partners = [
     description: "Central Electricity Authority",
     url: "https://cea.nic.in",
   },
+  {
+    name: "CPCB",
+    description: "Central Pollution Control Board",
+    url: "https://cpcb.nic.in",
+  },
+  {
+    name: "PPCB",
+    description: "Punjab Pollution Control Board",
+    url: "https://ppcb.punjab.gov.in",
+  },
+  {
+    name: "MoEFCC",
+    description: "Ministry of Environment & Climate",
+    url: "https://moef.gov.in",
+  },
+  {
+    name: "BEE",
+    description: "Bureau of Energy Efficiency",
+    url: "https://beeindia.gov.in",
+  },
+  {
+    name: "NITI Aayog",
+    description: "Policy Think Tank",
+    url: "https://niti.gov.in",
+  },
 ];
 
 const fadeInUp = {
