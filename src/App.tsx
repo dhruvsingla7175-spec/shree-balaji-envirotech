@@ -16,6 +16,11 @@ import IndustrialFuelCostsPunjab from "./pages/awareness/IndustrialFuelCostsPunj
 import TextileMillsFuelPunjab from "./pages/awareness/TextileMillsFuelPunjab";
 import BrickKilnsBiomassPunjab from "./pages/awareness/BrickKilnsBiomassPunjab";
 import FoodProcessingFuelPunjab from "./pages/awareness/FoodProcessingFuelPunjab";
+import RiceMillsFuelPunjab from "./pages/awareness/RiceMillsFuelPunjab";
+import DairyPlantsFuelPunjab from "./pages/awareness/DairyPlantsFuelPunjab";
+import PaperMillsFuelPunjab from "./pages/awareness/PaperMillsFuelPunjab";
+import DistilleriesFuelPunjab from "./pages/awareness/DistilleriesFuelPunjab";
+import PoultryFarmsFuelPunjab from "./pages/awareness/PoultryFarmsFuelPunjab";
 
 const queryClient = new QueryClient();
 
@@ -38,7 +43,11 @@ const App = () => (
           <Route path="/awareness/textile-mills-fuel-punjab" element={<TextileMillsFuelPunjab />} />
           <Route path="/awareness/brick-kilns-biomass-punjab" element={<BrickKilnsBiomassPunjab />} />
           <Route path="/awareness/food-processing-fuel-punjab" element={<FoodProcessingFuelPunjab />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/awareness/rice-mills-fuel-punjab" element={<RiceMillsFuelPunjab />} />
+          <Route path="/awareness/dairy-plants-fuel-punjab" element={<DairyPlantsFuelPunjab />} />
+          <Route path="/awareness/paper-mills-fuel-punjab" element={<PaperMillsFuelPunjab />} />
+          <Route path="/awareness/distilleries-fuel-punjab" element={<DistilleriesFuelPunjab />} />
+          <Route path="/awareness/poultry-farms-fuel-punjab" element={<PoultryFarmsFuelPunjab />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
