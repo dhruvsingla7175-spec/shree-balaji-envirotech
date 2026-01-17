@@ -35,7 +35,7 @@ const TextileMillsFuelPunjab = () => {
       <BlogLayout
         title="Textile Mills in Punjab: Is Expensive Fuel Shrinking Your Margins?"
         subtitle="How rising coal and diesel prices are hitting Punjab's textile industry—and the local biomass solution saving mills 25-40%"
-        breadcrumbs={[{ label: 'Awareness', href: '/blog' }]}
+        breadcrumbs={[{ label: 'Awareness', href: '/awareness/textile-mills-fuel-punjab' }]}
       >
         {/* Pain Point */}
         <section className="mb-12">

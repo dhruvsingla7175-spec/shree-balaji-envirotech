@@ -35,7 +35,7 @@ const BrickKilnsBiomassPunjab = () => {
       <BlogLayout
         title="Brick Kilns in Punjab: Coal Costs Rising, NGT Watching. What's Your Plan?"
         subtitle="How biomass pellets help Punjab brick kilns cut costs by 20-35% while meeting pollution norms"
-        breadcrumbs={[{ label: 'Awareness', href: '/blog' }]}
+        breadcrumbs={[{ label: 'Awareness', href: '/awareness/brick-kilns-biomass-punjab' }]}
       >
         {/* Pain Point */}
         <section className="mb-12">
