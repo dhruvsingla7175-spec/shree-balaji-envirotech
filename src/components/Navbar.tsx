@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
-import { getAwarenessPages } from "@/data/blogPosts";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const navItems = [
   { label: "Home", id: "hero" },
@@ -21,11 +14,6 @@ const navItems = [
   { label: "Contact", id: "contact" },
 ];
 
-const slugToLabel = (slug: string) =>
-  slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
 
 // Custom nav link component
 const NavButton = ({ 
@@ -56,13 +44,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-
-  const awarenessLinks = getAwarenessPages()
-    .map((p) => ({
-      label: slugToLabel(p.slug),
-      href: p.awarenessPath || `/awareness/${p.slug}`,
-    }))
-    .sort((a, b) => a.label.localeCompare(b.label));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,27 +144,6 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
               </Link>
 
-              {/* Awareness Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className={cn(
-                  "relative font-medium transition-colors group flex items-center gap-1 outline-none",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}>
-                  Awareness
-                  <ChevronDown className="w-4 h-4" />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-64">
-                  {awarenessLinks.map((page) => (
-                    <DropdownMenuItem key={page.href} asChild>
-                      <Link to={page.href} className="cursor-pointer">
-                        {page.label}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
               <Button
                 onClick={() => scrollToSection("contact")}
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-elevated hover:scale-105 transition-all"
@@ -233,21 +193,6 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-
-              {/* Mobile Awareness Links */}
-              <div className="border-t border-border pt-2 mt-2">
-                <div className="text-sm text-muted-foreground px-4 py-2">Awareness</div>
-                {awarenessLinks.map((page) => (
-                  <Link
-                    key={page.href}
-                    to={page.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block w-full text-left font-medium py-2 px-6 rounded-lg transition-all text-foreground hover:bg-muted text-sm"
-                  >
-                    {page.label}
-                  </Link>
-                ))}
-              </div>
 
               <Button
                 onClick={() => scrollToSection("contact")}

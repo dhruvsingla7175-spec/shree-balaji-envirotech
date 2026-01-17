@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowRight, Leaf, Tag, Factory } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Leaf, Tag } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
-import { blogPosts, getFeaturedPosts, getAwarenessPages } from '@/data/blogPosts';
+import { allPosts, getFeaturedPosts } from '@/data/blogPosts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -20,7 +20,7 @@ const staggerContainer = {
 
 const categoryLabels = {
   guide: 'Guide',
-  awareness: 'Awareness',
+  awareness: 'Industry Solution',
   industry: 'Industry News',
   local: 'Local Focus',
 };
@@ -34,7 +34,6 @@ const categoryColors = {
 
 const Blog = () => {
   const featuredPosts = getFeaturedPosts();
-  const awarenessPages = getAwarenessPages();
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -155,60 +154,7 @@ const Blog = () => {
         </section>
       )}
 
-      {/* Industry Awareness Pages */}
-      <section className="py-12 bg-gradient-to-br from-amber-50/50 to-orange-50/50 dark:from-amber-900/10 dark:to-orange-900/10">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mb-8"
-          >
-            <h2 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-2">
-              <Factory className="w-6 h-6 text-amber-600" />
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-muted-foreground">
-              Discover how biomass pellets can reduce fuel costs for your specific industry in Punjab
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
-          >
-            {awarenessPages.map((page) => (
-              <motion.div key={page.slug} variants={fadeInUp}>
-                <Link to={page.awarenessPath || `/awareness/${page.slug}`}>
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-amber-500/50 group border-amber-200/50 dark:border-amber-800/30">
-                    <CardContent className="p-5">
-                      <Badge className="mb-3 bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
-                        {page.primaryKeyword.split(' ')[0]} {page.primaryKeyword.split(' ')[1]}
-                      </Badge>
-                      <h3 className="text-lg font-semibold text-foreground group-hover:text-amber-600 transition-colors mb-2 line-clamp-2">
-                        {page.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{page.excerpt}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {page.readTime}
-                        </span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-amber-600" />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* All Posts */}
+      {/* All Posts (Blog + Awareness merged) */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -218,7 +164,7 @@ const Blog = () => {
             className="text-2xl font-bold text-foreground mb-8 flex items-center gap-2"
           >
             <span className="w-10 h-1 bg-secondary rounded-full" />
-            All Articles
+            All Articles & Industry Solutions
           </motion.h2>
 
           <motion.div
@@ -228,9 +174,9 @@ const Blog = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            {blogPosts.map((post) => (
+            {allPosts.map((post) => (
               <motion.div key={post.slug} variants={fadeInUp}>
-                <Link to={`/blog/${post.slug}`}>
+                <Link to={post.isAwareness ? (post.awarenessPath || `/awareness/${post.slug}`) : `/blog/${post.slug}`}>
                   <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50 group">
                     <CardContent className="p-6">
                       <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -239,6 +185,11 @@ const Blog = () => {
                             <Badge className={categoryColors[post.category]}>
                               {categoryLabels[post.category]}
                             </Badge>
+                            {post.featured && (
+                              <Badge variant="outline" className="border-secondary text-secondary">
+                                Featured
+                              </Badge>
+                            )}
                           </div>
                           <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
                             {post.title}
