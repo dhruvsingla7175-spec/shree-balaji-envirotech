@@ -143,7 +143,7 @@ const Contact = () => {
             Ready to switch to sustainable energy? Contact us today for premium biomass pellet solutions
           </p>
           <a
-            href="https://wa.me/message/RRKAEOM2TS3EM1"
+            href="https://wa.me/916280610158"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -167,8 +167,8 @@ const Contact = () => {
                 icon: Phone,
                 title: "Call Us",
                 subtitle: "Mon-Sat, 9AM-6PM",
-                value: "+91 83604 10158",
-                href: "tel:+918360410158",
+                value: "+91 62806 10158 / 83604 10158",
+                href: "tel:+916280610158",
                 gradient: "bg-gradient-green",
               },
               {

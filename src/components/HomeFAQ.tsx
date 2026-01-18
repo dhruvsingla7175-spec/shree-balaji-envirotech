@@ -215,9 +215,9 @@ const HomeFAQ = () => {
             Still have questions? We're here to help!
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <a href="tel:+918360410158" className="inline-flex items-center gap-2">
+            <a href="tel:+916280610158" className="inline-flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              Call Us: +91 83604 10158
+              Call Us: +91 62806 10158
             </a>
           </Button>
         </motion.div>

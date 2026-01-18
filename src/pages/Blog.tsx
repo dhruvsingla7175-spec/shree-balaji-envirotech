@@ -248,10 +248,10 @@ const Blog = () => {
                 Get a Quote
               </Link>
               <a
-                href="tel:+918360410158"
+                href="tel:+916280610158"
                 className="inline-flex items-center justify-center px-8 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
-                Call: +91 83604 10158
+                Call: +91 62806 10158
               </a>
             </div>
           </motion.div>
