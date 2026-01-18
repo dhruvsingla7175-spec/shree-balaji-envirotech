@@ -5,36 +5,36 @@ const steps = [
   {
     icon: Truck,
     title: "Raw Material Collection",
-    description: "Agricultural residues like rice husk, wheat straw, and sawdust are collected from farms and sawmills across Punjab.",
-    details: ["Paddy straw from fields", "Wood chips from sawmills", "Agricultural waste sorting"],
+    description: "Agricultural residues like paddy straw, mustard husk, rice husk, and sawdust are collected from farms across Punjab.",
+    details: ["Paddy straw from 22 districts", "Long-term farmer contracts", "6 months storage buffer"],
     color: "from-amber-500 to-orange-500"
   },
   {
     icon: Cog,
-    title: "Material Processing",
-    description: "Raw materials undergo size reduction, drying, and conditioning to achieve optimal moisture content below 12%.",
-    details: ["Hammer mill crushing", "Rotary dryer processing", "Moisture optimization"],
+    title: "Shredding & Drying",
+    description: "Raw materials are shredded into smaller particles and dried using rotary dryer to achieve 10-15% moisture content.",
+    details: ["Automated conveyors & dosing", "Rotary dryer with moisture control", "Hammer mill fine crushing"],
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Factory,
-    title: "Pellet Formation",
-    description: "Processed material is compressed under high pressure through die holes to form dense, uniform pellets.",
-    details: ["Ring die pelletizer", "High-pressure compression", "Natural lignin binding"],
+    title: "Pelletization",
+    description: "Dried biomass is compressed through ring die pellet machines (XGJ560) under high pressure to form dense pellets.",
+    details: ["5 TPH capacity (4 pellet machines)", "GCV: 3200-3400 kcal/kg", "Natural lignin binding"],
     color: "from-primary to-green-500"
   },
   {
     icon: Package,
     title: "Cooling & Packaging",
-    description: "Hot pellets are cooled, screened for quality, and packaged in moisture-resistant bags for storage.",
-    details: ["Counter-flow cooling", "Vibrating screen sorting", "50kg bag packaging"],
+    description: "Hot pellets are cooled, sieved to remove fines, and packaged for dispatch to thermal power plants and industries.",
+    details: ["Counter-flow cooling tower", "Dust extraction system", "Storage & dispatch ready"],
     color: "from-purple-500 to-pink-500"
   },
   {
     icon: ClipboardCheck,
     title: "Quality Testing",
-    description: "Every batch undergoes rigorous testing for calorific value, moisture, ash content, and durability.",
-    details: ["Calorific value testing", "Durability index check", "Ash content analysis"],
+    description: "Every batch is tested for GCV (3200-3400 kcal/kg), ash content (15-20%), and moisture to meet NTPC/boiler standards.",
+    details: ["On-site QC lab", "NTPC specification compliance", "Ash content: 12-14% with mixing"],
     color: "from-emerald-500 to-teal-500"
   }
 ];

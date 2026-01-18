@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform, type Easing } from "framer-motion";
 const easeOut: Easing = [0.0, 0.0, 0.2, 1];
 
 const stats = [
-  { value: 5000, suffix: "+", label: "Tons Produced" },
-  { value: 100, suffix: "%", label: "Eco-Friendly" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 24, suffix: "/7", label: "Running Industry" },
+  { value: 5, suffix: " TPH", label: "Production Capacity" },
+  { value: 2500, suffix: "+", label: "MT/Month Output" },
+  { value: 27, suffix: "M", label: "Tonnes Straw in Punjab" },
+  { value: 40, suffix: "%", label: "Fuel Cost Savings" },
 ];
 
 const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string }) => {
