@@ -111,13 +111,13 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-secondary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                 <img 
                   src={logo} 
-                  alt="Shree Balaji Envirotech LLP" 
+                  alt="Shree Balaji Envirotech" 
                   className="h-12 w-auto rounded-full relative z-10 transition-transform group-hover:scale-105" 
                 />
               </div>
               <div className={`hidden sm:block transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 <div className="font-bold text-lg leading-tight">Shree Balaji</div>
-                <div className="text-xs opacity-80">Envirotech LLP</div>
+                <div className="text-xs opacity-80">Envirotech</div>
               </div>
             </div>
 

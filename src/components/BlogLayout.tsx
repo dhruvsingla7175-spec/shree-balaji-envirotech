@@ -160,7 +160,7 @@ const BlogLayout = ({
                 Get Premium Biomass Pellets in Bathinda, Punjab
               </h3>
               <p className="text-muted-foreground mb-6">
-                Looking for reliable biomass pellet suppliers near you? Shree Balaji Envirotech LLP delivers 
+                Looking for reliable biomass pellet suppliers near you? Shree Balaji Envirotech delivers 
                 high-quality, eco-friendly biomass pellets across Punjab, Haryana, and North India.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">

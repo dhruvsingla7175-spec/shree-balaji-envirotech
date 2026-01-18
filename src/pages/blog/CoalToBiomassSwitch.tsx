@@ -327,7 +327,7 @@ const CoalToBiomassSwitch = () => {
             <h2 className="text-2xl font-bold mb-4">Ready to Reduce Fuel Costs?</h2>
             <p className="mb-6 text-primary-foreground/90">
               Get a free site assessment and ROI analysis for your boiler conversion. 
-              Shree Balaji Envirotech LLP has helped dozens of Punjab industries make the switch successfully.
+              Shree Balaji Envirotech has helped dozens of Punjab industries make the switch successfully.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "Where can I buy rice husk pellets in Punjab?",
-    answer: "Shree Balaji Envirotech LLP in Bathinda manufactures rice husk and agro-waste pellets with delivery across Punjab. Contact +91 83604 10158 for pricing and availability."
+    answer: "Shree Balaji Envirotech in Bathinda manufactures rice husk and agro-waste pellets with delivery across Punjab. Contact +91 83604 10158 for pricing and availability."
   }
 ];
 
