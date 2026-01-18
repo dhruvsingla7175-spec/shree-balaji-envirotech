@@ -5,11 +5,18 @@ import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
 
-const navItems = [
+const scrollNavItems = [
   { label: "Home", id: "hero" },
   { label: "Products", id: "products" },
   { label: "Benefits", id: "benefits" },
   { label: "Contact", id: "contact" },
+];
+
+const pageNavItems = [
+  { label: "About Us", path: "/about" },
+  { label: "Equipment", path: "/equipment" },
+  { label: "Buyers", path: "/buyers" },
+  { label: "Blog", path: "/blog" },
 ];
 
 
@@ -48,13 +55,13 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Active section detection
-      const sections = navItems.map(item => document.getElementById(item.id));
+      const sections = scrollNavItems.map(item => document.getElementById(item.id));
       const scrollPosition = window.scrollY + 100;
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id);
+          setActiveSection(scrollNavItems[i].id);
           break;
         }
       }
@@ -122,8 +129,8 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6">
-              {navItems.map((item) => (
+            <div className="hidden md:flex items-center gap-5">
+              {scrollNavItems.map((item) => (
                 <NavButton
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -134,53 +141,20 @@ const Navbar = () => {
                 </NavButton>
               ))}
               
-              {/* About Us Link - positioned after Benefits */}
-              <Link
-                to="/about"
-                className={cn(
-                  "relative font-medium transition-colors group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}
-              >
-                About Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
-              </Link>
-
-              {/* Equipment Link */}
-              <Link
-                to="/equipment"
-                className={cn(
-                  "relative font-medium transition-colors group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}
-              >
-                Equipment
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
-              </Link>
-
-              {/* Buyers Link */}
-              <Link
-                to="/buyers"
-                className={cn(
-                  "relative font-medium transition-colors group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}
-              >
-                Buyers
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
-              </Link>
-
-              {/* Blog Link */}
-              <Link
-                to="/blog"
-                className={cn(
-                  "relative font-medium transition-colors group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}
-              >
-                Blog
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
-              </Link>
+              {/* Page Navigation Links */}
+              {pageNavItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    "relative font-medium transition-colors group",
+                    isScrolled ? "text-foreground" : "text-primary-foreground"
+                  )}
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
 
               <Button
                 onClick={() => scrollToSection("contact")}
@@ -209,7 +183,7 @@ const Navbar = () => {
             isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4 pb-4" : "max-h-0 opacity-0"
           }`}>
             <div className="space-y-2 bg-card/95 backdrop-blur-lg rounded-xl p-4 shadow-elevated">
-              {navItems.map((item) => (
+              {scrollNavItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -223,41 +197,17 @@ const Navbar = () => {
                 </button>
               ))}
               
-              {/* Mobile About Us Link */}
-              <Link
-                to="/about"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
-              >
-                About Us
-              </Link>
-
-              {/* Mobile Equipment Link */}
-              <Link
-                to="/equipment"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
-              >
-                Equipment
-              </Link>
-
-              {/* Mobile Buyers Link */}
-              <Link
-                to="/buyers"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
-              >
-                Buyers
-              </Link>
-
-              {/* Mobile Blog Link */}
-              <Link
-                to="/blog"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
-              >
-                Blog
-              </Link>
+              {/* Mobile Page Links */}
+              {pageNavItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
+                >
+                  {item.label}
+                </Link>
+              ))}
 
               <Button
                 onClick={() => scrollToSection("contact")}
