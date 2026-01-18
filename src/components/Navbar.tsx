@@ -134,6 +134,18 @@ const Navbar = () => {
                 </NavButton>
               ))}
               
+              {/* About Us Link */}
+              <Link
+                to="/about"
+                className={cn(
+                  "relative font-medium transition-colors group",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
+              >
+                About Us
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+              </Link>
+
               {/* Blog Link */}
               <Link
                 to="/blog"
@@ -187,6 +199,15 @@ const Navbar = () => {
                 </button>
               ))}
               
+              {/* Mobile About Us Link */}
+              <Link
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
+              >
+                About Us
+              </Link>
+
               {/* Mobile Blog Link */}
               <Link
                 to="/blog"
