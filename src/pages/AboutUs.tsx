@@ -207,8 +207,54 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Mission Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <motion.div variants={fadeInUp} className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Target className="w-4 h-4" />
+                Our Mission
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                What <span className="text-primary">Drives Us</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Our mission is built on five pillars that guide every decision we make
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {missionPoints.map((point, index) => (
+                <motion.div
+                  key={point.title}
+                  variants={fadeInUp}
+                  className={`group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 ${
+                    index === 4 ? "lg:col-start-2" : ""
+                  }`}
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <point.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {point.title}
+                  </h3>
+                  <p className="text-muted-foreground">{point.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Timeline Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden lg:block" />
         
         <div className="container mx-auto px-4">
@@ -281,54 +327,8 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
-          >
-            <motion.div variants={fadeInUp} className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Target className="w-4 h-4" />
-                Our Mission
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                What <span className="text-primary">Drives Us</span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our mission is built on five pillars that guide every decision we make
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {missionPoints.map((point, index) => (
-                <motion.div
-                  key={point.title}
-                  variants={fadeInUp}
-                  className={`group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 ${
-                    index === 4 ? "lg:col-start-2" : ""
-                  }`}
-                >
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <point.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {point.title}
-                  </h3>
-                  <p className="text-muted-foreground">{point.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
