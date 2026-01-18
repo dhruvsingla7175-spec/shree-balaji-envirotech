@@ -70,7 +70,7 @@ const missionPoints = [
 
 const milestones = [
   {
-    year: "2022",
+    year: "JUNE 2025",
     title: "The Vision Begins",
     description: "Six entrepreneurs from diverse business backgrounds unite with a shared vision to tackle stubble burning and provide sustainable fuel solutions.",
     icon: Handshake,
