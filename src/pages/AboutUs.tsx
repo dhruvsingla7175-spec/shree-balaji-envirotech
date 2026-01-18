@@ -207,6 +207,90 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <motion.div variants={fadeInUp} className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Users className="w-4 h-4" />
+                Our Team
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Meet Our <span className="text-primary">Leadership</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                A dedicated team of entrepreneurs united by a vision for sustainable energy
+              </p>
+            </motion.div>
+
+            {/* Founder Highlight */}
+            <motion.div variants={fadeInUp} className="mb-12">
+              <div className="bg-gradient-to-br from-primary/10 via-card to-secondary/10 border-2 border-primary/20 rounded-3xl p-8 md:p-10 max-w-3xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center border-4 border-background shadow-xl">
+                    <span className="text-4xl font-bold text-primary-foreground">DS</span>
+                  </div>
+                  <div className="text-center md:text-left flex-1">
+                    <div className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-2">
+                      Founder & Managing Partner
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                      Dhruv Singla
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {team[0].bio}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Other Partners */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {team.slice(1).map((member) => (
+                <motion.div
+                  key={member.name}
+                  variants={fadeInUp}
+                  className="group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
+                      <span className="text-xl font-bold text-primary">
+                        {member.name.split(" ").map((n) => n[0]).join("")}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground group-hover:text-primary transition-colors">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-primary">{member.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{member.bio}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Team Statement */}
+            <motion.div variants={fadeInUp} className="text-center mt-12">
+              <div className="bg-card border border-border rounded-2xl p-8 max-w-3xl mx-auto">
+                <p className="text-lg text-muted-foreground italic">
+                  "Together, we bring diverse expertise from different industries, united by a shared commitment 
+                  to create sustainable energy solutions that benefit farmers, industries, and the environment."
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -323,90 +407,6 @@ const AboutUs = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
-          >
-            <motion.div variants={fadeInUp} className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Users className="w-4 h-4" />
-                Our Team
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Meet Our <span className="text-primary">Leadership</span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A dedicated team of entrepreneurs united by a vision for sustainable energy
-              </p>
-            </motion.div>
-
-            {/* Founder Highlight */}
-            <motion.div variants={fadeInUp} className="mb-12">
-              <div className="bg-gradient-to-br from-primary/10 via-card to-secondary/10 border-2 border-primary/20 rounded-3xl p-8 md:p-10 max-w-3xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center border-4 border-background shadow-xl">
-                    <span className="text-4xl font-bold text-primary-foreground">DS</span>
-                  </div>
-                  <div className="text-center md:text-left flex-1">
-                    <div className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mb-2">
-                      Founder & Managing Partner
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-                      Dhruv Singla
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {team[0].bio}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Other Partners */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {team.slice(1).map((member) => (
-                <motion.div
-                  key={member.name}
-                  variants={fadeInUp}
-                  className="group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
-                      <span className="text-xl font-bold text-primary">
-                        {member.name.split(" ").map((n) => n[0]).join("")}
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground group-hover:text-primary transition-colors">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-primary">{member.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{member.bio}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Team Statement */}
-            <motion.div variants={fadeInUp} className="text-center mt-12">
-              <div className="bg-card border border-border rounded-2xl p-8 max-w-3xl mx-auto">
-                <p className="text-lg text-muted-foreground italic">
-                  "Together, we bring diverse expertise from different industries, united by a shared commitment 
-                  to create sustainable energy solutions that benefit farmers, industries, and the environment."
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
