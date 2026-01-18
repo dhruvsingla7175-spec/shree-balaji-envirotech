@@ -12,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import CaseStudies from "@/components/CaseStudies";
 import Partners from "@/components/Partners";
 import HomeFAQ from "@/components/HomeFAQ";
+import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -33,6 +34,7 @@ const Index = () => {
       <CaseStudies />
       <Partners />
       <HomeFAQ />
+      <BlogPreview />
       <Contact />
       <Footer />
       <WhatsAppButton />

@@ -1,4 +1,5 @@
-import { motion, type Easing } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, type Easing } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Recycle, Factory, TrendingUp, CheckCircle2 } from "lucide-react";
 
@@ -25,20 +26,39 @@ const staggerContainer = {
 };
 
 const About = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const leftContentX = useTransform(scrollYProgress, [0, 0.5], ["-20px", "0px"]);
+  const rightContentX = useTransform(scrollYProgress, [0, 0.5], ["20px", "0px"]);
+
   return (
-    <section id="about" className="py-24 bg-muted/30 relative overflow-hidden">
-      {/* Background decoration */}
+    <section ref={sectionRef} id="about" className="py-24 bg-muted/30 relative overflow-hidden">
+      {/* Parallax Background decoration */}
       <motion.div 
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2, ease: easeOut }}
-        className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" 
-      />
+        style={{ y: backgroundY }}
+        className="absolute inset-0 -z-10"
+      >
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: easeOut }}
+          className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" 
+        />
+        <div className="absolute top-20 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+      </motion.div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div 
+            style={{ x: leftContentX }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -87,6 +107,7 @@ const About = () => {
           </motion.div>
 
           <motion.div 
+            style={{ x: rightContentX }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
