@@ -22,6 +22,9 @@ import DairyPlantsFuelPunjab from "./pages/awareness/DairyPlantsFuelPunjab";
 import PaperMillsFuelPunjab from "./pages/awareness/PaperMillsFuelPunjab";
 import DistilleriesFuelPunjab from "./pages/awareness/DistilleriesFuelPunjab";
 import PoultryFarmsFuelPunjab from "./pages/awareness/PoultryFarmsFuelPunjab";
+import ManufacturingCosts from "./pages/ManufacturingCosts";
+import Equipment from "./pages/Equipment";
+import Compliance from "./pages/Compliance";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +37,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/manufacturing-costs" element={<ManufacturingCosts />} />
+          <Route path="/equipment" element={<Equipment />} />
+          <Route path="/compliance" element={<Compliance />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/biomass-pellets-complete-guide-punjab" element={<BiomassPelletsGuidePunjab />} />
           <Route path="/blog/stubble-burning-solution-punjab-biomass-pellets" element={<StubbleBurningSolution />} />
