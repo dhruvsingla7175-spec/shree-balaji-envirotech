@@ -184,7 +184,7 @@ const AboutUs = () => {
               variants={fadeInUp}
               className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-lg"
             >
-              <div className="prose prose-lg max-w-none text-muted-foreground">
+              <div className="prose prose-lg max-w-none text-foreground/80">
                 <p className="text-lg leading-relaxed mb-6">
                   <span className="text-foreground font-semibold">Shree Balaji Envirotech</span> was born from a unique convergence of 
                   entrepreneurs from diverse business backgrounds who shared a common concern – the environmental crisis caused by 
@@ -208,7 +208,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <section id="team" className="py-20 bg-gradient-to-b from-background to-muted/30 scroll-mt-24">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -225,7 +225,7 @@ const AboutUs = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Meet Our <span className="text-primary">Leadership</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 A dedicated team of entrepreneurs united by a vision for sustainable energy
               </p>
             </motion.div>
@@ -244,7 +244,7 @@ const AboutUs = () => {
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
                       Dhruv Singla
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-foreground/80 leading-relaxed">
                       {team[0].bio}
                     </p>
                   </div>
@@ -273,7 +273,7 @@ const AboutUs = () => {
                       <p className="text-sm text-primary">{member.role}</p>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{member.bio}</p>
+                  <p className="text-sm text-foreground/75">{member.bio}</p>
                 </motion.div>
               ))}
             </div>
@@ -281,7 +281,7 @@ const AboutUs = () => {
             {/* Team Statement */}
             <motion.div variants={fadeInUp} className="text-center mt-12">
               <div className="bg-card border border-border rounded-2xl p-8 max-w-3xl mx-auto">
-                <p className="text-lg text-muted-foreground italic">
+                <p className="text-lg text-foreground/80 italic">
                   "Together, we bring diverse expertise from different industries, united by a shared commitment 
                   to create sustainable energy solutions that benefit farmers, industries, and the environment."
                 </p>
@@ -292,7 +292,7 @@ const AboutUs = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-background">
+      <section id="mission" className="py-20 bg-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
@@ -309,7 +309,7 @@ const AboutUs = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 What <span className="text-primary">Drives Us</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 Our mission is built on five pillars that guide every decision we make
               </p>
             </motion.div>
@@ -329,7 +329,7 @@ const AboutUs = () => {
                   <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {point.title}
                   </h3>
-                  <p className="text-muted-foreground">{point.description}</p>
+                  <p className="text-foreground/75">{point.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -338,7 +338,7 @@ const AboutUs = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
+      <section id="timeline" className="py-20 bg-muted/30 relative overflow-hidden scroll-mt-24">
         <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden lg:block" />
         
         <div className="container mx-auto px-4">
@@ -357,7 +357,7 @@ const AboutUs = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Milestones & <span className="text-primary">Achievements</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 From vision to reality – our journey of building sustainable energy solutions
               </p>
             </motion.div>
@@ -390,7 +390,7 @@ const AboutUs = () => {
                         <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                           {milestone.title}
                         </h3>
-                        <p className="text-muted-foreground">{milestone.description}</p>
+                        <p className="text-foreground/75">{milestone.description}</p>
                       </motion.div>
                     </div>
 
@@ -412,7 +412,7 @@ const AboutUs = () => {
       </section>
 
       {/* Environmental Impact Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+      <section id="impact" className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden scroll-mt-24">
         <div className="absolute top-10 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
         
@@ -432,7 +432,7 @@ const AboutUs = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Creating a <span className="text-primary">Sustainable Future</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 Our commitment to the environment goes beyond business – we're actively fighting pollution and climate change
               </p>
             </motion.div>
@@ -455,7 +455,7 @@ const AboutUs = () => {
                   </div>
                   <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
                   <div className="font-semibold text-foreground mb-1">{stat.label}</div>
-                  <div className="text-sm text-muted-foreground">{stat.desc}</div>
+                  <div className="text-sm text-foreground/75">{stat.desc}</div>
                 </motion.div>
               ))}
             </div>
@@ -468,7 +468,7 @@ const AboutUs = () => {
                     <Recycle className="w-5 h-5 text-primary" />
                     Solving the Stubble Burning Crisis
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-foreground/80 leading-relaxed">
                     Every year, Punjab generates approximately <strong className="text-foreground">27 million tonnes</strong> of paddy straw. 
                     Instead of burning this agricultural waste and contributing to severe air pollution, we transform it into 
                     valuable biomass pellets – creating a sustainable fuel source while protecting our environment.
@@ -479,7 +479,7 @@ const AboutUs = () => {
                     <TrendingUp className="w-5 h-5 text-primary" />
                     Economic & Social Benefits
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-foreground/80 leading-relaxed">
                     Our operations provide <strong className="text-foreground">direct employment to 12+ workers</strong> and create 
                     income opportunities for <strong className="text-foreground">200+ farmers and transporters</strong>. Industries 
                     switching to biomass save <strong className="text-foreground">30-40% on fuel costs</strong>, making it a 
