@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { TrendingDown, Leaf, Award, ArrowRight, Factory, Flame, Milk } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,11 +63,24 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
+  const cardsY = useTransform(scrollYProgress, [0, 0.5], ["30px", "0px"]);
+
   return (
-    <section id="case-studies" className="py-24 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" />
+    <section ref={sectionRef} id="case-studies" className="py-24 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+      {/* Parallax Background decoration */}
+      <motion.div style={{ y: backgroundY }} className="absolute inset-0 -z-10">
+        <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-accent/5 rounded-full blur-3xl -translate-x-1/2" />
+      </motion.div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -88,6 +102,7 @@ const CaseStudies = () => {
         </motion.div>
 
         <motion.div
+          style={{ y: cardsY }}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
