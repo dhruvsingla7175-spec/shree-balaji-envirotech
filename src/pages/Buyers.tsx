@@ -125,11 +125,11 @@ const majorBrands = [
 ];
 
 const localContacts = [
-  { type: "Paper Factory", location: "Near Tapa Grid", phone: "9815376152" },
-  { type: "Brick Kiln", location: "Near Dhaula Grid", phone: "9464746391" },
-  { type: "Ashutosh Plastic Industry", location: "Near Tapa Grid", phone: "9417148730" },
-  { type: "Trader - Vijay Malik BPM", location: "Punjab", phone: "7206589277" },
-  { type: "Samana Industries", location: "Pellet factory, Bricks", phone: "Contact for details" }
+  { type: "Paper Factory", location: "Near Tapa Grid" },
+  { type: "Brick Kiln", location: "Near Dhaula Grid" },
+  { type: "Ashutosh Plastic Industry", location: "Near Tapa Grid" },
+  { type: "Trader - Vijay Malik BPM", location: "Punjab" },
+  { type: "Samana Industries", location: "Pellet factory, Bricks" }
 ];
 
 const Buyers = () => {
@@ -418,11 +418,13 @@ const Buyers = () => {
                           </p>
                         </div>
                         <a 
-                          href={`tel:${contact.phone}`}
+                          href="https://wa.me/919501005435"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-medium hover:bg-primary/20 transition-colors"
                         >
                           <Phone className="w-4 h-4" />
-                          {contact.phone}
+                          Contact for details
                         </a>
                       </CardContent>
                     </Card>
