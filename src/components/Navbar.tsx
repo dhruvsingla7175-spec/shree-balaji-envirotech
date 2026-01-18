@@ -144,6 +144,30 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
               </Link>
 
+              {/* Equipment Link */}
+              <Link
+                to="/equipment"
+                className={cn(
+                  "relative font-medium transition-colors group",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
+              >
+                Equipment
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+              </Link>
+
+              {/* Buyers Link */}
+              <Link
+                to="/buyers"
+                className={cn(
+                  "relative font-medium transition-colors group",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
+              >
+                Buyers
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+              </Link>
+
               {/* Blog Link */}
               <Link
                 to="/blog"
@@ -204,6 +228,24 @@ const Navbar = () => {
                 className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
               >
                 About Us
+              </Link>
+
+              {/* Mobile Equipment Link */}
+              <Link
+                to="/equipment"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
+              >
+                Equipment
+              </Link>
+
+              {/* Mobile Buyers Link */}
+              <Link
+                to="/buyers"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
+              >
+                Buyers
               </Link>
 
               {/* Mobile Blog Link */}
