@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Home, Package, Sparkles, MessageSquare, Users, Wrench, ShoppingCart, BookOpen } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
 
 const scrollNavItems = [
-  { label: "Home", id: "hero" },
-  { label: "Products", id: "products" },
-  { label: "Benefits", id: "benefits" },
-  { label: "Contact", id: "contact" },
+  { label: "Home", id: "hero", icon: Home },
+  { label: "Products", id: "products", icon: Package },
+  { label: "Benefits", id: "benefits", icon: Sparkles },
+  { label: "Contact", id: "contact", icon: MessageSquare },
 ];
 
 const pageNavItems = [
-  { label: "About Us", path: "/about" },
-  { label: "Equipment", path: "/equipment" },
-  { label: "Buyers", path: "/buyers" },
-  { label: "Blog", path: "/blog" },
+  { label: "About Us", path: "/about", icon: Users },
+  { label: "Equipment", path: "/equipment", icon: Wrench },
+  { label: "Buyers", path: "/buyers", icon: ShoppingCart },
+  { label: "Blog", path: "/blog", icon: BookOpen },
 ];
 
 
@@ -178,43 +178,130 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu */}
-          <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4 pb-4" : "max-h-0 opacity-0"
-          }`}>
-            <div className="space-y-2 bg-card/95 backdrop-blur-lg rounded-xl p-4 shadow-elevated">
-              {scrollNavItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left font-medium py-3 px-4 rounded-lg transition-all ${
-                    activeSection === item.id 
-                      ? "bg-primary text-primary-foreground" 
-                      : "text-foreground hover:bg-muted"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-              
-              {/* Mobile Page Links */}
-              {pageNavItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-left font-medium py-3 px-4 rounded-lg transition-all text-foreground hover:bg-muted"
-                >
-                  {item.label}
-                </Link>
-              ))}
+          {/* Mobile Menu Overlay */}
+          <div 
+            className={cn(
+              "md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300",
+              isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            )}
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
 
+          {/* Mobile Menu Slide-in Panel */}
+          <div 
+            className={cn(
+              "md:hidden fixed top-0 right-0 h-full w-[280px] bg-card z-50 shadow-2xl transition-transform duration-300 ease-out",
+              isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            )}
+          >
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <div className="flex items-center gap-2">
+                <img 
+                  src={logo} 
+                  alt="Shree Balaji Envirotech" 
+                  className="h-10 w-auto rounded-full" 
+                />
+                <div>
+                  <div className="font-bold text-sm leading-tight text-foreground">Shree Balaji</div>
+                  <div className="text-xs text-muted-foreground">Envirotech</div>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Content */}
+            <div className="p-4 overflow-y-auto h-[calc(100%-80px)]">
+              {/* Section Label */}
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                Navigate
+              </div>
+              
+              {/* Scroll Navigation Items */}
+              <div className="space-y-1 mb-6">
+                {scrollNavItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={cn(
+                        "flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200",
+                        activeSection === item.id 
+                          ? "bg-primary text-primary-foreground shadow-md" 
+                          : "text-foreground hover:bg-muted"
+                      )}
+                      style={{ 
+                        animationDelay: `${index * 50}ms`,
+                        animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
+                      }}
+                    >
+                      <Icon className="w-5 h-5" />
+                      {item.label}
+                      {activeSection === item.id && (
+                        <span className="ml-auto w-2 h-2 bg-secondary rounded-full" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Section Label */}
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                Explore
+              </div>
+              
+              {/* Page Navigation Items */}
+              <div className="space-y-1 mb-6">
+                {pageNavItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 text-foreground hover:bg-muted"
+                      style={{ 
+                        animationDelay: `${(index + 4) * 50}ms`,
+                        animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
+                      }}
+                    >
+                      <Icon className="w-5 h-5" />
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {/* CTA Button */}
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground mt-2"
+                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg"
+                size="lg"
               >
                 Get Quote
               </Button>
+
+              {/* Contact Info */}
+              <div className="mt-6 p-4 bg-muted/50 rounded-xl">
+                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
+                  Call Us
+                </div>
+                <a href="tel:+916280610158" className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors mb-1">
+                  <Phone className="w-4 h-4" />
+                  +91 62806 10158
+                </a>
+                <a href="tel:+918360410158" className="flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors">
+                  <Phone className="w-4 h-4" />
+                  +91 83604 10158
+                </a>
+              </div>
             </div>
           </div>
         </div>
