@@ -71,39 +71,33 @@ const missionPoints = [
 const milestones = [
   {
     year: "JUNE 2025",
-    title: "The Vision Begins",
-    description: "Six entrepreneurs from diverse business backgrounds unite with a shared vision to tackle stubble burning and provide sustainable fuel solutions.",
+    title: "Planning & Research",
+    description: "Comprehensive planning for property acquisition, budget allocation, ROI analysis, investment structuring, and all project parameters finalized.",
     icon: Handshake,
   },
   {
-    year: "NOVEMBER 2025 - MARCH 2026",
-    title: "Company Founded",
-    description: "Shree Balaji Envirotech officially established in Bathinda, Punjab. Acquired land and began setting up manufacturing infrastructure.",
+    year: "NOVEMBER 2025",
+    title: "Company Incorporation",
+    description: "Shree Balaji Envirotech officially incorporated and registered. Legal formalities completed and team formation finalized.",
     icon: Factory,
   },
   {
-    year: "2023",
-    title: "First Production Line",
-    description: "Installed state-of-the-art pelletizing machinery with 5 TPH capacity. Started pilot production and quality testing.",
+    year: "MARCH 2026",
+    title: "Production Begins",
+    description: "Plant commissioned and running at full capacity. 5 TPH production line operational, serving thermal power plants and industrial clients.",
     icon: Award,
   },
   {
-    year: "2024",
-    title: "Commercial Operations",
-    description: "Launched full-scale commercial operations. Onboarded first major industrial clients including textile mills and brick kilns.",
-    icon: Truck,
-  },
-  {
-    year: "2024",
-    title: "Farmer Network",
-    description: "Established partnerships with 100+ farmers across Punjab for sustainable raw material sourcing. Created fair pricing model for crop residue.",
-    icon: TreePine,
-  },
-  {
-    year: "2025",
-    title: "Expansion & Growth",
-    description: "Planning capacity expansion to 10 TPH. Targeting new markets in Haryana and Rajasthan. Committed to processing 50,000+ tons annually.",
+    year: "FUTURE VISION",
+    title: "Expansion & Independence",
+    description: "Planning to increase production capacity with additional production lines. Installing solar plant for self-electricity generation to reduce dependency and costs.",
     icon: TrendingUp,
+  },
+  {
+    year: "FUTURE VISION",
+    title: "Self-Baling Operations",
+    description: "Establishing own baling operations for paddy straw collection to achieve cost-cutting in raw material procurement and ensure consistent supply.",
+    icon: TreePine,
   },
 ];
 
