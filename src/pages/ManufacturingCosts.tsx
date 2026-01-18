@@ -327,7 +327,7 @@ const ManufacturingCosts = () => {
                     Contact us for a customized cost breakdown based on your specific requirements and location
                   </p>
                   <a
-                    href="https://wa.me/919501005435"
+                    href="https://wa.me/916280610158"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors"

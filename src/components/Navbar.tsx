@@ -81,6 +81,8 @@ const Navbar = () => {
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4" />
+            <a href="tel:+916280610158" className="hover:underline">+91 62806 10158</a>
+            <span className="mx-1">|</span>
             <a href="tel:+918360410158" className="hover:underline">+91 83604 10158</a>
             <span className="mx-2">|</span>
             <a href="mailto:shreebalajienvirotech@gmail.com" className="hover:underline">shreebalajienvirotech@gmail.com</a>

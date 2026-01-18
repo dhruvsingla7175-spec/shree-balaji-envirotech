@@ -165,9 +165,9 @@ const BlogLayout = ({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                  <a href="tel:+918360410158">
+                  <a href="tel:+916280610158">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call: +91 83604 10158
+                    Call: +91 62806 10158
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
