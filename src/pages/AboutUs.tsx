@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Users, Target, Leaf, TrendingUp, IndianRupee, Recycle, History, Heart, Calendar, Factory, Handshake, Award, Truck, TreePine } from "lucide-react";
+import { Users, Target, Leaf, TrendingUp, IndianRupee, Recycle, History, Heart, Calendar, Factory, Handshake, Award, Truck, TreePine, Flame, Wind, Sprout, Users2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -411,6 +411,87 @@ const AboutUs = () => {
                   "Together, we bring diverse expertise from different industries, united by a shared commitment 
                   to create sustainable energy solutions that benefit farmers, industries, and the environment."
                 </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Environmental Impact Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <motion.div variants={fadeInUp} className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Leaf className="w-4 h-4" />
+                Environmental Impact
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Creating a <span className="text-primary">Sustainable Future</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Our commitment to the environment goes beyond business – we're actively fighting pollution and climate change
+              </p>
+            </motion.div>
+
+            {/* Impact Stats */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                { icon: Flame, value: "30,000+", label: "MT Paddy Straw Saved", desc: "From burning annually" },
+                { icon: Wind, value: "100,000+", label: "Tons CO₂ Reduced", desc: "Per year" },
+                { icon: Users2, value: "200+", label: "Farmers & Transporters", desc: "Indirect employment" },
+                { icon: Sprout, value: "27M", label: "Tonnes Available", desc: "Paddy straw in Punjab" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  variants={fadeInUp}
+                  className="group bg-card border border-border rounded-2xl p-6 text-center hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <stat.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                  <div className="font-semibold text-foreground mb-1">{stat.label}</div>
+                  <div className="text-sm text-muted-foreground">{stat.desc}</div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Impact Description */}
+            <motion.div variants={fadeInUp} className="bg-card border border-border rounded-3xl p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                    <Recycle className="w-5 h-5 text-primary" />
+                    Solving the Stubble Burning Crisis
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Every year, Punjab generates approximately <strong className="text-foreground">27 million tonnes</strong> of paddy straw. 
+                    Instead of burning this agricultural waste and contributing to severe air pollution, we transform it into 
+                    valuable biomass pellets – creating a sustainable fuel source while protecting our environment.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                    Economic & Social Benefits
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Our operations provide <strong className="text-foreground">direct employment to 12+ workers</strong> and create 
+                    income opportunities for <strong className="text-foreground">200+ farmers and transporters</strong>. Industries 
+                    switching to biomass save <strong className="text-foreground">30-40% on fuel costs</strong>, making it a 
+                    win-win for the economy and environment.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
