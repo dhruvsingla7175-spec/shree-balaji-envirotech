@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Home, Package, Sparkles, MessageSquare, Users, Wrench, ShoppingCart, BookOpen } from "lucide-react";
+import { Menu, X, Phone, Home, Package, Sparkles, MessageSquare, Users, BookOpen, Briefcase, ChevronDown, Factory, ClipboardCheck, Wrench, ShoppingCart } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
 
@@ -12,10 +12,15 @@ const scrollNavItems = [
   { label: "Contact", id: "contact", icon: MessageSquare },
 ];
 
+const businessNavItems = [
+  { label: "Manufacturing Costs", path: "/manufacturing-costs", icon: Factory, description: "Cost breakdown & analysis" },
+  { label: "Equipment", path: "/equipment", icon: Wrench, description: "Machinery & setup" },
+  { label: "Compliance", path: "/compliance", icon: ClipboardCheck, description: "Licenses & approvals" },
+  { label: "Buyers", path: "/buyers", icon: ShoppingCart, description: "Find pellet buyers" },
+];
+
 const pageNavItems = [
   { label: "About Us", path: "/about", icon: Users },
-  { label: "Equipment", path: "/equipment", icon: Wrench },
-  { label: "Buyers", path: "/buyers", icon: ShoppingCart },
   { label: "Blog", path: "/blog", icon: BookOpen },
 ];
 
@@ -49,6 +54,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const [isBusinessOpen, setIsBusinessOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,6 +146,55 @@ const Navbar = () => {
                   {item.label}
                 </NavButton>
               ))}
+              
+              {/* Business Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsBusinessOpen(true)}
+                onMouseLeave={() => setIsBusinessOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "relative font-medium transition-colors group flex items-center gap-1",
+                    isScrolled ? "text-foreground" : "text-primary-foreground"
+                  )}
+                >
+                  <Briefcase className="w-4 h-4" />
+                  Business
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-transform duration-200",
+                    isBusinessOpen && "rotate-180"
+                  )} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className={cn(
+                  "absolute top-full left-0 mt-2 w-64 bg-card rounded-xl shadow-elevated border border-border overflow-hidden transition-all duration-200 origin-top",
+                  isBusinessOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                )}>
+                  <div className="p-2">
+                    {businessNavItems.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted transition-colors group"
+                        >
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="font-medium text-foreground">{item.label}</div>
+                            <div className="text-xs text-muted-foreground">{item.description}</div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
               
               {/* Page Navigation Links */}
               {pageNavItems.map((item) => (
@@ -252,6 +307,33 @@ const Navbar = () => {
                 })}
               </div>
 
+              {/* Section Label - Business */}
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                Business
+              </div>
+              
+              {/* Business Navigation Items */}
+              <div className="space-y-1 mb-6">
+                {businessNavItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 text-foreground hover:bg-muted"
+                      style={{ 
+                        animationDelay: `${(index + 4) * 50}ms`,
+                        animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
+                      }}
+                    >
+                      <Icon className="w-5 h-5" />
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+
               {/* Section Label */}
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                 Explore
@@ -268,7 +350,7 @@ const Navbar = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 text-foreground hover:bg-muted"
                       style={{ 
-                        animationDelay: `${(index + 4) * 50}ms`,
+                        animationDelay: `${(index + 8) * 50}ms`,
                         animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
                       }}
                     >
