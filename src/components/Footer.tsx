@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
-import { Leaf, Mail, Phone, MapPin } from "lucide-react";
+import { Leaf, Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const location = useLocation();
@@ -142,6 +142,12 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 text-secondary mt-0.5" />
                 <span>Bathinda, Punjab, India</span>
+              </li>
+              <li className="flex items-center gap-3 text-primary-foreground/80">
+                <Instagram className="w-4 h-4 text-secondary" />
+                <a href="https://www.instagram.com/shreebalaji_envirotech/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  @shreebalaji_envirotech
+                </a>
               </li>
             </ul>
           </div>
