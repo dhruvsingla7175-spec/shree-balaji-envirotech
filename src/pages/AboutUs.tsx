@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Users, Target, Leaf, TrendingUp, IndianRupee, Recycle, History, Heart } from "lucide-react";
+import { Users, Target, Leaf, TrendingUp, IndianRupee, Recycle, History, Heart, Calendar, Factory, Handshake, Award, Truck, TreePine } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -65,6 +65,45 @@ const missionPoints = [
     icon: Heart,
     title: "Clear Field Waste",
     description: "Transforming agricultural residue into valuable fuel, solving the stubble disposal problem for farmers.",
+  },
+];
+
+const milestones = [
+  {
+    year: "2022",
+    title: "The Vision Begins",
+    description: "Six entrepreneurs from diverse business backgrounds unite with a shared vision to tackle stubble burning and provide sustainable fuel solutions.",
+    icon: Handshake,
+  },
+  {
+    year: "2023",
+    title: "Company Founded",
+    description: "Shree Balaji Envirotech officially established in Bathinda, Punjab. Acquired land and began setting up manufacturing infrastructure.",
+    icon: Factory,
+  },
+  {
+    year: "2023",
+    title: "First Production Line",
+    description: "Installed state-of-the-art pelletizing machinery with 5 TPH capacity. Started pilot production and quality testing.",
+    icon: Award,
+  },
+  {
+    year: "2024",
+    title: "Commercial Operations",
+    description: "Launched full-scale commercial operations. Onboarded first major industrial clients including textile mills and brick kilns.",
+    icon: Truck,
+  },
+  {
+    year: "2024",
+    title: "Farmer Network",
+    description: "Established partnerships with 100+ farmers across Punjab for sustainable raw material sourcing. Created fair pricing model for crop residue.",
+    icon: TreePine,
+  },
+  {
+    year: "2025",
+    title: "Expansion & Growth",
+    description: "Planning capacity expansion to 10 TPH. Targeting new markets in Haryana and Rajasthan. Committed to processing 50,000+ tons annually.",
+    icon: TrendingUp,
   },
 ];
 
@@ -174,8 +213,82 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent hidden lg:block" />
+        
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <motion.div variants={fadeInUp} className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Calendar className="w-4 h-4" />
+                Our Journey
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Milestones & <span className="text-primary">Achievements</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From vision to reality – our journey of building sustainable energy solutions
+              </p>
+            </motion.div>
+
+            <div className="relative">
+              {/* Timeline Line - Mobile */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-secondary/50 to-primary/50 lg:hidden" />
+              
+              {/* Timeline Items */}
+              <div className="space-y-8 lg:space-y-0">
+                {milestones.map((milestone, index) => (
+                  <motion.div
+                    key={index}
+                    variants={fadeInUp}
+                    className={`relative flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 ${
+                      index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                    }`}
+                  >
+                    {/* Content Card */}
+                    <div className={`flex-1 ml-16 lg:ml-0 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="group bg-card border border-border rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+                      >
+                        <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}>
+                          <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">
+                            {milestone.year}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-muted-foreground">{milestone.description}</p>
+                      </motion.div>
+                    </div>
+
+                    {/* Center Icon */}
+                    <div className="absolute left-0 lg:relative lg:left-auto flex-shrink-0">
+                      <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg border-4 border-background">
+                        <milestone.icon className="w-5 h-5 lg:w-7 lg:h-7 text-primary-foreground" />
+                      </div>
+                    </div>
+
+                    {/* Empty Space for alternating layout */}
+                    <div className="hidden lg:block flex-1" />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             variants={staggerContainer}
