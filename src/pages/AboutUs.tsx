@@ -76,7 +76,7 @@ const milestones = [
     icon: Handshake,
   },
   {
-    year: "2023",
+    year: "NOVEMBER 2025",
     title: "Company Founded",
     description: "Shree Balaji Envirotech officially established in Bathinda, Punjab. Acquired land and began setting up manufacturing infrastructure.",
     icon: Factory,
