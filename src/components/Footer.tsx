@@ -24,10 +24,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Shree Balaji Envirotech LLP" className="h-14 w-auto rounded-full" />
+              <img src={logo} alt="Shree Balaji Envirotech" className="h-14 w-auto rounded-full" />
               <div>
                 <div className="font-bold text-lg">Shree Balaji</div>
-                <div className="text-sm text-primary-foreground/80">Envirotech LLP</div>
+                <div className="text-sm text-primary-foreground/80">Envirotech</div>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/70">
-              © {new Date().getFullYear()} Shree Balaji Envirotech LLP. All rights reserved.
+              © {new Date().getFullYear()} Shree Balaji Envirotech. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/70 flex items-center gap-2">
               <Leaf className="w-4 h-4" />

@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "Where can I buy biomass pellets near Bathinda?",
-    answer: "Shree Balaji Envirotech LLP is a leading biomass pellet manufacturer in Bathinda, Punjab. We supply across Bathinda, Ludhiana, Jalandhar, Amritsar, Patiala, and all of North India. Call +91 83604 10158 for pricing and delivery."
+    answer: "Shree Balaji Envirotech is a leading biomass pellet manufacturer in Bathinda, Punjab. We supply across Bathinda, Ludhiana, Jalandhar, Amritsar, Patiala, and all of North India. Call +91 83604 10158 for pricing and delivery."
   },
   {
     question: "Are biomass pellets eligible for carbon credits?",

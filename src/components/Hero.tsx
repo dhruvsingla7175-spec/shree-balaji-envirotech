@@ -177,7 +177,7 @@ const Hero = () => {
               >
                 <img 
                   src={logo} 
-                  alt="Shree Balaji Envirotech LLP Logo" 
+                  alt="Shree Balaji Envirotech Logo" 
                   className="relative w-full max-w-sm h-auto drop-shadow-2xl animate-float rounded-2xl"
                 />
                 

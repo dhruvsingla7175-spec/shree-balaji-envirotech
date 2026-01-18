@@ -311,7 +311,7 @@ const StubbleBurningSolution = () => {
                 <h3 className="font-bold text-lg text-foreground mb-2">Growing Adoption Across Punjab</h3>
                 <p className="text-muted-foreground">
                   Districts like Sangrur, Patiala, and Bathinda are seeing rapid growth in pellet production. 
-                  Shree Balaji Envirotech LLP works with 200+ farmers annually, converting thousands of tons 
+                  Shree Balaji Envirotech works with 200+ farmers annually, converting thousands of tons 
                   of paddy straw into clean fuel.
                 </p>
               </div>
@@ -340,7 +340,7 @@ const StubbleBurningSolution = () => {
             <h2 className="text-2xl font-bold mb-4">Join the Solution</h2>
             <p className="mb-6 text-primary-foreground/90">
               Whether you're a farmer looking to sell straw or an industry seeking cleaner fuel, 
-              Shree Balaji Envirotech LLP connects both sides of the solution.
+              Shree Balaji Envirotech connects both sides of the solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

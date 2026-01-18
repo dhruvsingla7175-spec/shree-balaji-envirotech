@@ -9,7 +9,7 @@ const post = getPostBySlug('biomass-pellet-suppliers-near-bathinda')!;
 const faqs = [
   {
     question: "Who is the best biomass pellet supplier in Bathinda?",
-    answer: "Shree Balaji Envirotech LLP is a leading biomass pellet manufacturer in Bathinda, offering agro-waste and wood pellets with consistent quality, competitive pricing, and reliable delivery across Punjab. Contact: +91 83604 10158."
+    answer: "Shree Balaji Envirotech is a leading biomass pellet manufacturer in Bathinda, offering agro-waste and wood pellets with consistent quality, competitive pricing, and reliable delivery across Punjab. Contact: +91 83604 10158."
   },
   {
     question: "What should I check before buying biomass pellets?",
@@ -56,7 +56,7 @@ const BiomassSuppliersNearBathinda = () => {
               <span className="text-sm font-medium text-secondary">Featured Manufacturer</span>
             </div>
             
-            <h2 className="text-2xl font-bold text-foreground mb-4">Shree Balaji Envirotech LLP</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Shree Balaji Envirotech</h2>
             
             <p className="text-muted-foreground mb-6">
               A leading biomass pellet manufacturer in Bathinda, Punjab, offering premium quality agro-waste 
@@ -333,7 +333,7 @@ const BiomassSuppliersNearBathinda = () => {
           <div className="p-8 bg-gradient-to-br from-primary to-primary/80 rounded-2xl text-primary-foreground">
             <h2 className="text-2xl font-bold mb-4">Ready to Source Biomass Pellets?</h2>
             <p className="mb-6 text-primary-foreground/90">
-              Shree Balaji Envirotech LLP offers premium biomass pellets with transparent pricing, 
+              Shree Balaji Envirotech offers premium biomass pellets with transparent pricing, 
               quality certification, and reliable delivery across Punjab. Contact us for samples and quotes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

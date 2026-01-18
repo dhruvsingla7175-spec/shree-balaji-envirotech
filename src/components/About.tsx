@@ -73,7 +73,7 @@ const About = () => {
                 Transforming <span className="text-primary">Agricultural Waste</span> into Clean Energy
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Shree Balaji Envirotech LLP is a pioneer in manufacturing premium-grade biomass pellets. 
+                Shree Balaji Envirotech is a pioneer in manufacturing premium-grade biomass pellets. 
                 We convert agricultural residues into highly efficient, eco-friendly fuel that powers industries 
                 while reducing carbon footprint.
               </p>
