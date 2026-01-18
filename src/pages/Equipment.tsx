@@ -12,9 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Factory,
-  Gauge,
-  Shield,
-  Landmark
+  Shield
 } from "lucide-react";
 
 const fadeInUp = {
@@ -80,8 +78,7 @@ const equipmentList = [
     name: "Automatic Feeder with Stand",
     specs: ["Watch Glass / Stone Separator with structure 3 ton", "Screw: 3HP with VFD", "Feeder Belt Motor with Gearbox", "5 HP Roller Drive System", "3 HP Cutter Roller Drum Assembly", "Brand: PROVEG"],
     use: "Controlled feeding and Stone/metal removal",
-    qty: 1,
-    price: "₹7,50,000"
+    qty: 1
   },
   {
     srNo: 8,
@@ -96,7 +93,6 @@ const equipmentList = [
     specs: ["Power: 200+4 KW", "Fan blower: CM-10C-55KW", "Cyclone Dia: Ø250", "Air lock: 700/5.5KW", "Hammers: 126 PCS", "Air pipe: Ø525×10M", "Sieve: 4 pcs (6-8mm holes)", "PLC ECP box & full accessory", "Brand: YULONG"],
     use: "Grinding",
     qty: 1,
-    price: "₹35,00,000",
     highlight: true
   },
   {
@@ -119,7 +115,6 @@ const equipmentList = [
     specs: ["Power: 160+2.2+0.55+2.2+0.05 KW", "Die: 6mm/8mm", "Ring-die (stainless steel)", "Roller assembly with roller shell", "2 sets Auto-lubrication device", "Cooling fan blower", "Soft starter", "Brand: YULONG"],
     use: "Compressing powdered biomass into high-density pellets",
     qty: 2,
-    price: "₹62,00,000",
     highlight: true
   },
   {
@@ -155,8 +150,7 @@ const equipmentList = [
     name: "Plant Accessories",
     specs: ["Magnet system on conveyor", "Welding machine, grinders", "Platforms & ladders", "Air compressor", "Supporting platforms with access ladders", "Anti-vibration wedge for all machines"],
     use: "Plant support infrastructure",
-    qty: 1,
-    price: "₹2,70,000"
+    qty: 1
   },
   {
     srNo: 18,
@@ -172,21 +166,6 @@ const equipmentList = [
     use: "Complete plant integration",
     qty: 1
   }
-];
-
-const plantSpecs = [
-  { label: "Total EXW Price", value: "₹1,07,20,000" },
-  { label: "GST", value: "5%" },
-  { label: "Total Investment", value: "₹1,12,56,000" },
-  { label: "Shed Size", value: "70ft × 180ft × 33ft height" },
-  { label: "Load Requirement", value: "725 KW" }
-];
-
-const paymentTerms = [
-  { stage: "Advance", percent: "20%", note: "Against confirmed Purchase Order" },
-  { stage: "Pre-Dispatch", percent: "65%", note: "After written readiness for dispatch" },
-  { stage: "During Installation", percent: "10%", note: "On-site setup" },
-  { stage: "Retention Balance", percent: "5%", note: "After complete setup" }
 ];
 
 const Equipment = () => {
@@ -311,11 +290,6 @@ const Equipment = () => {
                                 <span className="text-foreground/80">{item.use}</span>
                               </span>
                               <Badge variant="secondary">Qty: {item.qty}</Badge>
-                              {item.price && (
-                                <Badge className="bg-emerald-500/10 text-emerald-600 border-emerald-500/20">
-                                  {item.price}
-                                </Badge>
-                              )}
                             </div>
                           </div>
                         </div>
@@ -323,75 +297,6 @@ const Equipment = () => {
                     </Card>
                   </motion.div>
                 ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Pricing & Terms */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="max-w-5xl mx-auto"
-            >
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Plant Specifications */}
-                <motion.div variants={fadeInUp}>
-                  <Card className="h-full border-border/50 bg-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-foreground">
-                        <Gauge className="w-5 h-5 text-primary" />
-                        Plant Specifications
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        {plantSpecs.map((spec, index) => (
-                          <div key={index} className="flex items-center justify-between py-2 border-b border-border/50 last:border-0">
-                            <span className="text-foreground/70">{spec.label}</span>
-                            <span className="font-semibold text-foreground">{spec.value}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="mt-4 p-4 bg-muted/50 rounded-lg">
-                        <p className="text-sm text-foreground/70">
-                          <strong className="text-foreground">Note:</strong> Transportation cost extra. GST @ 5% applicable.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                {/* Payment Terms */}
-                <motion.div variants={fadeInUp}>
-                  <Card className="h-full border-border/50 bg-card">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-foreground">
-                        <Landmark className="w-5 h-5 text-primary" />
-                        Payment Terms
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        {paymentTerms.map((term, index) => (
-                          <div key={index} className="flex items-center gap-4">
-                            <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-                              <span className="text-xl font-bold text-primary">{term.percent}</span>
-                            </div>
-                            <div>
-                              <p className="font-semibold text-foreground">{term.stage}</p>
-                              <p className="text-sm text-foreground/70">{term.note}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
               </div>
             </motion.div>
           </div>
