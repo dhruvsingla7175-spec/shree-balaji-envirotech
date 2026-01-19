@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Home, Package, Sparkles, MessageSquare, Users, BookOpen, Briefcase, ChevronDown, Factory, ClipboardCheck, Wrench, ShoppingCart } from "lucide-react";
+import { Menu, X, Phone, Home, Package, Sparkles, MessageSquare, Users, BookOpen, Briefcase, ChevronDown, Factory, ClipboardCheck, Wrench, ShoppingCart, Building2, Wheat, Milk, FileText, Flame, Egg, Fuel, UtensilsCrossed, Building } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +17,18 @@ const businessNavItems = [
   { label: "Equipment", path: "/equipment", icon: Wrench, description: "Machinery & setup" },
   { label: "Compliance", path: "/compliance", icon: ClipboardCheck, description: "Licenses & approvals" },
   { label: "Buyers", path: "/buyers", icon: ShoppingCart, description: "Find pellet buyers" },
+];
+
+const industryNavItems = [
+  { label: "Textile Mills", path: "/awareness/textile-mills-fuel-punjab", icon: Building2, description: "Fuel solutions for textiles" },
+  { label: "Rice Mills", path: "/awareness/rice-mills-fuel-punjab", icon: Wheat, description: "Biomass for rice processing" },
+  { label: "Dairy Plants", path: "/awareness/dairy-plants-fuel-punjab", icon: Milk, description: "Sustainable dairy operations" },
+  { label: "Paper Mills", path: "/awareness/paper-mills-fuel-punjab", icon: FileText, description: "Clean energy for paper" },
+  { label: "Distilleries", path: "/awareness/distilleries-fuel-punjab", icon: Flame, description: "Efficient distillery fuel" },
+  { label: "Poultry Farms", path: "/awareness/poultry-farms-fuel-punjab", icon: Egg, description: "Heating for poultry" },
+  { label: "Brick Kilns", path: "/awareness/brick-kilns-biomass-punjab", icon: Building, description: "NGT compliant fuel" },
+  { label: "Food Processing", path: "/awareness/food-processing-fuel-punjab", icon: UtensilsCrossed, description: "Food industry solutions" },
+  { label: "Industrial Fuel", path: "/awareness/industrial-fuel-costs-punjab", icon: Fuel, description: "General fuel cost savings" },
 ];
 
 const pageNavItems = [
@@ -55,6 +67,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isBusinessOpen, setIsBusinessOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -175,6 +188,55 @@ const Navbar = () => {
                 )}>
                   <div className="p-2">
                     {businessNavItems.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted transition-colors group"
+                        >
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="font-medium text-foreground">{item.label}</div>
+                            <div className="text-xs text-muted-foreground">{item.description}</div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Industries Dropdown */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "relative font-medium transition-colors group flex items-center gap-1",
+                    isScrolled ? "text-foreground" : "text-primary-foreground"
+                  )}
+                >
+                  <Building2 className="w-4 h-4" />
+                  Industries
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-transform duration-200",
+                    isIndustriesOpen && "rotate-180"
+                  )} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className={cn(
+                  "absolute top-full right-0 mt-2 w-72 bg-card rounded-xl shadow-elevated border border-border overflow-hidden transition-all duration-200 origin-top z-50",
+                  isIndustriesOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                )}>
+                  <div className="p-2 max-h-[400px] overflow-y-auto">
+                    {industryNavItems.map((item) => {
                       const Icon = item.icon;
                       return (
                         <Link
@@ -334,6 +396,33 @@ const Navbar = () => {
                 })}
               </div>
 
+              {/* Section Label - Industries */}
+              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                Industries
+              </div>
+              
+              {/* Industries Navigation Items */}
+              <div className="space-y-1 mb-6">
+                {industryNavItems.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 text-foreground hover:bg-muted"
+                      style={{ 
+                        animationDelay: `${(index + 8) * 50}ms`,
+                        animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
+                      }}
+                    >
+                      <Icon className="w-5 h-5" />
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+
               {/* Section Label */}
               <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                 Explore
@@ -350,7 +439,7 @@ const Navbar = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="flex items-center gap-3 w-full text-left font-medium py-3 px-4 rounded-xl transition-all duration-200 text-foreground hover:bg-muted"
                       style={{ 
-                        animationDelay: `${(index + 8) * 50}ms`,
+                        animationDelay: `${(index + 17) * 50}ms`,
                         animation: isMobileMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
                       }}
                     >
