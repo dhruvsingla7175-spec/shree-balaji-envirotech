@@ -216,4 +216,22 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Parallax utilities */
+  .parallax-slow {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  /* Safe area for mobile bottom nav */
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  /* Lazy loading image placeholder */
+  .img-lazy {
+    background: linear-gradient(90deg, hsl(var(--muted)) 0%, hsl(var(--muted) / 0.5) 50%, hsl(var(--muted)) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
 }
