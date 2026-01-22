@@ -91,6 +91,8 @@ const BrickKilnsBiomassPunjab = () => {
         ctaDescription="Get a free assessment of your fuel consumption and calculate exact savings with biomass pellets."
         
         faqs={faqs}
+        currentSlug="brick-kilns-biomass-punjab"
+        currentCategory="awareness"
       />
     </>
   );

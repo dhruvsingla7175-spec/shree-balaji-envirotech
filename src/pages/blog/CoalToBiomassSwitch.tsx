@@ -47,6 +47,8 @@ const CoalToBiomassSwitch = () => {
         publishDate={post.publishDate}
         readTime={post.readTime}
         breadcrumbs={[{ label: 'Blog', href: '/blog' }]}
+        currentSlug={post.slug}
+        currentCategory={post.category}
       >
         {/* Introduction */}
         <section className="mb-12">
@@ -349,28 +351,6 @@ const CoalToBiomassSwitch = () => {
 
         {/* FAQs */}
         <FAQSection faqs={faqs} />
-
-        {/* Related */}
-        <section className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold text-foreground mb-4">Related Articles</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/blog/biomass-pellets-complete-guide-punjab" className="text-primary hover:underline">
-                → Biomass Pellets: Complete Guide for Industries in Punjab
-              </a>
-            </li>
-            <li>
-              <a href="/blog/biomass-pellet-price-punjab-2025" className="text-primary hover:underline">
-                → Biomass Pellet Prices in Punjab 2025: Complete Market Analysis
-              </a>
-            </li>
-            <li>
-              <a href="/awareness/industrial-fuel-costs-punjab" className="text-primary hover:underline">
-                → Industrial Fuel Costs Crushing Punjab Businesses? Here's the Fix
-              </a>
-            </li>
-          </ul>
-        </section>
       </BlogLayout>
     </>
   );

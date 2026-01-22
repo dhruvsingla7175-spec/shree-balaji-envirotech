@@ -101,6 +101,8 @@ const TextileMillsFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your current fuel consumption, boiler type, and production schedule."
         
         faqs={faqs}
+        currentSlug="textile-mills-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

@@ -101,6 +101,8 @@ const RiceMillsFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your milling capacity, current fuel mix, and seasonal operations."
         
         faqs={faqs}
+        currentSlug="rice-mills-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

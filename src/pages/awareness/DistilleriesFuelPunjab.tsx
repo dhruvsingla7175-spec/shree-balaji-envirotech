@@ -101,6 +101,8 @@ const DistilleriesFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your production capacity, current fuel mix, and operational requirements."
         
         faqs={faqs}
+        currentSlug="distilleries-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

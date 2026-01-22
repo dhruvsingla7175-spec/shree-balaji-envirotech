@@ -101,6 +101,8 @@ const PoultryFarmsFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your flock size, current heating method, and seasonal requirements."
         
         faqs={faqs}
+        currentSlug="poultry-farms-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

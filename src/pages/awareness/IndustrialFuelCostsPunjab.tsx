@@ -73,6 +73,8 @@ const IndustrialFuelCostsPunjab = () => {
         ctaDescription="Get a free fuel cost analysis and see exactly how much your factory can save with biomass pellets."
         
         faqs={faqs}
+        currentSlug="industrial-fuel-costs-punjab"
+        currentCategory="awareness"
       />
     </>
   );
