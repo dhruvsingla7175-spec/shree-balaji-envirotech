@@ -1,12 +1,15 @@
+import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowRight, Leaf, Tag } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Leaf, Tag, Search, X } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
-import { allPosts, getFeaturedPosts } from '@/data/blogPosts';
+import BlogSidebar from '@/components/BlogSidebar';
+import { allPosts, getFeaturedPosts, BlogPost } from '@/data/blogPosts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,22 +21,69 @@ const staggerContainer = {
   visible: { transition: { staggerChildren: 0.1 } }
 };
 
-const categoryLabels = {
+const categoryLabels: Record<BlogPost['category'], string> = {
   guide: 'Guide',
   awareness: 'Industry Solution',
   industry: 'Industry News',
   local: 'Local Focus',
 };
 
-const categoryColors = {
+const categoryColors: Record<BlogPost['category'], string> = {
   guide: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
   awareness: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200',
   industry: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
   local: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
 };
 
+// Thumbnail images based on category
+const categoryThumbnails: Record<BlogPost['category'], string> = {
+  guide: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=300&h=200&fit=crop',
+  awareness: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=300&h=200&fit=crop',
+  industry: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=300&h=200&fit=crop',
+  local: 'https://images.unsplash.com/photo-1518173946687-a4c036bc4add?w=300&h=200&fit=crop',
+};
+
 const Blog = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState<BlogPost['category'] | null>(null);
+  
   const featuredPosts = getFeaturedPosts();
+
+  // Filter posts based on search and category
+  const filteredPosts = useMemo(() => {
+    let posts = allPosts;
+
+    if (activeCategory) {
+      posts = posts.filter(post => post.category === activeCategory);
+    }
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      posts = posts.filter(post => 
+        post.title.toLowerCase().includes(query) ||
+        post.excerpt.toLowerCase().includes(query) ||
+        post.primaryKeyword.toLowerCase().includes(query) ||
+        post.secondaryKeywords.some(kw => kw.toLowerCase().includes(query))
+      );
+    }
+
+    return posts;
+  }, [searchQuery, activeCategory]);
+
+  const getPostUrl = (post: BlogPost) => {
+    if (post.isAwareness && post.awarenessPath) {
+      return post.awarenessPath;
+    }
+    return `/blog/${post.slug}`;
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setActiveCategory(null);
+  };
+
+  const hasActiveFilters = searchQuery.trim() || activeCategory;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -46,7 +96,7 @@ const Blog = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 relative z-10">
@@ -87,140 +137,230 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Featured Posts */}
-      {featuredPosts.length > 0 && (
-        <section className="py-12 border-b border-border">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-2xl font-bold text-foreground mb-8 flex items-center gap-2"
-            >
-              <span className="w-10 h-1 bg-primary rounded-full" />
-              Featured Articles
-            </motion.h2>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {featuredPosts.map((post) => (
-                <motion.div key={post.slug} variants={fadeInUp}>
-                  <Link to={`/blog/${post.slug}`}>
-                    <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50 group">
-                      <CardHeader>
-                        <div className="flex items-center gap-2 mb-2">
-                          <Badge className={categoryColors[post.category]}>
-                            {categoryLabels[post.category]}
-                          </Badge>
-                          {post.featured && (
-                            <Badge variant="outline" className="border-secondary text-secondary">
-                              Featured
-                            </Badge>
-                          )}
-                        </div>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
-                          {post.title}
-                        </CardTitle>
-                        <CardDescription className="line-clamp-2">
-                          {post.excerpt}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="flex items-center justify-between text-sm text-muted-foreground">
-                          <div className="flex items-center gap-4">
-                            <span className="flex items-center gap-1">
-                              <Calendar className="w-4 h-4" />
-                              {post.publishDate}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              {post.readTime}
-                            </span>
-                          </div>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-primary" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* All Posts (Blog + Awareness merged) */}
-      <section className="py-16">
+      {/* Main Content with Sidebar */}
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-foreground mb-8 flex items-center gap-2"
-          >
-            <span className="w-10 h-1 bg-secondary rounded-full" />
-            All Articles & Industry Solutions
-          </motion.h2>
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content */}
+            <main className="flex-1 min-w-0">
+              {/* Active Filters Bar */}
+              {hasActiveFilters && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 p-4 bg-muted/50 rounded-lg border border-border flex flex-wrap items-center gap-3"
+                >
+                  <span className="text-sm text-muted-foreground">Active filters:</span>
+                  
+                  {searchQuery && (
+                    <Badge variant="secondary" className="flex items-center gap-1.5">
+                      <Search className="w-3 h-3" />
+                      "{searchQuery}"
+                      <button onClick={() => setSearchQuery('')} className="ml-1 hover:text-destructive">
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
+                  
+                  {activeCategory && (
+                    <Badge variant="secondary" className="flex items-center gap-1.5">
+                      Category: {categoryLabels[activeCategory]}
+                      <button onClick={() => setActiveCategory(null)} className="ml-1 hover:text-destructive">
+                        <X className="w-3 h-3" />
+                      </button>
+                    </Badge>
+                  )}
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            {allPosts.map((post) => (
-              <motion.div key={post.slug} variants={fadeInUp}>
-                <Link to={post.isAwareness ? (post.awarenessPath || `/awareness/${post.slug}`) : `/blog/${post.slug}`}>
-                  <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50 group">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col md:flex-row md:items-center gap-4">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2">
-                            <Badge className={categoryColors[post.category]}>
-                              {categoryLabels[post.category]}
-                            </Badge>
-                            {post.featured && (
-                              <Badge variant="outline" className="border-secondary text-secondary">
-                                Featured
-                              </Badge>
-                            )}
-                          </div>
-                          <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                            {post.title}
-                          </h3>
-                          <p className="text-muted-foreground mb-3">{post.excerpt}</p>
-                          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                            <Tag className="w-3 h-3" />
-                            {post.secondaryKeywords.slice(0, 3).map((keyword, index) => (
-                              <span key={index} className="bg-muted px-2 py-0.5 rounded">
-                                {keyword}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="flex md:flex-col items-center gap-4 md:gap-2 text-sm text-muted-foreground md:text-right">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {post.publishDate}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {post.readTime}
-                          </span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
+                  <Button variant="ghost" size="sm" onClick={clearFilters} className="ml-auto">
+                    Clear All
+                  </Button>
+                </motion.div>
+              )}
+
+              {/* Results Count */}
+              <div className="mb-6">
+                <p className="text-sm text-muted-foreground">
+                  Showing <span className="font-semibold text-foreground">{filteredPosts.length}</span> 
+                  {filteredPosts.length === 1 ? ' article' : ' articles'}
+                  {activeCategory && <span> in <span className="text-primary">{categoryLabels[activeCategory]}</span></span>}
+                </p>
+              </div>
+
+              {/* Featured Posts (only show when no filters) */}
+              {!hasActiveFilters && featuredPosts.length > 0 && (
+                <div className="mb-12">
+                  <motion.h2
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="text-xl font-bold text-foreground mb-6 flex items-center gap-2"
+                  >
+                    <span className="w-8 h-1 bg-primary rounded-full" />
+                    Featured Articles
+                  </motion.h2>
+
+                  <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid md:grid-cols-2 gap-6"
+                  >
+                    {featuredPosts.slice(0, 2).map((post) => (
+                      <motion.div key={post.slug} variants={fadeInUp}>
+                        <Link to={getPostUrl(post)}>
+                          <Card className="h-full hover:shadow-lg transition-all duration-300 hover:border-primary/50 group overflow-hidden">
+                            <div className="aspect-[16/9] relative overflow-hidden">
+                              <img 
+                                src={categoryThumbnails[post.category]} 
+                                alt={post.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                              <div className="absolute bottom-4 left-4 right-4">
+                                <Badge className={categoryColors[post.category]}>
+                                  {categoryLabels[post.category]}
+                                </Badge>
+                              </div>
+                            </div>
+                            <CardHeader className="pb-2">
+                              <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2">
+                                {post.title}
+                              </CardTitle>
+                              <CardDescription className="line-clamp-2">
+                                {post.excerpt}
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="flex items-center justify-between text-sm text-muted-foreground">
+                                <div className="flex items-center gap-3">
+                                  <span className="flex items-center gap-1">
+                                    <Calendar className="w-4 h-4" />
+                                    {post.publishDate}
+                                  </span>
+                                  <span className="flex items-center gap-1">
+                                    <Clock className="w-4 h-4" />
+                                    {post.readTime}
+                                  </span>
+                                </div>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-primary" />
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+              )}
+
+              {/* All Posts List */}
+              <div>
+                <motion.h2
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="text-xl font-bold text-foreground mb-6 flex items-center gap-2"
+                >
+                  <span className="w-8 h-1 bg-secondary rounded-full" />
+                  {hasActiveFilters ? 'Search Results' : 'All Articles'}
+                </motion.h2>
+
+                {filteredPosts.length === 0 ? (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-center py-12 bg-muted/30 rounded-xl border border-dashed border-border"
+                  >
+                    <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-foreground mb-2">No articles found</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Try adjusting your search or filter criteria
+                    </p>
+                    <Button onClick={clearFilters}>Clear Filters</Button>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="space-y-4"
+                  >
+                    {filteredPosts.map((post) => (
+                      <motion.div key={post.slug} variants={fadeInUp}>
+                        <Link to={getPostUrl(post)}>
+                          <Card className="hover:shadow-md transition-all duration-300 hover:border-primary/50 group overflow-hidden">
+                            <CardContent className="p-0">
+                              <div className="flex flex-col sm:flex-row">
+                                {/* Thumbnail */}
+                                <div className="sm:w-48 md:w-56 flex-shrink-0">
+                                  <div className="aspect-[16/10] sm:h-full relative overflow-hidden">
+                                    <img 
+                                      src={categoryThumbnails[post.category]} 
+                                      alt={post.title}
+                                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                                
+                                {/* Content */}
+                                <div className="flex-1 p-5">
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <Badge className={`${categoryColors[post.category]} text-xs`}>
+                                      {categoryLabels[post.category]}
+                                    </Badge>
+                                    {post.featured && (
+                                      <Badge variant="outline" className="border-secondary text-secondary text-xs">
+                                        Featured
+                                      </Badge>
+                                    )}
+                                  </div>
+                                  
+                                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                                    {post.title}
+                                  </h3>
+                                  
+                                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                                    {post.excerpt}
+                                  </p>
+                                  
+                                  <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                                    <span className="flex items-center gap-1">
+                                      <Calendar className="w-3.5 h-3.5" />
+                                      {post.publishDate}
+                                    </span>
+                                    <span className="flex items-center gap-1">
+                                      <Clock className="w-3.5 h-3.5" />
+                                      {post.readTime}
+                                    </span>
+                                    <span className="hidden md:flex items-center gap-1">
+                                      <Tag className="w-3.5 h-3.5" />
+                                      {post.primaryKeyword}
+                                    </span>
+                                    <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform text-primary" />
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
+            </main>
+
+            {/* Sidebar */}
+            <BlogSidebar 
+              onSearch={setSearchQuery}
+              onCategoryFilter={setActiveCategory}
+              activeCategory={activeCategory}
+            />
+          </div>
         </div>
       </section>
 
