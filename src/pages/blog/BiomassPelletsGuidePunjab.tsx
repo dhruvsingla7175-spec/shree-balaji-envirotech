@@ -47,6 +47,8 @@ const BiomassPelletsGuidePunjab = () => {
         publishDate={post.publishDate}
         readTime={post.readTime}
         breadcrumbs={[{ label: 'Blog', href: '/blog' }]}
+        currentSlug={post.slug}
+        currentCategory={post.category}
       >
         {/* Introduction */}
         <section className="mb-12">
@@ -292,28 +294,6 @@ const BiomassPelletsGuidePunjab = () => {
 
         {/* FAQs */}
         <FAQSection faqs={faqs} />
-
-        {/* Internal Links */}
-        <section className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold text-foreground mb-4">Related Articles</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/blog/stubble-burning-solution-punjab-biomass-pellets" className="text-primary hover:underline">
-                → Stubble Burning in Punjab: How Biomass Pellets Solve the Crisis
-              </a>
-            </li>
-            <li>
-              <a href="/blog/coal-to-biomass-switch-industrial-boilers" className="text-primary hover:underline">
-                → Switch from Coal to Biomass Pellets: Complete Industrial Guide
-              </a>
-            </li>
-            <li>
-              <a href="/blog/biomass-pellet-price-punjab-2025" className="text-primary hover:underline">
-                → Biomass Pellet Prices in Punjab 2025: Complete Market Analysis
-              </a>
-            </li>
-          </ul>
-        </section>
       </BlogLayout>
     </>
   );

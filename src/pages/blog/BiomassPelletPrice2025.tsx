@@ -47,6 +47,8 @@ const BiomassPelletPrice2025 = () => {
         publishDate={post.publishDate}
         readTime={post.readTime}
         breadcrumbs={[{ label: 'Blog', href: '/blog' }]}
+        currentSlug={post.slug}
+        currentCategory={post.category}
       >
         {/* Price Summary */}
         <section className="mb-12">
@@ -355,27 +357,6 @@ const BiomassPelletPrice2025 = () => {
         {/* FAQs */}
         <FAQSection faqs={faqs} />
 
-        {/* Related */}
-        <section className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold text-foreground mb-4">Related Articles</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/blog/biomass-pellets-complete-guide-punjab" className="text-primary hover:underline">
-                → Biomass Pellets: Complete Guide for Industries in Punjab
-              </a>
-            </li>
-            <li>
-              <a href="/blog/biomass-pellet-suppliers-near-bathinda" className="text-primary hover:underline">
-                → Biomass Pellet Suppliers Near Bathinda: Buying Guide 2025
-              </a>
-            </li>
-            <li>
-              <a href="/blog/coal-to-biomass-switch-industrial-boilers" className="text-primary hover:underline">
-                → Switch from Coal to Biomass Pellets: Complete Industrial Guide
-              </a>
-            </li>
-          </ul>
-        </section>
       </BlogLayout>
     </>
   );

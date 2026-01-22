@@ -101,6 +101,8 @@ const DairyPlantsFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your processing capacity, current fuel consumption, and operational hours."
         
         faqs={faqs}
+        currentSlug="dairy-plants-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

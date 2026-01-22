@@ -10,8 +10,10 @@ import {
 import Navbar from './Navbar';
 import Footer from './Footer';
 import WhatsAppButton from './WhatsAppButton';
+import RelatedPosts from './RelatedPosts';
 import { Button } from './ui/button';
 import FAQSection from './FAQSection';
+import { BlogPost } from '@/data/blogPosts';
 
 interface PainPoint {
   text: string;
@@ -88,6 +90,10 @@ interface AwarenessPageProps {
   // FAQs
   faqs: FAQ[];
   
+  // Related Posts
+  currentSlug?: string;
+  currentCategory?: BlogPost['category'];
+  
   children?: ReactNode;
 }
 
@@ -121,6 +127,8 @@ const AwarenessPageLayout = ({
   ctaTitle,
   ctaDescription,
   faqs,
+  currentSlug,
+  currentCategory = 'awareness',
   children
 }: AwarenessPageProps) => {
   return (
@@ -593,6 +601,21 @@ const AwarenessPageLayout = ({
           </div>
         </div>
       </section>
+
+      {/* Related Articles */}
+      {currentSlug && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <RelatedPosts 
+                currentSlug={currentSlug} 
+                currentCategory={currentCategory} 
+                maxPosts={3}
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Additional Content */}
       {children}

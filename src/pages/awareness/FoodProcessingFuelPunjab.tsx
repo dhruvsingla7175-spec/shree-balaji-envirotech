@@ -91,6 +91,8 @@ const FoodProcessingFuelPunjab = () => {
         ctaDescription="Share your daily capacity and current fuel consumption—we'll show you exact monthly savings with biomass pellets."
         
         faqs={faqs}
+        currentSlug="food-processing-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Phone, Mail, MapPin, Calendar, Clock, User, ChevronRight, Home } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import RelatedPosts from './RelatedPosts';
 import { Button } from './ui/button';
+import { BlogPost } from '@/data/blogPosts';
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -15,6 +17,8 @@ interface BlogLayoutProps {
   readTime?: string;
   breadcrumbs?: { label: string; href: string }[];
   showCTA?: boolean;
+  currentSlug?: string;
+  currentCategory?: BlogPost['category'];
 }
 
 const fadeInUp = {
@@ -31,6 +35,8 @@ const BlogLayout = ({
   readTime,
   breadcrumbs = [],
   showCTA = true,
+  currentSlug,
+  currentCategory = 'guide',
 }: BlogLayoutProps) => {
   const location = useLocation();
   const isAwarenessPage = location.pathname.startsWith('/awareness');
@@ -182,6 +188,15 @@ const BlogLayout = ({
                 <span>Serving Bathinda, Ludhiana, Jalandhar, Amritsar, Patiala & all of Punjab</span>
               </div>
             </motion.div>
+          )}
+
+          {/* Related Posts */}
+          {currentSlug && (
+            <RelatedPosts 
+              currentSlug={currentSlug} 
+              currentCategory={currentCategory} 
+              maxPosts={3}
+            />
           )}
         </div>
       </article>

@@ -101,6 +101,8 @@ const PaperMillsFuelPunjab = () => {
         ctaDescription="We'll calculate your exact savings potential based on your production capacity, current fuel consumption, and operational requirements."
         
         faqs={faqs}
+        currentSlug="paper-mills-fuel-punjab"
+        currentCategory="awareness"
       />
     </>
   );

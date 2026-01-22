@@ -47,6 +47,8 @@ const StubbleBurningSolution = () => {
         publishDate={post.publishDate}
         readTime={post.readTime}
         breadcrumbs={[{ label: 'Blog', href: '/blog' }]}
+        currentSlug={post.slug}
+        currentCategory={post.category}
       >
         {/* Problem Statement */}
         <section className="mb-12">
@@ -362,28 +364,6 @@ const StubbleBurningSolution = () => {
 
         {/* FAQs */}
         <FAQSection faqs={faqs} />
-
-        {/* Related */}
-        <section className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold text-foreground mb-4">Related Articles</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/blog/biomass-pellets-complete-guide-punjab" className="text-primary hover:underline">
-                → Biomass Pellets: Complete Guide for Industries in Punjab
-              </a>
-            </li>
-            <li>
-              <a href="/blog/coal-to-biomass-switch-industrial-boilers" className="text-primary hover:underline">
-                → Switch from Coal to Biomass Pellets: Complete Industrial Guide
-              </a>
-            </li>
-            <li>
-              <a href="/awareness/industrial-fuel-costs-punjab" className="text-primary hover:underline">
-                → Industrial Fuel Costs Crushing Punjab Businesses? Here's the Fix
-              </a>
-            </li>
-          </ul>
-        </section>
       </BlogLayout>
     </>
   );
