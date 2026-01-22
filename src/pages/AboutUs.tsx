@@ -5,7 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
-
+import Breadcrumbs from "@/components/Breadcrumbs";
+import BackToTop from "@/components/BackToTop";
+import BottomNav from "@/components/BottomNav";
 const team = [
   {
     name: "Dhruv Singla",
@@ -120,7 +122,7 @@ const AboutUs = () => {
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16 md:pb-0">
       <SEOHead
         title="About Us - Shree Balaji Envirotech | Biomass Pellet Manufacturer Punjab"
         description="Learn about Shree Balaji Envirotech - Punjab's leading biomass pellet manufacturer. Meet our team of dedicated partners committed to sustainable energy and environmental protection."
@@ -139,6 +141,11 @@ const AboutUs = () => {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
+          {/* Breadcrumbs */}
+          <div className="mb-6">
+            <Breadcrumbs />
+          </div>
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -494,6 +501,8 @@ const AboutUs = () => {
 
       <Footer />
       <WhatsAppButton />
+      <BackToTop />
+      <BottomNav />
     </div>
   );
 };
