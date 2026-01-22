@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowRight, Leaf, Tag, Search, X } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Leaf, Tag, Search, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -10,6 +10,8 @@ import { allPosts, getFeaturedPosts, BlogPost } from '@/data/blogPosts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+
+const POSTS_PER_PAGE = 6;
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -46,6 +48,7 @@ const categoryThumbnails: Record<BlogPost['category'], string> = {
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<BlogPost['category'] | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
   
   const featuredPosts = getFeaturedPosts();
 
@@ -70,6 +73,24 @@ const Blog = () => {
     return posts;
   }, [searchQuery, activeCategory]);
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = useMemo(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  // Reset to page 1 when filters change
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryFilter = (category: BlogPost['category'] | null) => {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  };
+
   const getPostUrl = (post: BlogPost) => {
     if (post.isAwareness && post.awarenessPath) {
       return post.awarenessPath;
@@ -80,9 +101,39 @@ const Blog = () => {
   const clearFilters = () => {
     setSearchQuery('');
     setActiveCategory(null);
+    setCurrentPage(1);
   };
 
   const hasActiveFilters = searchQuery.trim() || activeCategory;
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of article list
+    document.getElementById('articles-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const getPageNumbers = () => {
+    const pages: (number | 'ellipsis')[] = [];
+    
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      
+      if (currentPage > 3) pages.push('ellipsis');
+      
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+      
+      for (let i = start; i <= end; i++) pages.push(i);
+      
+      if (currentPage < totalPages - 2) pages.push('ellipsis');
+      
+      pages.push(totalPages);
+    }
+    
+    return pages;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -256,7 +307,7 @@ const Blog = () => {
               )}
 
               {/* All Posts List */}
-              <div>
+              <div id="articles-list">
                 <motion.h2
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -281,83 +332,137 @@ const Blog = () => {
                     <Button onClick={clearFilters}>Clear Filters</Button>
                   </motion.div>
                 ) : (
-                  <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="space-y-4"
-                  >
-                    {filteredPosts.map((post) => (
-                      <motion.div key={post.slug} variants={fadeInUp}>
-                        <Link to={getPostUrl(post)}>
-                          <Card className="hover:shadow-md transition-all duration-300 hover:border-primary/50 group overflow-hidden">
-                            <CardContent className="p-0">
-                              <div className="flex flex-col sm:flex-row">
-                                {/* Thumbnail */}
-                                <div className="sm:w-48 md:w-56 flex-shrink-0">
-                                  <div className="aspect-[16/10] sm:h-full relative overflow-hidden">
-                                    <img 
-                                      src={categoryThumbnails[post.category]} 
-                                      alt={post.title}
-                                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                      loading="lazy"
-                                    />
+                  <>
+                    <motion.div
+                      variants={staggerContainer}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      className="space-y-4"
+                      key={currentPage} // Re-animate on page change
+                    >
+                      {paginatedPosts.map((post) => (
+                        <motion.div key={post.slug} variants={fadeInUp}>
+                          <Link to={getPostUrl(post)}>
+                            <Card className="hover:shadow-md transition-all duration-300 hover:border-primary/50 group overflow-hidden">
+                              <CardContent className="p-0">
+                                <div className="flex flex-col sm:flex-row">
+                                  {/* Thumbnail */}
+                                  <div className="sm:w-48 md:w-56 flex-shrink-0">
+                                    <div className="aspect-[16/10] sm:h-full relative overflow-hidden">
+                                      <img 
+                                        src={categoryThumbnails[post.category]} 
+                                        alt={post.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy"
+                                      />
+                                    </div>
                                   </div>
-                                </div>
-                                
-                                {/* Content */}
-                                <div className="flex-1 p-5">
-                                  <div className="flex items-center gap-2 mb-2">
-                                    <Badge className={`${categoryColors[post.category]} text-xs`}>
-                                      {categoryLabels[post.category]}
-                                    </Badge>
-                                    {post.featured && (
-                                      <Badge variant="outline" className="border-secondary text-secondary text-xs">
-                                        Featured
+                                  
+                                  {/* Content */}
+                                  <div className="flex-1 p-5">
+                                    <div className="flex items-center gap-2 mb-2">
+                                      <Badge className={`${categoryColors[post.category]} text-xs`}>
+                                        {categoryLabels[post.category]}
                                       </Badge>
-                                    )}
-                                  </div>
-                                  
-                                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
-                                    {post.title}
-                                  </h3>
-                                  
-                                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
-                                    {post.excerpt}
-                                  </p>
-                                  
-                                  <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-                                    <span className="flex items-center gap-1">
-                                      <Calendar className="w-3.5 h-3.5" />
-                                      {post.publishDate}
-                                    </span>
-                                    <span className="flex items-center gap-1">
-                                      <Clock className="w-3.5 h-3.5" />
-                                      {post.readTime}
-                                    </span>
-                                    <span className="hidden md:flex items-center gap-1">
-                                      <Tag className="w-3.5 h-3.5" />
-                                      {post.primaryKeyword}
-                                    </span>
-                                    <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform text-primary" />
+                                      {post.featured && (
+                                        <Badge variant="outline" className="border-secondary text-secondary text-xs">
+                                          Featured
+                                        </Badge>
+                                      )}
+                                    </div>
+                                    
+                                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                                      {post.title}
+                                    </h3>
+                                    
+                                    <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                                      {post.excerpt}
+                                    </p>
+                                    
+                                    <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                                      <span className="flex items-center gap-1">
+                                        <Calendar className="w-3.5 h-3.5" />
+                                        {post.publishDate}
+                                      </span>
+                                      <span className="flex items-center gap-1">
+                                        <Clock className="w-3.5 h-3.5" />
+                                        {post.readTime}
+                                      </span>
+                                      <span className="hidden md:flex items-center gap-1">
+                                        <Tag className="w-3.5 h-3.5" />
+                                        {post.primaryKeyword}
+                                      </span>
+                                      <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform text-primary" />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </Link>
+                              </CardContent>
+                            </Card>
+                          </Link>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+
+                    {/* Pagination */}
+                    {totalPages > 1 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border"
+                      >
+                        <p className="text-sm text-muted-foreground">
+                          Showing {((currentPage - 1) * POSTS_PER_PAGE) + 1}-{Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of {filteredPosts.length} articles
+                        </p>
+                        
+                        <div className="flex items-center gap-1">
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            onClick={() => goToPage(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className="h-9 w-9"
+                          >
+                            <ChevronLeft className="h-4 w-4" />
+                          </Button>
+                          
+                          {getPageNumbers().map((page, index) => (
+                            page === 'ellipsis' ? (
+                              <span key={`ellipsis-${index}`} className="px-2 text-muted-foreground">...</span>
+                            ) : (
+                              <Button
+                                key={page}
+                                variant={currentPage === page ? 'default' : 'outline'}
+                                size="icon"
+                                onClick={() => goToPage(page)}
+                                className="h-9 w-9"
+                              >
+                                {page}
+                              </Button>
+                            )
+                          ))}
+                          
+                          <Button
+                            variant="outline"
+                            size="icon"
+                            onClick={() => goToPage(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className="h-9 w-9"
+                          >
+                            <ChevronRight className="h-4 w-4" />
+                          </Button>
+                        </div>
                       </motion.div>
-                    ))}
-                  </motion.div>
+                    )}
+                  </>
                 )}
               </div>
             </main>
 
             {/* Sidebar */}
             <BlogSidebar 
-              onSearch={setSearchQuery}
-              onCategoryFilter={setActiveCategory}
+              onSearch={handleSearch}
+              onCategoryFilter={handleCategoryFilter}
               activeCategory={activeCategory}
             />
           </div>
