@@ -29,6 +29,7 @@ const BrickKilnsBiomassPunjab = () => {
         description="Punjab brick kilns facing NGT closure threats? Switch to biomass pellets - reduce emissions, cut fuel costs 20-35%. Supplier in Bathinda, Mansa, Fazilka."
         keywords="brick kiln fuel Punjab, biomass pellets brick kiln, NGT compliant fuel, coal alternative brick kiln, Bathinda brick kiln"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/brick-kilns-biomass-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

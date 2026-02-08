@@ -29,6 +29,7 @@ const FoodProcessingFuelPunjab = () => {
         description="Punjab food processing units - rice mills, flour mills, oil mills - save 25-40% on steam fuel. Switch to clean biomass pellets. Supplier in Bathinda."
         keywords="food processing fuel Punjab, rice mill boiler fuel, biomass pellets food industry, steam generation Punjab, par boiling rice mill"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/food-processing-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

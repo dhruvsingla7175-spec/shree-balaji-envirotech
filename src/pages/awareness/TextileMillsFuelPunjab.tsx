@@ -29,6 +29,7 @@ const TextileMillsFuelPunjab = () => {
         description="Punjab textile mills losing lakhs to coal & diesel costs. Switch to biomass pellets - save 25-40% on boiler fuel. Supplier in Bathinda serving Ludhiana."
         keywords="textile mill fuel Punjab, biomass pellets Ludhiana, dyeing boiler fuel, textile industry coal alternative, reduce fuel cost textile mill"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/textile-mills-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

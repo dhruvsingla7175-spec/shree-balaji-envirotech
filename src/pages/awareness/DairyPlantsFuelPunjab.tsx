@@ -29,6 +29,7 @@ const DairyPlantsFuelPunjab = () => {
         description="Punjab dairy processing plants spending lakhs on fuel. Switch to biomass pellets - save 30-40% on boiler costs. Supplier in Bathinda serving all Punjab."
         keywords="dairy plant fuel Punjab, biomass pellets dairy industry, pasteurization boiler fuel, milk processing coal alternative, reduce fuel cost dairy"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/dairy-plants-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout
