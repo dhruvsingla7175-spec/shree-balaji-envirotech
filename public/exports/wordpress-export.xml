@@ -8,15 +8,18 @@
 >
 
 <channel>
-	<title>Shree Balaji Envirotech Blog</title>
+	<title>Shree Balaji Envirotech</title>
 	<link>https://shreebalajienvirotech.com</link>
-	<description>Expert insights on biomass pellets, stubble management, and sustainable fuel solutions for industries in Punjab</description>
-	<pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+	<description>Premium Biomass Pellet Manufacturer in Punjab - Sustainable Energy Solutions for Industries</description>
+	<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://shreebalajienvirotech.com</wp:base_site_url>
 	<wp:base_blog_url>https://shreebalajienvirotech.com</wp:base_blog_url>
 
+	<!-- ═══════════════════════════════════════════ -->
+	<!-- CATEGORIES                                  -->
+	<!-- ═══════════════════════════════════════════ -->
 	<wp:category>
 		<wp:term_id>1</wp:term_id>
 		<wp:category_nicename><![CDATA[guide]]></wp:category_nicename>
@@ -42,6 +45,604 @@
 		<wp:cat_name><![CDATA[Local Focus]]></wp:cat_name>
 	</wp:category>
 
+	<!-- ═══════════════════════════════════════════ -->
+	<!-- STATIC PAGES                                -->
+	<!-- ═══════════════════════════════════════════ -->
+
+	<!-- ──── HOME PAGE ──── -->
+	<item>
+		<title><![CDATA[Home - Shree Balaji Envirotech]]></title>
+		<link>https://shreebalajienvirotech.com/</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=100</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Premium Biomass Pellet Solutions | Punjab</h1>
+<p>Leading manufacturer of eco-friendly biomass pellets in Punjab. Save 40% on fuel costs with our sustainable energy solutions. High-quality, carbon-neutral biomass fuel for industries.</p>
+
+<h2>Our Products</h2>
+<p>We manufacture three types of premium biomass pellets:</p>
+<ul>
+<li><strong>Rice Husk Pellets</strong> – 3800-4200 kcal/kg calorific value, ideal for cost-sensitive applications</li>
+<li><strong>Sawdust Pellets</strong> – 4200-4500 kcal/kg, premium quality for high-efficiency boilers</li>
+<li><strong>Agro-Waste Pellets</strong> – Made from mixed agricultural waste, balanced performance and cost</li>
+</ul>
+
+<h2>Manufacturing Process</h2>
+<p>Our state-of-the-art manufacturing facility in Bathinda, Punjab follows a 6-step process:</p>
+<ol>
+<li>Raw Material Collection – Sourced from local farmers and agricultural waste</li>
+<li>Shredding &amp; Drying – Reducing moisture to below 14%</li>
+<li>Grinding – Hammer mill processing for uniform particle size</li>
+<li>Pelletization – High-pressure compression using YULONG pellet mills</li>
+<li>Cooling &amp; Screening – Quality control and grading</li>
+<li>Packaging &amp; Delivery – Moisture-proof packaging with pan-Punjab delivery</li>
+</ol>
+
+<h2>Why Choose Biomass Pellets?</h2>
+<ul>
+<li>25-40% cost savings compared to coal</li>
+<li>Carbon-neutral, eco-friendly fuel</li>
+<li>Low ash content (&lt;5%)</li>
+<li>High calorific value (4200+ kcal/kg)</li>
+<li>Government subsidies &amp; carbon credit eligibility</li>
+<li>Consistent quality with BIS certification</li>
+</ul>
+
+<h2>Biomass vs Coal Comparison</h2>
+<table>
+<tr><th>Parameter</th><th>Biomass Pellets</th><th>Coal</th></tr>
+<tr><td>Price per ton</td><td>₹7,000-8,500</td><td>₹10,000-12,000</td></tr>
+<tr><td>Ash Content</td><td>3-5%</td><td>20-40%</td></tr>
+<tr><td>Sulphur</td><td>&lt;0.05%</td><td>2-4%</td></tr>
+<tr><td>CO2 Emissions</td><td>Carbon Neutral</td><td>High</td></tr>
+<tr><td>Calorific Value</td><td>4000-4500 kcal/kg</td><td>5000-6000 kcal/kg</td></tr>
+</table>
+
+<h2>Industries We Serve</h2>
+<ul>
+<li>Textile Mills – Dyeing and finishing boilers</li>
+<li>Brick Kilns – Coal replacement fuel</li>
+<li>Rice Mills – Parboiling boiler fuel</li>
+<li>Dairy Plants – Pasteurization steam</li>
+<li>Paper Mills – Pulp processing energy</li>
+<li>Food Processing – Steam and heating</li>
+<li>Distilleries – Ethanol production fuel</li>
+<li>Poultry Farms – Brooder heating</li>
+</ul>
+
+<h2>Savings Calculator</h2>
+<p>Industries switching from coal to biomass pellets save 25-40% on fuel costs. A factory consuming 100 tons of coal monthly saves Rs 1.4-3 lakhs per month.</p>
+
+<h2>Certifications</h2>
+<ul>
+<li>ISO 9001 – Quality Management</li>
+<li>ISO 14001 – Environmental Management</li>
+<li>BIS Certified Pellets</li>
+<li>PPCB Green Category</li>
+</ul>
+
+<h2>Contact Us</h2>
+<p><strong>Shree Balaji Envirotech</strong><br/>
+Near Grain Market, Bathinda, Punjab 151001<br/>
+Phone: +91 62806 10158 | +91 83604 10158<br/>
+Email: shreebalajienvirotech@gmail.com</p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Leading manufacturer of eco-friendly biomass pellets in Punjab. Save 40% on fuel costs with our sustainable energy solutions.]]></excerpt:encoded>
+		<wp:post_id>100</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[home]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Shree Balaji Envirotech - Premium Biomass Pellet Solutions | Punjab]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Leading manufacturer of eco-friendly biomass pellets in Punjab. Save 40% on fuel costs with our sustainable energy solutions. High-quality, carbon-neutral biomass fuel for industries.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── ABOUT US PAGE ──── -->
+	<item>
+		<title><![CDATA[About Us - Shree Balaji Envirotech]]></title>
+		<link>https://shreebalajienvirotech.com/about</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=101</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Building a Greener Future Together</h1>
+<p>Shree Balaji Envirotech is Punjab's trusted partner in sustainable biomass solutions, driven by a passionate team committed to environmental protection and industrial growth.</p>
+
+<h2>Our Story</h2>
+<p><strong>Shree Balaji Envirotech</strong> was born from a unique convergence of entrepreneurs from diverse business backgrounds who shared a common concern – the environmental crisis caused by stubble burning in Punjab and the rising fuel costs affecting industries.</p>
+<p>Our founders, each successful in their respective fields, recognized that Punjab's agricultural waste could be transformed from a pollution problem into a sustainable energy solution. With expertise spanning agriculture, manufacturing, finance, and operations, they came together to establish a company that would bridge the gap between farmers with crop residue and industries seeking affordable, eco-friendly fuel.</p>
+<p>Today, we stand as Punjab's premier biomass pellet manufacturer, processing thousands of tons of agricultural waste annually and helping industries reduce their carbon footprint while saving on fuel costs.</p>
+
+<h2>Our Team</h2>
+<h3>Dhruv Singla – Founder &amp; Managing Partner</h3>
+<p>Visionary leader with expertise in business development and sustainable energy solutions. Driving the company's mission to revolutionize the biomass industry in Punjab.</p>
+
+<h3>Keshav Goyal – Partner</h3>
+<p>Brings extensive experience in operations and supply chain management, ensuring seamless delivery of quality biomass products.</p>
+
+<h3>Davinder Kumar – Partner</h3>
+<p>Expert in industrial relations and client partnerships, building strong relationships with businesses across Punjab.</p>
+
+<h3>Vishnu Goyal – Partner</h3>
+<p>Specializes in financial planning and strategic growth, driving the company's expansion and profitability.</p>
+
+<h3>Umesh Gupta – Partner</h3>
+<p>Focuses on quality control and production excellence, maintaining the highest standards in biomass manufacturing.</p>
+
+<h3>Gurmeet Singh – Partner</h3>
+<p>Leads farmer outreach and raw material sourcing, creating sustainable partnerships with agricultural communities.</p>
+
+<h2>Our Mission</h2>
+<ul>
+<li><strong>Growth of Business</strong> – Expanding sustainable energy solutions while creating value for our partners, clients, and communities.</li>
+<li><strong>Protect Nature</strong> – Committed to environmental conservation by promoting clean, renewable energy alternatives.</li>
+<li><strong>Reduce Pollution</strong> – Eliminating stubble burning and industrial emissions through eco-friendly biomass solutions.</li>
+<li><strong>Save Money</strong> – Helping industries cut fuel costs by 30-40% with affordable, high-quality biomass pellets.</li>
+<li><strong>Clear Field Waste</strong> – Transforming agricultural residue into valuable fuel, solving the stubble disposal problem for farmers.</li>
+</ul>
+
+<h2>Our Journey</h2>
+<ul>
+<li><strong>June 2025 – Planning &amp; Research:</strong> Comprehensive planning for property acquisition, budget allocation, ROI analysis, investment structuring, and all project parameters finalized.</li>
+<li><strong>November 2025 – Company Incorporation:</strong> Shree Balaji Envirotech officially incorporated and registered. Legal formalities completed and team formation finalized.</li>
+<li><strong>March 2026 – Production Begins:</strong> Plant commissioned and running at full capacity. 5 TPH production line operational, serving thermal power plants and industrial clients.</li>
+<li><strong>Future Vision:</strong> Planning to increase production capacity with additional production lines. Installing solar plant for self-electricity generation.</li>
+<li><strong>Future Vision:</strong> Establishing own baling operations for paddy straw collection to achieve cost-cutting in raw material procurement.</li>
+</ul>
+
+<h2>Environmental Impact</h2>
+<p>Every ton of biomass pellets we produce prevents approximately 1.8 tons of CO2 emissions compared to coal. We are committed to making Punjab cleaner and greener.</p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Learn about Shree Balaji Envirotech - Punjab's leading biomass pellet manufacturer. Meet our team of dedicated partners committed to sustainable energy.]]></excerpt:encoded>
+		<wp:post_id>101</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[about]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[About Us - Shree Balaji Envirotech | Biomass Pellet Manufacturer Punjab]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Learn about Shree Balaji Envirotech - Punjab's leading biomass pellet manufacturer. Meet our team of dedicated partners committed to sustainable energy and environmental protection.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── MANUFACTURING COSTS PAGE ──── -->
+	<item>
+		<title><![CDATA[Manufacturing Cost Breakdown]]></title>
+		<link>https://shreebalajienvirotech.com/manufacturing-costs</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=102</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Manufacturing Cost Breakdown</h1>
+<p>Transparent per-kilogram cost analysis for non-torrefied biomass pellet production.</p>
+
+<h2>Total Costs</h2>
+<ul>
+<li><strong>Manufacturing Cost:</strong> ₹5.70 per kg</li>
+<li><strong>Total with Overheads:</strong> ₹6.75 per kg</li>
+</ul>
+
+<h2>Core Manufacturing Costs</h2>
+<p>Breakdown of all direct costs involved in producing one kilogram of biomass pellets:</p>
+
+<table>
+<tr><th>Component</th><th>Cost per kg</th><th>Details</th></tr>
+<tr><td>Raw Material (Paddy Straw)</td><td>₹2.40</td><td>Base buying price ₹1.75/kg. Effective cost including moisture, loading, unloading, wastage, internal transport.</td></tr>
+<tr><td>Electric Cost</td><td>₹1.45</td><td>125 kWh/ton @ ₹9.50/kWh. Major operational expense.</td></tr>
+<tr><td>Maintenance &amp; Spare Parts</td><td>₹0.65</td><td>Die, roller assembly, shell, bearing, hammer, sieves with misc. Regular replacement required.</td></tr>
+<tr><td>Labour</td><td>₹0.50</td><td>Operators, helpers, supervisors, manager, security, cleaning. 2 shifts operation.</td></tr>
+<tr><td>Bank Interest</td><td>₹0.50</td><td>Based on ₹10 Cr loan @ 10% p.a.</td></tr>
+<tr><td>Mishappening / Contingency</td><td>₹0.20</td><td>Buffer for unforeseen issues and unexpected repairs.</td></tr>
+</table>
+<p><strong>Manufacturing Subtotal: ₹5.70/kg</strong></p>
+
+<h2>Additional Operating Costs</h2>
+<table>
+<tr><th>Component</th><th>Cost per kg</th><th>Details</th></tr>
+<tr><td>Transport to NTPC &amp; Private</td><td>₹0.75</td><td>Load &amp; unload charges under 200km (depends on distance)</td></tr>
+<tr><td>Factory Overheads &amp; Misc</td><td>₹0.30</td><td>Admin salaries, insurance, office expenses, food &amp; water</td></tr>
+</table>
+<p><strong>Total Cost (Delivered): ₹6.75/kg</strong></p>
+
+<h2>Cost Cutting Methods</h2>
+<ol>
+<li>Self Baling – Reduce raw material costs</li>
+<li>Solar Project – Reduce electricity costs</li>
+<li>Own Transport – Reduce logistics costs</li>
+<li>Double Project Setup – Economy of scale</li>
+<li>Subsidy + Loan Optimization</li>
+<li>Round Bales Usage – Better efficiency</li>
+</ol>
+
+<h2>Want a Detailed Cost Analysis?</h2>
+<p>Contact us for a customized cost breakdown based on your specific requirements and location.</p>
+<p>WhatsApp: <a href="https://wa.me/916280610158">+91 62806 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Detailed per-kg manufacturing cost analysis for biomass pellet production. Raw material, electricity, labour, and overhead costs explained.]]></excerpt:encoded>
+		<wp:post_id>102</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[manufacturing-costs]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Manufacturing Cost Breakdown | Biomass Pellet Production Costs]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Detailed per-kg manufacturing cost analysis for biomass pellet production. Raw material, electricity, labour, and overhead costs explained.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── EQUIPMENT PAGE ──── -->
+	<item>
+		<title><![CDATA[Plant Equipment & Machinery]]></title>
+		<link>https://shreebalajienvirotech.com/equipment</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=103</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Plant Equipment &amp; Machinery</h1>
+<p>World-class YULONG biomass pellet manufacturing equipment with complete automation.</p>
+
+<h2>Plant Overview</h2>
+<ul>
+<li><strong>19+ Equipment Units</strong></li>
+<li><strong>725 KW Connected Load</strong></li>
+<li><strong>2.6 T/hr Production Capacity</strong></li>
+<li><strong>Brand: YULONG</strong></li>
+</ul>
+
+<h2>Complete Equipment List</h2>
+
+<h3>1. Infeed Belt Conveyor 1000 MM</h3>
+<p>Power: 5HP gear motor 3-phase TEFC, IE3/IE4. Motor &amp; VFD: ABB / Siemens. Length: 10m, Belt thickness: 8mm. Use: Shredder input conveyor. Qty: 1</p>
+
+<h3>2. Double Shaft Shredder with Platform (Key Equipment)</h3>
+<p>Power: 75+60 HP. Brand: SHREDO (Customized). Use: Main shredding. Qty: 1</p>
+
+<h3>3-5. Belt Conveyors (800 MM)</h3>
+<p>Multiple conveyors for material flow between processing stages. Power: 3HP gear motors with ABB/Siemens VFDs.</p>
+
+<h3>6. Dryer Double Pass Flash 5 Ton (Key Equipment)</h3>
+<p>Blower Power: 40HP × 2. Rotary Valve (Airlock): 5 HP × 2. With cyclone, stand &amp; wood-base furnace. Use: To reduce moisture. Qty: 1</p>
+
+<h3>7. Automatic Feeder with Stand</h3>
+<p>Watch Glass / Stone Separator with structure 3 ton. Brand: PROVEG. Includes screw, feeder belt motor, roller drive system, cutter roller drum assembly. Use: Controlled feeding and stone/metal removal. Qty: 1</p>
+
+<h3>9. Hammer Mill 75×150 (Key Equipment)</h3>
+<p>Power: 200+4 KW. Brand: YULONG. Fan blower: CM-10C-55KW. Hammers: 126 PCS. Sieves: 4 pcs (6-8mm holes). PLC ECP box &amp; full accessories. Use: Grinding. Qty: 1</p>
+
+<h3>11. Hydraulic Bin &amp; Double Silo with PLC ECP</h3>
+<p>Size: 5.8 × 1.3 × 1.3m (for 2 set XGJ560). Brand: YULONG. Integrated mixing facility for burnt oil (1%). Use: Material storage and feeding control. Qty: 1</p>
+
+<h3>12. Vertical Ring Die Pellet Mill XGJ560 (Key Equipment)</h3>
+<p>Power: 160+2.2+0.55+2.2+0.05 KW. Die: 6mm/8mm ring-die (stainless steel). Brand: YULONG. 2 sets auto-lubrication device. Cooling fan blower. Soft starter. Use: Compressing powdered biomass into high-density pellets. Qty: 2</p>
+
+<h3>15. Pulse Jet Filter 240 Bags</h3>
+<p>Elgi Compressor: 15HP with Air Tank. Blower: 40 HP collector for plant. Use: Plant dust removal. Qty: 1</p>
+
+<h3>18. Electrical Cabinet &amp; Automation</h3>
+<p>PLC, HMI, VFD, MCC, Soft Starter. SCADA with interlocking. APFC panel. Machine-mounted sensors. Use: Control room automation. Qty: 1</p>
+
+<h3>19. Installation &amp; Erection</h3>
+<p>Complete plant setup including spark detection &amp; suppression system, explosion vents, dust control, fire safety, AI-controlled CCTV, piping, ducting, ladders, platforms, and earthing.</p>
+
+<h2>Ready to Set Up Your Pellet Plant?</h2>
+<p>Get complete consultation on equipment selection, plant layout, and installation support.</p>
+<p>WhatsApp: <a href="https://wa.me/916280610158">+91 62806 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Complete biomass pellet plant machinery list with YULONG equipment. Shredder, hammer mill, pellet mills, dryer, conveyors and automation systems.]]></excerpt:encoded>
+		<wp:post_id>103</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[equipment]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Plant Equipment & Machinery | YULONG Biomass Pellet Plant Setup]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Complete biomass pellet plant machinery list with YULONG equipment. Shredder, hammer mill, pellet mills, dryer, conveyors and automation systems.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── COMPLIANCE PAGE ──── -->
+	<item>
+		<title><![CDATA[Compliance & Approvals Checklist]]></title>
+		<link>https://shreebalajienvirotech.com/compliance</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=104</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Compliance &amp; Approvals Checklist</h1>
+<p>Track all 70+ licenses and approvals required for your biomass pellet plant.</p>
+
+<h2>1. Company &amp; Legal Registration</h2>
+<ul>
+<li>Registered Sale Deed</li>
+<li>Land Mutation &amp; Jamabandi (Revenue Record)</li>
+<li>Company Registration - Pvt Ltd (Preferred for subsidy &amp; tender eligibility)</li>
+<li>GST Registration</li>
+<li>Udyam Registration for MSME</li>
+<li>Trademark Registration</li>
+<li>PAN &amp; TAN for Company</li>
+<li>Certificate of Incorporation</li>
+<li>Memorandum &amp; Articles of Association (MoA, AoA)</li>
+<li>Board Resolution (authorized signatory)</li>
+<li>Company DSC (Digital Signature Certificate)</li>
+<li>D PIN</li>
+<li>CIN/NIC Code</li>
+<li>LEI (Legal Entity Identifier)</li>
+</ul>
+
+<h2>2. Land &amp; Building Approvals</h2>
+<ul>
+<li>Grant Permission for Change of Land Use (CLU)</li>
+<li>Building Plan Approval</li>
+<li>NOC from Gram Panchayat / Local Body</li>
+<li>Town &amp; Country Planner (TCP) Approval</li>
+<li>Site Plan Approval</li>
+</ul>
+
+<h2>3. Environmental &amp; Pollution Control</h2>
+<ul>
+<li>Consent to Establish (CTE) – PPCB</li>
+<li>Consent to Operate (CTO) – PPCB</li>
+<li>Pollution Control Board &amp; Green Category NOC</li>
+<li>Water / Borewell connection / CGWA approval</li>
+<li>Hazardous Waste Authorization (Ash, dust, lubricant waste)</li>
+<li>Factory Effluent Treatment Plant (ETP) Approval</li>
+<li>State Renewable Energy Dept. NOC</li>
+</ul>
+
+<h2>4. Factory &amp; Industrial Licenses</h2>
+<ul>
+<li>Factory License (under Factories Act)</li>
+<li>Shop &amp; Establishment License</li>
+<li>Provisional and Final Fire NOC</li>
+<li>Boiler Registration (if using steam boilers)</li>
+<li>PESO License (if storing diesel/fuel &gt; 2500 liters)</li>
+<li>District Industry Centre (DIC) Registration</li>
+<li>Weighbridge Approval &amp; Stamping</li>
+</ul>
+
+<h2>5. Electrical &amp; Power</h2>
+<ul>
+<li>Electricity Load Approval (PSEB/PSPCL)</li>
+<li>Certification of Electrical Infrastructure – CEIG</li>
+<li>Charging Permission from CEIG</li>
+<li>Transformer Installation Approval</li>
+<li>Solar Installation NOC (if applicable)</li>
+</ul>
+
+<h2>6. Labour &amp; Employment</h2>
+<ul>
+<li>Labour Department Registration</li>
+<li>Labour Identification Number (LIN)</li>
+<li>Registration for Migrant Workman</li>
+<li>Contract Labour License / ESI Registration</li>
+<li>Provident Fund Registration</li>
+<li>Professional Tax Registration</li>
+<li>Workmen Compensation Insurance</li>
+</ul>
+
+<h2>7. Quality &amp; Certifications</h2>
+<ul>
+<li>ISO 9001 Certification (Quality Management)</li>
+<li>ISO 14001 Certification (Environment)</li>
+<li>ISO 45001 Certification (Safety)</li>
+<li>BIS Certification for Pellets/Standards</li>
+<li>Carbon Credit Monetization</li>
+<li>REC Certificates</li>
+<li>Pellet Test Reports (GCV, Moisture, Ash)</li>
+</ul>
+
+<h2>8. Transport &amp; Logistics</h2>
+<ul>
+<li>Vehicle RC, Fitness Certificate</li>
+<li>Vehicle Insurance</li>
+<li>PUC Certificates</li>
+<li>Driver's License</li>
+<li>Goods Transport Agreement (if outsourced)</li>
+</ul>
+
+<h2>9. Insurance &amp; Risk Management</h2>
+<ul>
+<li>Fire &amp; Machinery Breakdown Insurance</li>
+<li>Stock Insurance</li>
+<li>Public Liability Insurance</li>
+<li>Factory &amp; Machinery Insurance</li>
+</ul>
+
+<h2>10. Business &amp; Marketing</h2>
+<ul>
+<li>IEC Code (Import Export)</li>
+<li>DPIIT Startup India Registration</li>
+<li>NSIC Registration</li>
+<li>GeM Portal Registration</li>
+<li>IndiaMart / TradeIndia Listing</li>
+<li>Google Maps / Just Dial Listing</li>
+<li>Website &amp; SEO Optimization</li>
+<li>Demat Account</li>
+</ul>
+
+<h2>Important Notes</h2>
+<ul>
+<li>Requirements may vary based on your specific location and project scale</li>
+<li>Some approvals are prerequisites for others (e.g., CTE before CTO)</li>
+<li>Processing times vary from 1 week to 6 months depending on the approval</li>
+</ul>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Complete checklist of 70+ licenses, approvals and certifications required for biomass pellet manufacturing plant in Punjab.]]></excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[compliance]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>4</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Compliance Checklist | Biomass Pellet Plant Licenses & Approvals]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Complete checklist of 70+ licenses, approvals and certifications required for biomass pellet manufacturing plant in Punjab. Track your compliance progress.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── BUYERS PAGE ──── -->
+	<item>
+		<title><![CDATA[Potential Buyers & Customers]]></title>
+		<link>https://shreebalajienvirotech.com/buyers</link>
+		<pubDate>Sat, 08 Feb 2026 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?page_id=105</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Potential Buyers &amp; Customers</h1>
+<p>Large-scale consumers of biomass pellets across Punjab, Haryana &amp; North India.</p>
+
+<h2>Thermal Power Plants</h2>
+<p>Under government mandate, thermal power plants must use 5-7% biomass co-firing, creating massive demand for pellets.</p>
+
+<h3>Punjab</h3>
+<ul>
+<li>Ropar Thermal Power Plant, Rupnagar – 1260 MW</li>
+<li>Lehra Mohabbat Thermal Plant, Bhucho – 1980 MW</li>
+<li>Nabha Thermal Power Plant, Rajpura (L&amp;T Power) – 2640 MW</li>
+<li>Rajpura Thermal Power Plant, Nabha – 1400 MW</li>
+</ul>
+
+<h3>Haryana</h3>
+<ul>
+<li>Panipat Thermal Power Station – 1360 MW</li>
+<li>Deenbandhu Chhotu Ram TPS, Yamunanagar – 600 MW</li>
+<li>Indira Gandhi Super Thermal Power Project, Jhajjar (NTPC-Haryana) – 1500 MW</li>
+<li>Faridabad Gas Thermal Plant – 430 MW</li>
+<li>NTPC Faridabad</li>
+</ul>
+
+<h3>NTPC &amp; Others</h3>
+<ul>
+<li>NTPC Dadri, Dhadari, UP – 1820 MW</li>
+<li>Badarpur Thermal Power Plant, NTPC Delhi – 705 MW (Decommissioned)</li>
+<li>APCPL Jharli, Haryana – 1320 MW</li>
+</ul>
+
+<h2>Industrial Buyers</h2>
+<table>
+<tr><th>Industry</th><th>Application</th><th>Demand</th></tr>
+<tr><td>Brick Kilns</td><td>Transitioning from coal to biomass pellets</td><td>High</td></tr>
+<tr><td>Paper Mills</td><td>Steam generation for pulp processing and drying</td><td>High</td></tr>
+<tr><td>Food Processing Plants</td><td>Boiler fuel for food processing and preservation</td><td>Medium</td></tr>
+<tr><td>Pharmaceutical Industries</td><td>Clean fuel for manufacturing processes</td><td>Medium</td></tr>
+<tr><td>Dairy Plants</td><td>Steam for pasteurization and dairy processing</td><td>High</td></tr>
+<tr><td>Cement Manufacturing</td><td>Alternative fuel for cement kilns</td><td>Very High</td></tr>
+<tr><td>Plywood Industries</td><td>Thermal energy for plywood pressing and drying</td><td>Medium</td></tr>
+<tr><td>Textile Mills</td><td>Steam generation for dyeing and finishing</td><td>High</td></tr>
+</table>
+
+<h2>Major Brands &amp; Companies</h2>
+<ul>
+<li>Amul Milk Plant – Multiple locations</li>
+<li>Nestlé Plant – Moga, Punjab</li>
+<li>Thermax Limited – Industrial heating solutions</li>
+<li>ITC Limited – Agri-business division</li>
+<li>Trident Group – Barnala, Punjab</li>
+<li>Uttam Energy Limited – Renewable energy</li>
+<li>SAEL – Sustainable Agro Energy Ltd</li>
+<li>Sukhbir Agro Energy Ltd – Punjab</li>
+</ul>
+
+<h2>Local Industry Contacts</h2>
+<ul>
+<li>Paper Factory – Near Tapa Grid</li>
+<li>Brick Kiln – Near Dhaula Grid</li>
+<li>Ashutosh Plastic Industry – Near Tapa Grid</li>
+<li>Trader - Vijay Malik BPM – Punjab</li>
+<li>Samana Industries – Pellet factory, Bricks</li>
+</ul>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[Connect with major biomass pellet buyers: NTPC, thermal power plants, brick kilns, paper mills, dairy plants across Punjab & North India.]]></excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2026-02-08 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-02-08 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[buyers]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>5</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Biomass Pellet Buyers | Thermal Plants, Industries & Traders]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Connect with major biomass pellet buyers: NTPC, thermal power plants, brick kilns, paper mills, dairy plants across Punjab & North India.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ═══════════════════════════════════════════ -->
+	<!-- BLOG POSTS                                  -->
+	<!-- ═══════════════════════════════════════════ -->
+
+	<!-- ──── Blog 1: Complete Guide ──── -->
 	<item>
 		<title><![CDATA[Biomass Pellets: Complete Guide for Industries in Punjab]]></title>
 		<link>https://shreebalajienvirotech.com/blog/biomass-pellets-complete-guide-punjab</link>
@@ -49,19 +650,73 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=1</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Everything Punjab industries need to know about biomass pellets - from specifications to pricing to implementation.</p>
-<h2>What are Biomass Pellets?</h2>
-<p>Biomass pellets are compressed organic materials used as fuel for industrial boilers and heating systems. Made from agricultural waste like rice husk, paddy straw, and wood chips, these pellets offer a sustainable alternative to coal and other fossil fuels.</p>
-<h2>Key Benefits</h2>
+		<content:encoded><![CDATA[
+<p>Punjab's industrial sector burns through thousands of crores worth of coal and fossil fuels annually. Meanwhile, 20+ million tons of paddy straw gets burned in fields, creating Delhi's infamous smog. <strong>Biomass pellets solve both problems</strong>—offering industries a cheaper, cleaner fuel while converting agricultural waste into profit.</p>
+<p>This guide covers everything Punjab industries need to know: specifications, pricing, suppliers, and the exact steps to switch from coal to biomass pellets.</p>
+
+<h2>What Are Biomass Pellets?</h2>
+<p>Biomass pellets are compressed cylinders of organic material—agricultural waste, wood residue, or industrial byproducts—processed into a standardized, high-energy fuel. For Punjab industries, they represent a locally-sourced alternative to imported coal and expensive fossil fuels.</p>
+<h3>Key Advantages for Punjab Industries:</h3>
 <ul>
-<li>25-40% cost savings compared to coal</li>
-<li>Lower emissions and cleaner burning</li>
-<li>Consistent quality and calorific value</li>
-<li>Easy storage and handling</li>
-<li>Government subsidies available</li>
+<li>Cost savings of 20-40% compared to coal and LPG</li>
+<li>Locally sourced from Punjab's agricultural waste</li>
+<li>Carbon-neutral operation for ESG compliance</li>
+<li>Consistent energy output with standardized specifications</li>
+<li>Government incentives and carbon credit eligibility</li>
 </ul>
-<h2>Contact Us</h2>
-<p>For bulk pricing and supply in Punjab, contact Shree Balaji Envirotech, Bathinda.</p>]]></content:encoded>
+
+<h2>Biomass Pellet Specifications</h2>
+<p>Quality specifications matter for efficient combustion and equipment longevity.</p>
+<table>
+<tr><th>Parameter</th><th>Standard Value</th><th>Why It Matters</th></tr>
+<tr><td>Diameter</td><td>6-8 mm</td><td>Ensures consistent feeding in boilers</td></tr>
+<tr><td>Length</td><td>10-40 mm</td><td>Prevents jamming in feed systems</td></tr>
+<tr><td>Moisture</td><td>&lt;10%</td><td>Higher moisture reduces calorific value</td></tr>
+<tr><td>Calorific Value</td><td>4,000-4,500 Kcal/kg</td><td>Determines energy output per kg</td></tr>
+<tr><td>Ash Content</td><td>&lt;5%</td><td>Lower ash means less cleaning/maintenance</td></tr>
+<tr><td>Bulk Density</td><td>650-700 kg/m³</td><td>Affects storage and transport costs</td></tr>
+<tr><td>Sulphur</td><td>&lt;0.05%</td><td>Critical for emission compliance</td></tr>
+</table>
+
+<h2>Types of Biomass Pellets &amp; Pricing in Punjab</h2>
+<ul>
+<li><strong>Agro-Waste Pellets:</strong> Rs 6,500-7,500/ton | 3,800-4,200 Kcal/kg | Ideal for brick kilns, small boilers</li>
+<li><strong>Wood Pellets:</strong> Rs 7,500-8,500/ton | 4,200-4,500 Kcal/kg | Ideal for textile mills, food processing</li>
+<li><strong>Mixed Biomass Pellets:</strong> Rs 7,000-8,000/ton | 4,000-4,300 Kcal/kg | General industrial heating</li>
+<li><strong>Premium Industrial Pellets:</strong> Rs 8,500-10,000/ton | 4,400-4,800 Kcal/kg | Co-firing power plants</li>
+</ul>
+
+<h2>How to Switch from Coal to Biomass Pellets</h2>
+<ol>
+<li><strong>Assess Your Current Setup</strong> – Evaluate boiler type, fuel consumption, and storage facilities</li>
+<li><strong>Calculate Your Requirements</strong> – Plan for approximately 12 tons of pellets per 10 tons of coal</li>
+<li><strong>Modify Feed Systems</strong> – Cost: Rs 50,000-2,00,000 depending on boiler capacity</li>
+<li><strong>Arrange Storage</strong> – Covered shed or silo system for dry conditions</li>
+<li><strong>Trial Run</strong> – Start with 10-20 ton trial order before full-scale adoption</li>
+</ol>
+
+<h2>Quality Warning</h2>
+<p>Cheap, low-quality pellets with high moisture or ash content will clog your equipment, reduce efficiency, and increase maintenance costs. Always verify specifications and choose certified manufacturers like Shree Balaji Envirotech LLP.</p>
+
+<h2>Delivery Across Punjab &amp; North India</h2>
+<p>Shree Balaji Envirotech LLP delivers biomass pellets across Punjab and North India from our manufacturing facility in Bathinda. Regular supply routes include: Bathinda, Ludhiana, Jalandhar, Amritsar, Patiala, Mohali, Chandigarh, Ambala, Panipat, Karnal.</p>
+
+<h2>Get Started with Biomass Pellets Today</h2>
+<p>Contact Shree Balaji Envirotech LLP for a free consultation and competitive pricing.</p>
+<p>Call: <a href="tel:+918360410158">+91 83604 10158</a> | Email: <a href="mailto:shreebalajienvirotech@gmail.com">shreebalajienvirotech@gmail.com</a></p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is the price of biomass pellets in Punjab?</h3>
+<p>Biomass pellet prices in Punjab range from Rs 6,500-10,000 per ton depending on the type. Contact Shree Balaji Envirotech in Bathinda for current bulk pricing.</p>
+<h3>Can I use biomass pellets in my existing coal boiler?</h3>
+<p>Yes, most coal boilers can be converted with minor modifications costing Rs 50,000-2,00,000.</p>
+<h3>What calorific value do biomass pellets offer?</h3>
+<p>Quality biomass pellets offer 3,800-4,800 Kcal/kg depending on type.</p>
+<h3>Where can I buy biomass pellets near Bathinda?</h3>
+<p>Shree Balaji Envirotech is a leading manufacturer in Bathinda. Call +91 83604 10158.</p>
+<h3>Are biomass pellets eligible for carbon credits?</h3>
+<p>Yes, each ton of biomass pellets used instead of coal prevents approximately 1.8 tons of CO2 emissions.</p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[Everything Punjab industries need to know about biomass pellets - from specifications to pricing to implementation.]]></excerpt:encoded>
 		<wp:post_id>1</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-10 00:00:00]]></wp:post_date>
@@ -86,6 +741,7 @@
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Blog 2: Stubble Burning Solution ──── -->
 	<item>
 		<title><![CDATA[Stubble Burning in Punjab: How Biomass Pellets Solve the Crisis]]></title>
 		<link>https://shreebalajienvirotech.com/blog/stubble-burning-solution-punjab-biomass-pellets</link>
@@ -93,19 +749,104 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>How Punjab farmers and industries can turn the stubble burning crisis into a profitable opportunity.</p>
-<h2>The Stubble Burning Problem</h2>
-<p>Every year, Punjab farmers burn millions of tons of paddy straw (parali), causing severe air pollution across North India. This practice, while harmful, continues because farmers lack affordable alternatives.</p>
-<h2>The Biomass Pellet Solution</h2>
-<p>Converting parali into biomass pellets offers a win-win solution:</p>
+		<content:encoded><![CDATA[
+<p><strong>The Crisis: 20 Million Tons of Paddy Straw Burned Annually.</strong> Every October-November, Punjab's skies turn toxic. Farmers burn paddy straw (parali) because there's no profitable alternative. AQI levels exceed 500. Schools close. Health emergencies spike.</p>
+<p><strong>But there is a solution.</strong> The same paddy straw that creates pollution when burned becomes a valuable industrial fuel when converted to biomass pellets. Punjab's "waste" is actually worth Rs 3,000+ crore as renewable energy.</p>
+
+<h2>The Scale of Punjab's Stubble Problem</h2>
 <ul>
-<li>Farmers earn additional income from crop residue</li>
-<li>Industries get affordable, clean fuel</li>
-<li>Environment benefits from reduced emissions</li>
-<li>Government incentives support the transition</li>
+<li>20M+ tons of straw burned yearly</li>
+<li>15-day average burning window</li>
+<li>Rs 2,500/acre cost for non-burn disposal</li>
+<li>30M tons CO2 emissions from burning</li>
 </ul>
-<h2>Get Started</h2>
-<p>Contact Shree Balaji Envirotech for parali collection and pellet supply in Punjab.</p>]]></content:encoded>
+
+<h2>Why Do Farmers Burn Stubble?</h2>
+<ol>
+<li><strong>Tight sowing window:</strong> Only 15-20 days between rice harvest and wheat sowing</li>
+<li><strong>Cost of alternatives:</strong> Mulching costs Rs 2,000-3,000 per acre</li>
+<li><strong>No buyers for straw:</strong> Without accessible buyers, straw has no value</li>
+<li><strong>Equipment unavailability:</strong> Happy Seeders and balers are scarce</li>
+</ol>
+
+<h2>The Solution: Biomass Pellet Production</h2>
+<p><strong>Convert parali to profit.</strong> Biomass pellet plants buy paddy straw from farmers, process it into standardized fuel pellets, and sell to industries as a coal replacement.</p>
+
+<h3>For Farmers</h3>
+<ul>
+<li>Earn Rs 1,500-2,500/ton for straw</li>
+<li>Free field clearing in many cases</li>
+<li>No fines for burning</li>
+<li>Additional Rs 5,000-10,000 per acre</li>
+</ul>
+
+<h3>For Industries</h3>
+<ul>
+<li>20-40% cheaper than coal</li>
+<li>Carbon credit eligibility</li>
+<li>ESG compliance</li>
+<li>Reliable local supply</li>
+</ul>
+
+<h3>For Environment</h3>
+<ul>
+<li>Zero field burning</li>
+<li>Carbon-neutral energy</li>
+<li>30M tons CO2 reduction potential</li>
+<li>Clean air for North India</li>
+</ul>
+
+<h2>The Economics: Making Stubble Profitable</h2>
+<table>
+<tr><th>Item</th><th>Amount per ton</th><th>Beneficiary</th></tr>
+<tr><td>Farmer receives for straw</td><td>Rs 1,500-2,500</td><td>Farmer</td></tr>
+<tr><td>Collection &amp; transport</td><td>Rs 800-1,200</td><td>Local transporters</td></tr>
+<tr><td>Processing to pellets</td><td>Rs 1,500-2,000</td><td>Pellet manufacturer</td></tr>
+<tr><td>Pellet selling price</td><td>Rs 6,500-8,500</td><td>Industry fuel cost</td></tr>
+<tr><td>Industry savings vs coal</td><td>Rs 1,500-3,000</td><td>End user</td></tr>
+</table>
+
+<h2>How It Works: From Field to Factory</h2>
+<ol>
+<li><strong>Straw Collection:</strong> Baling machines collect straw immediately after harvest</li>
+<li><strong>Transport to Facility:</strong> Shree Balaji Envirotech in Bathinda has dedicated logistics</li>
+<li><strong>Processing &amp; Pelletization:</strong> Straw is shredded, dried, and compressed into 6-8mm pellets</li>
+<li><strong>Quality Testing:</strong> Each batch tested for calorific value, moisture, and ash content</li>
+<li><strong>Delivery to Industries:</strong> Finished pellets delivered to factories across Punjab and North India</li>
+</ol>
+
+<h2>Government Incentives</h2>
+<h3>For Farmers</h3>
+<ul>
+<li>80% subsidy on straw management equipment</li>
+<li>Free baler rentals through cooperatives</li>
+<li>Bonus payments for non-burning districts</li>
+</ul>
+<h3>For Industries</h3>
+<ul>
+<li>5% GST on biomass vs 18% on coal</li>
+<li>Accelerated depreciation on equipment</li>
+<li>Carbon credit eligibility</li>
+<li>State pollution board incentives</li>
+</ul>
+
+<h2>Growing Adoption Across Punjab</h2>
+<ul>
+<li>50,000+ tons processed yearly</li>
+<li>200+ partner farmers</li>
+<li>Rs 5 Cr+ annual farmer earnings</li>
+</ul>
+
+<h2>Join the Solution</h2>
+<p>Whether you're a farmer looking to sell straw or an industry seeking cleaner fuel, Shree Balaji Envirotech connects both sides of the solution.</p>
+<p>Call: <a href="tel:+918360410158">+91 83604 10158</a></p>
+
+<h2>FAQ</h2>
+<h3>How much can farmers earn from selling paddy straw?</h3>
+<p>Farmers can earn Rs 1,500-2,500 per ton, translating to Rs 4,500-10,000 additional income per acre.</p>
+<h3>What government subsidies are available?</h3>
+<p>Up to 80% subsidy for individual farmers and 50% for cooperatives on straw management equipment under the Crop Residue Management scheme.</p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[How Punjab farmers and industries can turn the stubble burning crisis into a profitable opportunity.]]></excerpt:encoded>
 		<wp:post_id>2</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-08 00:00:00]]></wp:post_date>
@@ -130,6 +871,7 @@
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Blog 3: Coal to Biomass Switch ──── -->
 	<item>
 		<title><![CDATA[Switch from Coal to Biomass Pellets: Complete Industrial Guide]]></title>
 		<link>https://shreebalajienvirotech.com/blog/coal-to-biomass-switch-industrial-boilers</link>
@@ -137,17 +879,86 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=3</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>A practical guide for industries looking to switch from coal to cleaner, cost-effective biomass pellets.</p>
-<h2>Why Switch from Coal?</h2>
-<p>Coal prices continue to rise while environmental regulations tighten. Biomass pellets offer a cost-effective, compliant alternative.</p>
-<h2>Boiler Conversion Options</h2>
+		<content:encoded><![CDATA[
+<p>Coal prices have increased 40% in the last three years. Emission regulations are tightening. ESG requirements are becoming mandatory. For Punjab industries, the question isn't whether to switch from coal—it's <strong>how quickly you can do it profitably</strong>.</p>
+
+<h2>Why Industries Are Switching to Biomass</h2>
+<h3>The Coal Problem</h3>
 <ul>
-<li>Minor modifications for compatible boilers</li>
-<li>Retrofit kits available</li>
-<li>New biomass-ready boilers</li>
+<li>Prices increased 40% since 2021</li>
+<li>Import dependency and supply uncertainty</li>
+<li>20-40% ash content requiring frequent cleaning</li>
+<li>Tightening emission norms and penalties</li>
+<li>Negative ESG perception</li>
 </ul>
-<h2>ROI Analysis</h2>
-<p>Most industries see payback within 12-18 months with 25-40% fuel cost savings.</p>]]></content:encoded>
+<h3>The Biomass Solution</h3>
+<ul>
+<li>20-40% cost savings vs coal</li>
+<li>Locally sourced—no import dependency</li>
+<li>Only 3-5% ash content</li>
+<li>Carbon-neutral for emission compliance</li>
+<li>Positive ESG rating impact</li>
+</ul>
+
+<h2>Cost Comparison: Coal vs Biomass Pellets</h2>
+<table>
+<tr><th>Parameter</th><th>Coal</th><th>Biomass Pellets</th><th>Advantage</th></tr>
+<tr><td>Price per ton</td><td>Rs 10,000-12,000</td><td>Rs 6,500-8,500</td><td>Pellets: 25-35% cheaper</td></tr>
+<tr><td>Cost per Million Kcal</td><td>Rs 2,000-2,400</td><td>Rs 1,500-1,900</td><td>Pellets: 20-25% cheaper</td></tr>
+<tr><td>Ash Content</td><td>20-40%</td><td>3-5%</td><td>Pellets: 80% less ash</td></tr>
+<tr><td>Sulphur Content</td><td>2-4%</td><td>&lt;0.05%</td><td>Pellets: Near zero</td></tr>
+<tr><td>CO2 Emissions</td><td>High (fossil)</td><td>Net zero (biogenic)</td><td>Pellets: Carbon neutral</td></tr>
+</table>
+<p><strong>Quick Math:</strong> An industry consuming 100 tons of coal monthly at Rs 10,000/ton = Rs 10 lakhs. Switching to pellets (~115 tons needed) = Rs 8.6 lakhs. <strong>Monthly savings: Rs 1.4 lakhs.</strong></p>
+
+<h2>Boiler Compatibility</h2>
+<ul>
+<li><strong>Traveling Grate Boilers:</strong> Excellent compatibility – Rs 50,000-1,00,000 conversion</li>
+<li><strong>Chain Grate Boilers:</strong> Very Good – Rs 75,000-1,50,000 conversion</li>
+<li><strong>Stoker Boilers:</strong> Good – Rs 1,00,000-2,00,000 conversion</li>
+<li><strong>Fluidized Bed Boilers:</strong> Excellent – Rs 50,000-1,00,000 conversion</li>
+<li><strong>Fixed Grate Boilers:</strong> Moderate – Rs 2,00,000-5,00,000 conversion</li>
+</ul>
+
+<h2>Step-by-Step Conversion Process</h2>
+<ol>
+<li><strong>Site Assessment (1-2 days):</strong> Evaluate existing boiler, fuel consumption, storage facilities</li>
+<li><strong>ROI Analysis (1-2 days):</strong> Detailed cost-benefit comparing coal vs pellet costs</li>
+<li><strong>Equipment Modification (3-7 days):</strong> Feed system adjustments, air flow optimization</li>
+<li><strong>Trial Run (2-3 days):</strong> Initial operation monitoring combustion efficiency</li>
+<li><strong>Full-Scale Operation:</strong> Transition to regular pellet supply</li>
+<li><strong>Performance Monitoring (3 months):</strong> Ongoing support and efficiency tracking</li>
+</ol>
+
+<h2>Technical Considerations</h2>
+<ul>
+<li><strong>Air-to-Fuel Ratio:</strong> Typically 1.3-1.5:1 excess air for complete combustion</li>
+<li><strong>Feed Rate Calibration:</strong> Screw feeders need recalibration for pellet density</li>
+<li><strong>Combustion Zone Temperature:</strong> Maintain 850-950°C</li>
+<li><strong>Ash Handling:</strong> Much less ash than coal, existing systems usually work</li>
+<li><strong>Storage Requirements:</strong> Keep dry, minimum 2-week buffer stock</li>
+<li><strong>Emission Compliance:</strong> Biomass typically meets all norms without additional controls</li>
+</ul>
+
+<h2>Common Conversion Mistakes to Avoid</h2>
+<ul>
+<li>Using low-quality pellets with high moisture/ash</li>
+<li>Ignoring storage—wet pellets disintegrate</li>
+<li>Using coal air settings for biomass</li>
+<li>Undersized supply contracts causing fuel shortage</li>
+</ul>
+
+<h2>Ready to Reduce Fuel Costs?</h2>
+<p>Get a free site assessment and ROI analysis. Call: <a href="tel:+918360410158">+91 83604 10158</a></p>
+
+<h2>FAQ</h2>
+<h3>How much does boiler conversion cost?</h3>
+<p>Rs 50,000 to Rs 5 lakhs depending on boiler type. ROI typically within 6-12 months.</p>
+<h3>Will switching reduce boiler efficiency?</h3>
+<p>Properly configured biomass systems achieve 80-85% efficiency, comparable to coal.</p>
+<h3>How much coal does 1 ton of pellets replace?</h3>
+<p>Approximately 0.85-0.9 tons of coal.</p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[A practical guide for industries looking to switch from coal to cleaner, cost-effective biomass pellets.]]></excerpt:encoded>
 		<wp:post_id>3</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-05 00:00:00]]></wp:post_date>
@@ -172,6 +983,7 @@
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Blog 4: Pellet Prices 2025 ──── -->
 	<item>
 		<title><![CDATA[Biomass Pellet Prices in Punjab 2025: Complete Market Analysis]]></title>
 		<link>https://shreebalajienvirotech.com/blog/biomass-pellet-price-punjab-2025</link>
@@ -179,16 +991,70 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=4</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Current market prices for different types of biomass pellets in Punjab with factors affecting costs.</p>
-<h2>Current Price Range (2025)</h2>
+		<content:encoded><![CDATA[
+<h2>Quick Price Reference: Punjab Market (Updated January 2025)</h2>
 <ul>
-<li>Rice Husk Pellets: ₹5,500-6,500/ton</li>
-<li>Wood Pellets: ₹7,000-8,500/ton</li>
-<li>Mixed Agro Pellets: ₹5,000-6,000/ton</li>
-<li>Torrefied Pellets: ₹9,000-11,000/ton</li>
+<li><strong>Agro-Waste Pellets:</strong> Rs 6,500-7,500/ton (Stable)</li>
+<li><strong>Wood Pellets:</strong> Rs 7,500-8,500/ton (Stable)</li>
+<li><strong>Mixed Biomass:</strong> Rs 7,000-8,000/ton (Decreasing)</li>
+<li><strong>Premium Industrial:</strong> Rs 8,500-10,000/ton (Slight increase)</li>
 </ul>
-<h2>Factors Affecting Price</h2>
-<p>Prices vary based on moisture content, calorific value, ash content, and delivery distance.</p>]]></content:encoded>
+<p><em>Prices are per metric ton, ex-factory Bathinda. Transport additional based on distance.</em></p>
+
+<p>Biomass pellet prices in Punjab remain competitive against coal in 2025, with most varieties offering 20-35% cost savings per unit of energy.</p>
+
+<h2>Detailed Price Breakdown by Type</h2>
+<h3>Agro-Waste Pellets: Rs 6,500-7,500/ton</h3>
+<p>Materials: Rice husk, wheat straw, paddy straw, corn cobs. Calorific Value: 3,800-4,200 Kcal/kg. Best For: Brick kilns, small-medium boilers. Most economical option. Price drops post-harvest season.</p>
+
+<h3>Wood Pellets: Rs 7,500-8,500/ton</h3>
+<p>Materials: Sawdust, wood chips, furniture factory waste. Calorific Value: 4,200-4,500 Kcal/kg. Best For: Textile mills, food processing, pharmaceutical. Higher energy density justifies premium.</p>
+
+<h3>Mixed Biomass Pellets: Rs 7,000-8,000/ton</h3>
+<p>Materials: Combination of agricultural and wood waste. Calorific Value: 4,000-4,300 Kcal/kg. Good balance of price and performance. Most popular choice.</p>
+
+<h3>Premium Industrial Pellets: Rs 8,500-10,000/ton</h3>
+<p>Materials: Selected high-grade feedstock. Calorific Value: 4,400-4,800 Kcal/kg. Meets international standards. Lowest ash content.</p>
+
+<h2>Factors Affecting Prices</h2>
+<ul>
+<li><strong>Seasonal Availability (High Impact):</strong> Post-harvest (Oct-Jan) lowest prices, Monsoon (Jul-Sep) highest</li>
+<li><strong>Raw Material Costs (High Impact):</strong> Paddy straw Rs 1,500-2,500/ton, wood waste Rs 2,000-3,000/ton</li>
+<li><strong>Transport Distance (Medium):</strong> Rs 500-1,500/ton beyond 100km from Bathinda</li>
+<li><strong>Order Volume (Medium):</strong> 50+ ton orders get 5-10% discount</li>
+<li><strong>Quality Specifications (Medium):</strong> Lower moisture, higher calorific value command premium</li>
+</ul>
+
+<h2>Regional Price Variations</h2>
+<table>
+<tr><th>City</th><th>Agro-Waste</th><th>Wood Pellets</th><th>Notes</th></tr>
+<tr><td>Bathinda (Hub)</td><td>Rs 6,500-7,200</td><td>Rs 7,500-8,200</td><td>Ex-factory, lowest in Punjab</td></tr>
+<tr><td>Ludhiana</td><td>Rs 7,000-7,700</td><td>Rs 8,000-8,700</td><td>High industrial demand</td></tr>
+<tr><td>Jalandhar</td><td>Rs 7,200-7,900</td><td>Rs 8,200-8,900</td><td>Growing market</td></tr>
+<tr><td>Amritsar</td><td>Rs 7,300-8,000</td><td>Rs 8,300-9,000</td><td>Good availability</td></tr>
+<tr><td>Patiala/Mohali</td><td>Rs 7,000-7,700</td><td>Rs 8,000-8,700</td><td>Close to Bathinda</td></tr>
+<tr><td>Chandigarh</td><td>Rs 7,500-8,200</td><td>Rs 8,500-9,200</td><td>Premium market</td></tr>
+</table>
+
+<h2>2025 Price Forecast: Stable to Declining</h2>
+<ul>
+<li><strong>Q1 (Jan-Mar):</strong> Lowest prices, ideal for bulk purchases</li>
+<li><strong>Q2 (Apr-Jun):</strong> Slight increase as raw material depletes</li>
+<li><strong>Q3 (Jul-Sep):</strong> Peak prices during monsoon</li>
+<li><strong>Q4 (Oct-Dec):</strong> Prices drop with new harvest</li>
+</ul>
+
+<h2>Tips for Best Prices</h2>
+<ol>
+<li>Buy in bulk (50+ tons) for 5-10% discounts</li>
+<li>Sign annual contracts for price stability</li>
+<li>Purchase post-harvest (Nov-Jan) for lowest rates</li>
+<li>Choose manufacturers near your location</li>
+<li>Verify quality specs to avoid hidden costs</li>
+</ol>
+
+<p>Contact Shree Balaji Envirotech for current quotes: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[Current market prices for different types of biomass pellets in Punjab with factors affecting costs.]]></excerpt:encoded>
 		<wp:post_id>4</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-03 00:00:00]]></wp:post_date>
@@ -213,6 +1079,7 @@
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Blog 5: Suppliers Near Bathinda ──── -->
 	<item>
 		<title><![CDATA[Biomass Pellet Suppliers Near Bathinda: Buying Guide 2025]]></title>
 		<link>https://shreebalajienvirotech.com/blog/biomass-pellet-suppliers-near-bathinda</link>
@@ -220,16 +1087,69 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=5</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>How to find and evaluate biomass pellet suppliers in and around Bathinda, Punjab.</p>
-<h2>Quality Checklist</h2>
+		<content:encoded><![CDATA[
+<h2>Featured Manufacturer: Shree Balaji Envirotech</h2>
+<p>A leading biomass pellet manufacturer in Bathinda, Punjab, offering premium quality agro-waste and wood pellets for industrial applications. Serving industries across Punjab, Haryana, and North India.</p>
 <ul>
-<li>Moisture content below 10%</li>
-<li>Calorific value 3800-4200 kcal/kg</li>
-<li>Ash content below 5%</li>
-<li>Consistent pellet size 6-8mm</li>
+<li>Location: Bathinda, Punjab, India</li>
+<li>Phone: <a href="tel:+918360410158">+91 83604 10158</a></li>
+<li>Email: <a href="mailto:shreebalajienvirotech@gmail.com">shreebalajienvirotech@gmail.com</a></li>
+<li>Products: Agro-Waste Pellets, Wood Pellets, Mixed Biomass Pellets, Premium Industrial Grade</li>
+<li>Features: ISO Certified, Bulk Supply, Pan-Punjab Delivery, Quality Tested, Competitive Pricing</li>
 </ul>
-<h2>Trusted Supplier</h2>
-<p>Shree Balaji Envirotech offers certified biomass pellets with delivery across Punjab.</p>]]></content:encoded>
+
+<p>Bathinda has emerged as a biomass pellet manufacturing hub thanks to its central location in Punjab's agricultural heartland.</p>
+
+<h2>Why Bathinda for Biomass Pellets?</h2>
+<ul>
+<li><strong>Agricultural Hub:</strong> Surrounded by rice and wheat cultivation zones with abundant raw material</li>
+<li><strong>Central Location:</strong> Excellent road connectivity to all major Punjab cities within 150-200km</li>
+<li><strong>Cost Advantage:</strong> Lower production costs translate to competitive pellet prices</li>
+</ul>
+
+<h2>Quality Checklist</h2>
+<h3>Product Quality</h3>
+<ul>
+<li>Moisture content &lt;10%</li>
+<li>Calorific value &gt;4000 Kcal/kg with test certificate</li>
+<li>Ash content &lt;5%</li>
+<li>Consistent pellet size (6-8mm diameter)</li>
+</ul>
+<h3>Manufacturing Capability</h3>
+<ul>
+<li>Own production facility (not just trading)</li>
+<li>Quality control processes in place</li>
+<li>Willingness to show factory</li>
+</ul>
+<h3>Business Practices</h3>
+<ul>
+<li>GST registration and proper invoicing</li>
+<li>Sample/trial order availability</li>
+<li>Written quality specifications</li>
+</ul>
+
+<h2>Delivery Coverage from Bathinda</h2>
+<table>
+<tr><th>Destination</th><th>Distance</th><th>Delivery Time</th><th>Est. Transport Cost</th></tr>
+<tr><td>Bathinda (Local)</td><td>0-30 km</td><td>Same day</td><td>Free/Minimal</td></tr>
+<tr><td>Ludhiana</td><td>150 km</td><td>1 day</td><td>Rs 600-800/ton</td></tr>
+<tr><td>Jalandhar</td><td>180 km</td><td>1 day</td><td>Rs 700-900/ton</td></tr>
+<tr><td>Amritsar</td><td>200 km</td><td>1-2 days</td><td>Rs 800-1,000/ton</td></tr>
+<tr><td>Patiala/Mohali</td><td>140 km</td><td>1 day</td><td>Rs 500-700/ton</td></tr>
+<tr><td>Delhi NCR</td><td>280 km</td><td>2 days</td><td>Rs 1,000-1,500/ton</td></tr>
+</table>
+
+<h2>Red Flags to Avoid</h2>
+<ul>
+<li>No factory visit allowed</li>
+<li>Significantly lower prices (quality compromise)</li>
+<li>No GST invoicing</li>
+<li>Unwilling to provide test certificates</li>
+<li>Demand for full payment before delivery</li>
+</ul>
+
+<p>Contact Shree Balaji Envirotech: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[How to find and evaluate biomass pellet suppliers in and around Bathinda, Punjab.]]></excerpt:encoded>
 		<wp:post_id>5</wp:post_id>
 		<wp:post_date><![CDATA[2024-12-28 00:00:00]]></wp:post_date>
@@ -254,6 +1174,7 @@
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Blog 6: Rice Husk Pellets ──── -->
 	<item>
 		<title><![CDATA[Rice Husk Pellets: Benefits, Manufacturing & Applications]]></title>
 		<link>https://shreebalajienvirotech.com/blog/rice-husk-pellets-benefits-manufacturing</link>
@@ -261,16 +1182,73 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=6</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Understanding rice husk pellets - a sustainable fuel from Punjab's abundant agricultural waste.</p>
+		<content:encoded><![CDATA[
+<p>Punjab processes over 12 million tons of paddy annually, generating millions of tons of rice husk as a byproduct. Once considered waste, rice husk is now a valuable raw material for biomass pellet production.</p>
+
+<h2>What Are Rice Husk Pellets?</h2>
+<p>Rice husk pellets are compressed cylinders made from the outer covering of rice grains, removed during milling. Dried, ground, and compressed into uniform 6-8mm pellets suitable for industrial combustion.</p>
+<table>
+<tr><th>Specification</th><th>Value</th><th>Notes</th></tr>
+<tr><td>Diameter</td><td>6-8 mm</td><td>Standard industrial size</td></tr>
+<tr><td>Calorific Value</td><td>3,800-4,200 Kcal/kg</td><td>Varies with processing</td></tr>
+<tr><td>Moisture Content</td><td>&lt;10%</td><td>Critical for efficiency</td></tr>
+<tr><td>Ash Content</td><td>8-15%</td><td>Higher than wood pellets</td></tr>
+<tr><td>Bulk Density</td><td>600-650 kg/m³</td><td>Good for storage</td></tr>
+<tr><td>Silica Content</td><td>15-20%</td><td>Characteristic of rice husk</td></tr>
+</table>
+
 <h2>Benefits of Rice Husk Pellets</h2>
+<h3>Cost-Effective</h3>
 <ul>
+<li>Lowest cost among biomass pellets</li>
+<li>30-40% cheaper than coal on energy basis</li>
 <li>Abundant raw material in Punjab</li>
-<li>High calorific value (3500-4000 kcal/kg)</li>
-<li>Low moisture content</li>
-<li>Carbon neutral fuel</li>
 </ul>
+<h3>Environmentally Friendly</h3>
+<ul>
+<li>Carbon-neutral combustion</li>
+<li>Reduces rice mill waste burden</li>
+<li>Lower emissions than fossil fuels</li>
+</ul>
+
 <h2>Manufacturing Process</h2>
-<p>Rice husk is collected, dried, ground, and compressed into uniform pellets using pellet mills.</p>]]></content:encoded>
+<ol>
+<li><strong>Collection &amp; Storage:</strong> Fresh rice husk from mills, stored dry</li>
+<li><strong>Drying:</strong> To &lt;12% moisture using rotary dryers</li>
+<li><strong>Grinding:</strong> Uniform 2-4mm particle size via hammer mills</li>
+<li><strong>Conditioning:</strong> Steam/water to activate natural lignin binder</li>
+<li><strong>Pelletization:</strong> High pressure (100-200 bar) through die holes</li>
+<li><strong>Cooling:</strong> Counter-flow cooler to harden and stabilize</li>
+<li><strong>Screening &amp; Packing:</strong> Moisture-resistant 50kg bags or bulk silos</li>
+</ol>
+
+<h2>Industrial Applications</h2>
+<ul>
+<li><strong>Brick Kilns:</strong> Excellent – cost-effective, handles higher ash</li>
+<li><strong>Rice Mills:</strong> Excellent – uses own waste, self-sufficient energy</li>
+<li><strong>Textile Mills:</strong> Good – check ash handling capacity</li>
+<li><strong>Distilleries:</strong> Excellent – steam boilers, cost reduction</li>
+<li><strong>Power Generation:</strong> Good – co-firing, biomass plants</li>
+</ul>
+
+<h2>Rice Husk vs Wood Pellets Comparison</h2>
+<table>
+<tr><th>Parameter</th><th>Rice Husk</th><th>Wood Pellets</th></tr>
+<tr><td>Price per ton</td><td>Rs 6,500-7,500</td><td>Rs 7,500-8,500</td></tr>
+<tr><td>Calorific Value</td><td>3,800-4,200 Kcal/kg</td><td>4,200-4,500 Kcal/kg</td></tr>
+<tr><td>Ash Content</td><td>8-15%</td><td>3-5%</td></tr>
+<tr><td>Availability in Punjab</td><td>High</td><td>Medium</td></tr>
+</table>
+
+<h2>Rice Husk Availability in Punjab</h2>
+<ul>
+<li>12M+ tons paddy processed/year</li>
+<li>2.5M+ tons rice husk generated</li>
+<li>2,000+ rice mills in Punjab</li>
+</ul>
+
+<p>Contact Shree Balaji Envirotech: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[Understanding rice husk pellets - a sustainable fuel from Punjab's abundant agricultural waste.]]></excerpt:encoded>
 		<wp:post_id>6</wp:post_id>
 		<wp:post_date><![CDATA[2024-12-25 00:00:00]]></wp:post_date>
@@ -295,279 +1273,62 @@
 		</wp:postmeta>
 	</item>
 
-	<item>
-		<title><![CDATA[Biomass Pellet Plant Subsidy in Punjab 2025: Complete Guide]]></title>
-		<link>https://shreebalajienvirotech.com/blog/biomass-pellet-plant-subsidy-punjab-2025</link>
-		<pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=7</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Everything you need to know about government subsidies and incentives for setting up biomass pellet plants in Punjab.</p>
-<h2>Available Government Schemes</h2>
-<ul>
-<li>MNRE Biomass Power Projects: Up to 25% capital subsidy</li>
-<li>NABARD Refinancing: Low-interest loans for agro-processing</li>
-<li>Punjab State Incentives: Additional 15% state subsidy</li>
-<li>MSME Benefits: Tax holidays and concessions</li>
-</ul>
-<h2>Eligibility Criteria</h2>
-<p>Entrepreneurs, farmer groups, and industries can apply for subsidies based on project capacity and location.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Everything you need to know about government subsidies and incentives for setting up biomass pellet plants in Punjab.]]></excerpt:encoded>
-		<wp:post_id>7</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-18 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-18 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[biomass-pellet-plant-subsidy-punjab-2025]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="guide"><![CDATA[Guide]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Pellet Plant Subsidy Punjab 2025 | Government Schemes]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Complete guide to government subsidies for biomass pellet plants in Punjab 2025. MNRE schemes, NABARD loans & state incentives explained.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+	<!-- ═══════════════════════════════════════════ -->
+	<!-- AWARENESS / INDUSTRY PAGES (as Posts)       -->
+	<!-- ═══════════════════════════════════════════ -->
 
+	<!-- ──── Awareness: Textile Mills ──── -->
 	<item>
-		<title><![CDATA[How to Make Biomass Pellets: Step-by-Step Manufacturing Process]]></title>
-		<link>https://shreebalajienvirotech.com/blog/biomass-pellet-making-process-step-by-step</link>
-		<pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=8</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>A detailed guide to the biomass pellet manufacturing process, from raw material preparation to final product packaging.</p>
-<h2>Manufacturing Steps</h2>
-<ol>
-<li>Raw Material Collection: Gather agricultural residue like rice husk, paddy straw, or wood chips</li>
-<li>Drying: Reduce moisture content to 10-15%</li>
-<li>Grinding: Size reduction using hammer mills</li>
-<li>Pelletizing: Compression through pellet mill dies</li>
-<li>Cooling: Gradual cooling to prevent cracking</li>
-<li>Screening: Remove fines and irregular pellets</li>
-<li>Packaging: Bag or bulk storage</li>
-</ol>
-<h2>Quality Control</h2>
-<p>Regular testing ensures consistent calorific value and ash content.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[A detailed guide to the biomass pellet manufacturing process, from raw material preparation to final product packaging.]]></excerpt:encoded>
-		<wp:post_id>8</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-16 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-16 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[biomass-pellet-making-process-step-by-step]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="guide"><![CDATA[Guide]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[How to Make Biomass Pellets | Manufacturing Process Guide]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Step-by-step biomass pellet making process. Equipment needed, raw materials & quality control for pellet manufacturing in Punjab.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Torrefied Biomass Pellets: The Future of Industrial Fuel]]></title>
-		<link>https://shreebalajienvirotech.com/blog/torrefied-biomass-pellets-industrial-fuel</link>
-		<pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=9</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Torrefied pellets offer higher energy density and water resistance compared to regular biomass pellets.</p>
-<h2>What is Torrefaction?</h2>
-<p>Torrefaction is a thermal treatment process at 200-300°C that removes moisture and volatiles, creating a coal-like product.</p>
-<h2>Benefits of Torrefied Pellets</h2>
-<ul>
-<li>Higher calorific value (5000-5500 kcal/kg)</li>
-<li>Hydrophobic - can be stored outdoors</li>
-<li>Easier grinding and handling</li>
-<li>Direct replacement for coal</li>
-</ul>
-<h2>Applications</h2>
-<p>Ideal for power plants, cement kilns, and industries requiring high-temperature processes.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Torrefied pellets offer higher energy density and water resistance compared to regular biomass pellets.]]></excerpt:encoded>
-		<wp:post_id>9</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-14 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-14 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[torrefied-biomass-pellets-industrial-fuel]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="guide"><![CDATA[Guide]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Torrefied Biomass Pellets | High Energy Industrial Fuel]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Learn about torrefied biomass pellets - higher calorific value, water-resistant, direct coal replacement for industrial boilers.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Biomass vs Coal: Complete Comparison for Punjab Industries]]></title>
-		<link>https://shreebalajienvirotech.com/blog/biomass-vs-coal-comparison-punjab-industries</link>
-		<pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=10</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>A detailed comparison of biomass pellets and coal for industrial applications in Punjab.</p>
-<h2>Cost Comparison</h2>
-<ul>
-<li>Coal: ₹8,000-12,000/ton (fluctuating)</li>
-<li>Biomass Pellets: ₹5,500-7,000/ton (stable)</li>
-<li>Savings: 25-40% on fuel costs</li>
-</ul>
-<h2>Environmental Impact</h2>
-<ul>
-<li>Biomass: Carbon neutral, low emissions</li>
-<li>Coal: High CO2, SO2, and particulate matter</li>
-</ul>
-<h2>Government Compliance</h2>
-<p>GRAP regulations increasingly favor biomass over coal in NCR regions.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[A detailed comparison of biomass pellets and coal for industrial applications in Punjab.]]></excerpt:encoded>
-		<wp:post_id>10</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-12 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-12 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[biomass-vs-coal-comparison-punjab-industries]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="industry"><![CDATA[Industry News]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass vs Coal Comparison | Industrial Fuel Punjab]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Compare biomass pellets vs coal for industrial use. Cost analysis, emissions comparison & government compliance for Punjab industries.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Industrial Fuel Cost Reduction in Punjab: Biomass Solutions]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/industrial-fuel-costs-punjab</link>
-		<pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=11</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Industries across Punjab are facing rising fuel costs. Biomass pellets offer a sustainable solution.</p>
-<h2>Cost Savings Potential</h2>
-<ul>
-<li>25-40% reduction in fuel expenses</li>
-<li>Stable pricing compared to coal</li>
-<li>Government incentives available</li>
-</ul>
-<h2>Industries Benefiting</h2>
-<p>Textile mills, rice mills, food processing units, and manufacturing facilities are switching to biomass.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Industries across Punjab are facing rising fuel costs. Biomass pellets offer a sustainable solution.]]></excerpt:encoded>
-		<wp:post_id>11</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-20 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-20 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[industrial-fuel-costs-punjab]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Industrial Fuel Costs Punjab | Biomass Solutions]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Reduce industrial fuel costs in Punjab with biomass pellets. 25-40% savings, stable pricing & government incentives available.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Biomass Fuel for Rice Mills in Punjab]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/rice-mills-fuel-punjab</link>
-		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=12</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Rice mills in Punjab can use their own byproduct - rice husk - as fuel for boilers and dryers.</p>
-<h2>Benefits for Rice Mills</h2>
-<ul>
-<li>Free fuel from rice husk waste</li>
-<li>Zero waste management costs</li>
-<li>Reduced carbon footprint</li>
-<li>Compliance with environmental regulations</li>
-</ul>
-<h2>Implementation</h2>
-<p>Contact Shree Balaji Envirotech for pelletization services and equipment.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Rice mills in Punjab can use their own byproduct - rice husk - as fuel for boilers and dryers.]]></excerpt:encoded>
-		<wp:post_id>12</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[rice-mills-fuel-punjab]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Rice Mills Punjab | Rice Husk Pellets]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Rice mills in Punjab can convert rice husk waste to biomass fuel. Zero waste, free fuel & environmental compliance.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Biomass Fuel for Textile Mills in Punjab]]></title>
+		<title><![CDATA[Textile Mills Punjab: Cut Fuel Costs 40% with Biomass Pellets]]></title>
 		<link>https://shreebalajienvirotech.com/awareness/textile-mills-fuel-punjab</link>
 		<pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=13</guid>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=20</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Textile mills require consistent steam for dyeing and finishing. Biomass pellets provide reliable, cost-effective fuel.</p>
-<h2>Why Biomass for Textiles?</h2>
+		<content:encoded><![CDATA[
+<h1>Textile Mills in Punjab: Is Expensive Fuel Shrinking Your Margins?</h1>
+<p>How rising coal and diesel prices are hitting Punjab's textile industry—and the local biomass solution saving mills 25-40%.</p>
+
+<h2>The Fuel Crisis Hitting Punjab Textile Mills</h2>
 <ul>
-<li>Consistent heat output for uniform dyeing</li>
-<li>Lower fuel costs than coal or LPG</li>
-<li>Eco-friendly certification opportunities</li>
-<li>Reduced emissions comply with regulations</li>
+<li>Coal prices at Rs 11,000-13,000/ton—up 45% in 3 years</li>
+<li>Diesel generators costing Rs 95+/litre during power cuts</li>
+<li>Dyeing and finishing operations consuming 60-70% of energy costs</li>
+<li>Pollution board scrutiny increasing on coal-fired boilers</li>
+<li>Export orders demanding carbon footprint documentation</li>
 </ul>
-<h2>Case Studies</h2>
-<p>Multiple textile mills in Ludhiana have successfully switched to biomass.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Textile mills require consistent steam for dyeing and finishing. Biomass pellets provide reliable, cost-effective fuel.]]></excerpt:encoded>
-		<wp:post_id>13</wp:post_id>
+
+<h2>Punjab's Textile Industry: The Fuel Challenge</h2>
+<p>Punjab's textile belt—spanning Ludhiana, Jalandhar, Amritsar, and Bathinda—houses over 3,000 textile mills employing lakhs of workers. These mills run steam boilers 16-20 hours daily for dyeing (120-140°C), finishing &amp; calendering, and drying systems.</p>
+<p><strong>With fuel comprising 30-40% of production costs, every rupee saved on fuel directly improves margins.</strong></p>
+
+<h2>Biomass Pellets for Textile Mills</h2>
+<p><strong>Biomass Pellets: Rs 7,000-8,500/ton</strong> vs <strong>Coal: Rs 11,000-13,000/ton</strong></p>
+<p>A textile mill consuming 100 tons monthly saves Rs 3-5 lakhs/month—Rs 36-60 lakhs annually.</p>
+<ul>
+<li><strong>Consistent Heat:</strong> 3800-4200 kcal/kg, ideal for dyeing temperature control</li>
+<li><strong>Boiler Compatible:</strong> Works with existing Lancashire &amp; FBC boilers</li>
+<li><strong>Low Ash:</strong> 3-5% ash content means less cleaning, more uptime</li>
+<li><strong>Stable Pricing:</strong> Locally sourced, insulated from global fuel volatility</li>
+</ul>
+
+<h2>Case Study: Medium-Sized Dyeing Unit, Ludhiana</h2>
+<ul>
+<li>Rs 4.2L monthly fuel savings</li>
+<li>45 days conversion ROI payback</li>
+<li>100% pollution compliance</li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>How much can textile mills save with biomass pellets?</h3>
+<p>Typically 25-40%. A mill spending Rs 15 lakhs monthly on coal can reduce costs to Rs 9-11 lakhs.</p>
+<h3>Are biomass pellets suitable for textile dyeing boilers?</h3>
+<p>Yes. They provide consistent high heat (3800-4200 kcal/kg) ideal for dyeing processes.</p>
+
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a> | <a href="https://wa.me/916280610158">WhatsApp</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How rising coal and diesel prices are hitting Punjab's textile industry—and the local biomass solution saving mills 25-40%.]]></excerpt:encoded>
+		<wp:post_id>20</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-15 00:00:00]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-01-15 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
@@ -582,33 +1343,70 @@
 		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Textile Mills Punjab | Steam Boilers]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Textile Mills Fuel Punjab | Biomass Pellets Ludhiana]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Textile mills in Punjab switching to biomass pellets for steam generation. Lower costs, consistent heat & eco-friendly certification.]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Punjab textile mills losing lakhs to coal costs. Switch to biomass pellets - save 25-40% on boiler fuel. Supplier in Bathinda serving Ludhiana.]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Awareness: Brick Kilns ──── -->
 	<item>
-		<title><![CDATA[Biomass Fuel for Food Processing Units in Punjab]]></title>
+		<title><![CDATA[Brick Kilns Punjab: Switch to Biomass Pellets & Save 35%]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/brick-kilns-biomass-punjab</link>
+		<pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=21</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Brick Kilns Punjab: Switch to Biomass Pellets &amp; Save 35%</h1>
+<p>How biomass pellets help brick kilns in Punjab reduce costs and meet pollution norms.</p>
+<h2>The Challenge</h2>
+<p>Punjab's brick kilns face rising coal prices and increasing pollution board scrutiny. Traditional coal-fired kilns produce heavy emissions and ash, leading to penalties and potential shutdowns.</p>
+<h2>The Biomass Solution</h2>
+<p>Biomass pellets at Rs 6,500-8,000/ton vs coal at Rs 10,000-12,000/ton offer 25-35% savings with cleaner combustion and pollution compliance.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How biomass pellets help brick kilns in Punjab reduce costs and meet pollution norms.]]></excerpt:encoded>
+		<wp:post_id>21</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-14 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-14 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[brick-kilns-biomass-punjab]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Brick Kilns Biomass Punjab | Coal Alternative Bathinda]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Punjab brick kilns facing coal shortages and pollution penalties. Switch to biomass pellets for cleaner, cheaper fuel. Supplier in Bathinda.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── Awareness: Food Processing ──── -->
+	<item>
+		<title><![CDATA[Food Processing Units Punjab: Cut Steam Costs with Biomass]]></title>
 		<link>https://shreebalajienvirotech.com/awareness/food-processing-fuel-punjab</link>
 		<pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=14</guid>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=22</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Food processing requires clean fuel for heating and drying. Biomass pellets meet food safety standards.</p>
-<h2>Applications in Food Processing</h2>
-<ul>
-<li>Drying of fruits and vegetables</li>
-<li>Steam generation for cooking</li>
-<li>Heating for packaging</li>
-<li>Cold storage backup power</li>
-</ul>
-<h2>Food Safety Compliance</h2>
-<p>Biomass pellets produce clean heat suitable for food-contact processes.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Food processing requires clean fuel for heating and drying. Biomass pellets meet food safety standards.]]></excerpt:encoded>
-		<wp:post_id>14</wp:post_id>
+		<content:encoded><![CDATA[
+<h1>Food Processing Units Punjab: Cut Steam Costs with Biomass</h1>
+<p>How biomass pellets offer food processing units a cleaner, cheaper alternative to traditional fuels. Save 30-40% on boiler fuel costs.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How biomass pellets offer food processing units a cleaner, cheaper alternative to traditional fuels.]]></excerpt:encoded>
+		<wp:post_id>22</wp:post_id>
 		<wp:post_date><![CDATA[2025-01-13 00:00:00]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2025-01-13 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
@@ -623,35 +1421,68 @@
 		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Food Processing Punjab | Clean Heat]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Food Processing Fuel Punjab | Biomass Pellets Boiler]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Food processing units in Punjab using biomass pellets for clean heat. Food safety compliant fuel for drying, cooking & packaging.]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Punjab food processing units spending lakhs on boiler fuel. Switch to biomass pellets for 30-40% savings. Bathinda supplier.]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Awareness: Rice Mills ──── -->
 	<item>
-		<title><![CDATA[Biomass Fuel for Dairy Plants in Punjab]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/dairy-plants-fuel-punjab</link>
-		<pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
+		<title><![CDATA[Rice Mills Punjab: Cut Parboiling Fuel Costs 35% with Biomass]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/rice-mills-fuel-punjab</link>
+		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=15</guid>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=23</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Dairy processing requires significant thermal energy. Biomass offers a sustainable alternative to conventional fuels.</p>
-<h2>Dairy Applications</h2>
-<ul>
-<li>Pasteurization and sterilization</li>
-<li>Spray drying for milk powder</li>
-<li>Hot water generation</li>
-<li>CIP (Clean-in-Place) systems</li>
-</ul>
-<h2>Cost Benefits</h2>
-<p>Dairy plants report 30-35% savings on fuel costs after switching to biomass.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Dairy processing requires significant thermal energy. Biomass offers a sustainable alternative to conventional fuels.]]></excerpt:encoded>
-		<wp:post_id>15</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-11 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-11 00:00:00]]></wp:post_date_gmt>
+		<content:encoded><![CDATA[
+<h1>Rice Mills Punjab: Cut Parboiling Fuel Costs 35% with Biomass</h1>
+<p>How rising coal prices impact Punjab's rice milling industry—and the local biomass solution saving mills 30-40%.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How rising coal prices impact Punjab's rice milling industry—and the local biomass solution saving mills 30-40%.]]></excerpt:encoded>
+		<wp:post_id>23</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[rice-mills-fuel-punjab]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Rice Mills Fuel Punjab | Biomass Pellets Amritsar]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Punjab rice mills spending lakhs on coal for parboiling. Switch to biomass pellets - save 30-40% on boiler fuel. Supplier in Bathinda serving Amritsar belt.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── Awareness: Dairy Plants ──── -->
+	<item>
+		<title><![CDATA[Dairy Plants Punjab: Cut Steam Costs 35% with Biomass Pellets]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/dairy-plants-fuel-punjab</link>
+		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=24</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Dairy Plants Punjab: Cut Steam Costs 35% with Biomass Pellets</h1>
+<p>How rising energy prices impact Punjab's dairy industry—and the biomass solution saving plants 30-40%.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How rising energy prices impact Punjab's dairy industry—and the biomass solution saving plants 30-40%.]]></excerpt:encoded>
+		<wp:post_id>24</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[open]]></wp:ping_status>
 		<wp:post_name><![CDATA[dairy-plants-fuel-punjab]]></wp:post_name>
@@ -664,117 +1495,31 @@
 		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Dairy Plants Punjab | Sustainable Energy]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Dairy Plants Fuel Punjab | Biomass Pellets Ludhiana]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Dairy plants in Punjab switching to biomass for pasteurization & drying. 30-35% fuel cost savings with sustainable energy.]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Punjab dairy processing plants spending lakhs on fuel. Switch to biomass pellets - save 30-40% on boiler costs. Supplier in Bathinda serving all Punjab.]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Awareness: Paper Mills ──── -->
 	<item>
-		<title><![CDATA[Biomass Fuel for Distilleries in Punjab]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/distilleries-fuel-punjab</link>
-		<pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=16</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Distilleries require high-temperature steam for fermentation and distillation. Biomass provides consistent thermal energy.</p>
-<h2>Distillery Applications</h2>
-<ul>
-<li>Steam generation for distillation</li>
-<li>Grain cooking and mashing</li>
-<li>Effluent treatment heating</li>
-<li>Spent wash evaporation</li>
-</ul>
-<h2>Environmental Benefits</h2>
-<p>Biomass helps distilleries meet zero liquid discharge requirements.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Distilleries require high-temperature steam for fermentation and distillation. Biomass provides consistent thermal energy.]]></excerpt:encoded>
-		<wp:post_id>16</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-09 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-09 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[distilleries-fuel-punjab]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Distilleries Punjab | Steam Generation]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Distilleries in Punjab using biomass for steam generation. High-temperature fuel for distillation & effluent treatment.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Biomass Fuel for Poultry Farms in Punjab]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/poultry-farms-fuel-punjab</link>
-		<pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=17</guid>
-		<description></description>
-		<content:encoded><![CDATA[<p>Poultry farms need heating for brooding and incubation. Biomass provides clean, affordable warmth.</p>
-<h2>Poultry Heating Applications</h2>
-<ul>
-<li>Brooder heating for chicks</li>
-<li>Hatchery temperature control</li>
-<li>Hot water for cleaning</li>
-<li>Feed drying</li>
-</ul>
-<h2>Advantages Over LPG</h2>
-<p>Biomass heating costs 40-50% less than LPG for poultry operations.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Poultry farms need heating for brooding and incubation. Biomass provides clean, affordable warmth.]]></excerpt:encoded>
-		<wp:post_id>17</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-07 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-07 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[poultry-farms-fuel-punjab]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Poultry Farms Punjab | Brooder Heating]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Poultry farms in Punjab using biomass for brooding & heating. 40-50% cheaper than LPG with clean combustion.]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-
-	<item>
-		<title><![CDATA[Biomass Fuel for Paper Mills in Punjab]]></title>
+		<title><![CDATA[Paper Mills Punjab: Cut Fuel Costs 35% with Biomass Pellets]]></title>
 		<link>https://shreebalajienvirotech.com/awareness/paper-mills-fuel-punjab</link>
-		<pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=18</guid>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=25</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Paper mills require large amounts of steam for pulping and drying. Biomass offers sustainable heat.</p>
-<h2>Paper Mill Applications</h2>
-<ul>
-<li>Pulp cooking and bleaching</li>
-<li>Paper drying cylinders</li>
-<li>Black liquor recovery</li>
-<li>Process steam generation</li>
-</ul>
-<h2>Sustainability Goals</h2>
-<p>Paper mills using biomass can claim carbon-neutral production credentials.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Paper mills require large amounts of steam for pulping and drying. Biomass offers sustainable heat.]]></excerpt:encoded>
-		<wp:post_id>18</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-05 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-05 00:00:00]]></wp:post_date_gmt>
+		<content:encoded><![CDATA[
+<h1>Paper Mills Punjab: Cut Fuel Costs 35% with Biomass Pellets</h1>
+<p>How rising fuel costs impact paper manufacturing—and the biomass solution saving mills 25-35%. Punjab paper mills spending crores on coal annually.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How rising fuel costs impact paper manufacturing—and the biomass solution saving mills 25-35%.]]></excerpt:encoded>
+		<wp:post_id>25</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[open]]></wp:ping_status>
 		<wp:post_name><![CDATA[paper-mills-fuel-punjab]]></wp:post_name>
@@ -787,39 +1532,34 @@
 		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass Fuel for Paper Mills Punjab | Sustainable Steam]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Paper Mills Fuel Punjab | Sustainable Paper Production]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Paper mills in Punjab using biomass for steam generation. Carbon-neutral pulping & drying with sustainable fuel.]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Punjab paper mills spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Supplier in Bathinda.]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 
+	<!-- ──── Awareness: Distilleries ──── -->
 	<item>
-		<title><![CDATA[Biomass for Brick Kilns in Punjab: Replacing Coal]]></title>
-		<link>https://shreebalajienvirotech.com/awareness/brick-kilns-biomass-punjab</link>
-		<pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+		<title><![CDATA[Distilleries Punjab: Cut Fuel Costs 30% with Biomass Pellets]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/distilleries-fuel-punjab</link>
+		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=19</guid>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=26</guid>
 		<description></description>
-		<content:encoded><![CDATA[<p>Brick kilns are major coal consumers in Punjab. Biomass pellets offer a cleaner, compliant alternative.</p>
-<h2>Regulatory Pressure</h2>
-<ul>
-<li>NCR regions banning coal in brick kilns</li>
-<li>Zigzag kiln technology mandated</li>
-<li>Emission standards tightening</li>
-</ul>
-<h2>Biomass Transition</h2>
-<p>Brick kilns switching to biomass report similar firing quality with lower emissions.</p>
-<h2>Government Support</h2>
-<p>Subsidies available for kiln conversion and biomass adoption.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[Brick kilns are major coal consumers in Punjab. Biomass pellets offer a cleaner, compliant alternative.]]></excerpt:encoded>
-		<wp:post_id>19</wp:post_id>
-		<wp:post_date><![CDATA[2025-01-03 00:00:00]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-01-03 00:00:00]]></wp:post_date_gmt>
+		<content:encoded><![CDATA[
+<h1>Distilleries Punjab: Cut Fuel Costs 30% with Biomass Pellets</h1>
+<p>How rising energy prices impact ethanol and spirit production—and the biomass solution saving distilleries 25-35%. Sustainable ethanol production fuel alternative.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How rising energy prices impact ethanol and spirit production—and the biomass solution saving distilleries 25-35%.]]></excerpt:encoded>
+		<wp:post_id>26</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[open]]></wp:comment_status>
 		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[brick-kilns-biomass-punjab]]></wp:post_name>
+		<wp:post_name><![CDATA[distilleries-fuel-punjab]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
@@ -829,11 +1569,85 @@
 		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Biomass for Brick Kilns Punjab | Coal Alternative]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Distilleries Fuel Punjab | Ethanol Production Biomass]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Brick kilns in Punjab replacing coal with biomass pellets. Regulatory compliance, cleaner emissions & government subsidies.]]></wp:meta_value>
+			<wp:meta_value><![CDATA[Punjab distilleries spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Sustainable ethanol production.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── Awareness: Poultry Farms ──── -->
+	<item>
+		<title><![CDATA[Poultry Farms Punjab: Cut Heating Costs 45% with Biomass Pellets]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/poultry-farms-fuel-punjab</link>
+		<pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=27</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Poultry Farms Punjab: Cut Heating Costs 45% with Biomass Pellets</h1>
+<p>How expensive LPG and diesel impact poultry farming—and the biomass solution saving farms 40-50% on brooding fuel costs.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[How expensive LPG and diesel impact poultry farming—and the biomass solution saving farms 40-50%.]]></excerpt:encoded>
+		<wp:post_id>27</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-17 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-17 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[poultry-farms-fuel-punjab]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Poultry Farms Fuel Punjab | Brooder Fuel Alternative]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Punjab poultry farms spending lakhs on LPG and diesel heating. Switch to biomass pellets - save 40-50% on brooding fuel. Supplier in Bathinda.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ──── Awareness: Industrial Fuel Costs ──── -->
+	<item>
+		<title><![CDATA[Industrial Fuel Costs Punjab: Comprehensive Cost Saving Guide]]></title>
+		<link>https://shreebalajienvirotech.com/awareness/industrial-fuel-costs-punjab</link>
+		<pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://shreebalajienvirotech.com/?p=28</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+<h1>Industrial Fuel Costs Punjab: Comprehensive Cost Saving Guide</h1>
+<p>A comprehensive guide to understanding and reducing industrial fuel costs in Punjab with biomass pellets. Industries paying too much for fuel can save 20-40% by switching.</p>
+<p>Contact: <a href="tel:+918360410158">+91 83604 10158</a></p>
+]]></content:encoded>
+		<excerpt:encoded><![CDATA[A comprehensive guide to understanding and reducing industrial fuel costs in Punjab with biomass pellets.]]></excerpt:encoded>
+		<wp:post_id>28</wp:post_id>
+		<wp:post_date><![CDATA[2025-01-12 00:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-01-12 00:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[industrial-fuel-costs-punjab]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="awareness"><![CDATA[Industry Solution]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Industrial Fuel Costs Punjab | Biomass Pellets Solution]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Punjab industries paying too much for fuel. Complete guide to reducing fuel costs with biomass pellets. Bathinda supplier.]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 
