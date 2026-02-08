@@ -10,101 +10,257 @@ interface SEOHeadProps {
   ogType?: 'website' | 'article';
   publishedDate?: string;
   modifiedDate?: string;
+  breadcrumbs?: { label: string; href: string }[];
 }
 
 const SITE_URL = 'https://shreebalajienvirotech.lovable.app';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const LOGO_URL = 'https://storage.googleapis.com/gpt-engineer-file-uploads/bCqaoewCiwUvL3FHJY89au2gZ7j1/uploads/1768682552720-Shree Balaji Envirotech Logo JPG.jpg';
 
-// LocalBusiness Schema
+// ─── WebSite Schema (sitelinks search box) ───
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  "name": "Shree Balaji Envirotech",
+  "url": SITE_URL,
+  "description": "Premium biomass pellet manufacturer in Punjab, India.",
+  "publisher": { "@id": `${SITE_URL}/#organization` },
+  "inLanguage": "en-IN",
+};
+
+// ─── LocalBusiness Schema (enhanced) ───
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${SITE_URL}/#localbusiness`,
   "name": "Shree Balaji Envirotech",
-  "description": "Leading manufacturer of premium biomass pellets in Punjab. Sustainable energy solutions for industries.",
+  "description": "Leading manufacturer of premium biomass pellets in Punjab. Sustainable, carbon-neutral energy solutions for industries including textile mills, brick kilns, rice mills, and more.",
   "url": SITE_URL,
-  "telephone": "+91-6280610158",
+  "telephone": ["+91-6280610158", "+91-8360410158"],
   "email": "shreebalajienvirotech@gmail.com",
+  "image": LOGO_URL,
+  "logo": {
+    "@type": "ImageObject",
+    "url": LOGO_URL,
+    "width": 512,
+    "height": 512,
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Near Grain Market",
     "addressLocality": "Bathinda",
     "addressRegion": "Punjab",
     "postalCode": "151001",
-    "addressCountry": "IN"
+    "addressCountry": "IN",
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "30.2070",
-    "longitude": "74.9455"
+    "latitude": 30.207,
+    "longitude": 74.9455,
   },
+  "areaServed": [
+    { "@type": "State", "name": "Punjab" },
+    { "@type": "State", "name": "Haryana" },
+    { "@type": "AdministrativeArea", "name": "North India" },
+  ],
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "opens": "09:00",
-    "closes": "18:00"
+    "closes": "18:00",
   },
   "priceRange": "₹₹",
-  "image": DEFAULT_OG_IMAGE,
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, Bank Transfer, UPI",
+  "knowsAbout": [
+    "Biomass Pellets",
+    "Renewable Energy",
+    "Sustainable Fuel",
+    "Carbon Credits",
+    "Industrial Boiler Fuel",
+    "Stubble Burning Solution",
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Biomass Pellet Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Rice Husk Pellets",
+        },
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Sawdust Pellets",
+        },
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Agro-Waste Pellets",
+        },
+      },
+    ],
+  },
   "sameAs": [
-    "https://www.instagram.com/shree_balaji_envirotech/"
-  ]
+    "https://www.instagram.com/shreebalaji_envirotech/",
+  ],
 };
 
-// Organization Schema
+// ─── Organization Schema ───
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   "name": "Shree Balaji Envirotech",
   "url": SITE_URL,
-  "logo": DEFAULT_OG_IMAGE,
+  "logo": LOGO_URL,
   "description": "Premium biomass pellet manufacturer providing sustainable energy solutions for industries across Punjab and India.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-6280610158",
-    "contactType": "sales",
-    "areaServed": "IN",
-    "availableLanguage": ["English", "Hindi", "Punjabi"]
-  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-6280610158",
+      "contactType": "sales",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Punjabi"],
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-8360410158",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Punjabi"],
+    },
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Bathinda",
     "addressRegion": "Punjab",
-    "addressCountry": "IN"
-  }
+    "addressCountry": "IN",
+  },
+  "sameAs": [
+    "https://www.instagram.com/shreebalaji_envirotech/",
+  ],
 };
 
-// Product Schema
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Premium Biomass Pellets",
-  "description": "High-quality biomass pellets made from agricultural residue. Eco-friendly fuel alternative with 4200+ kcal/kg calorific value.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Shree Balaji Envirotech"
+// ─── Product Schemas (multiple variants) ───
+const productSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Premium Biomass Pellets",
+    "description": "High-quality biomass pellets made from agricultural residue. Eco-friendly coal alternative with 4200+ kcal/kg calorific value and low ash content.",
+    "brand": { "@type": "Brand", "name": "Shree Balaji Envirotech" },
+    "manufacturer": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+    "image": DEFAULT_OG_IMAGE,
+    "material": "Agricultural residue (rice husk, wheat straw, sawdust)",
+    "category": "Biomass Fuel",
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "Calorific Value", "value": "4200+ kcal/kg" },
+      { "@type": "PropertyValue", "name": "Moisture Content", "value": "< 14%" },
+      { "@type": "PropertyValue", "name": "Ash Content", "value": "< 5%" },
+      { "@type": "PropertyValue", "name": "Pellet Diameter", "value": "6-25 mm" },
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "7000",
+      "highPrice": "8500",
+      "offerCount": "3",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31",
+      "seller": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+      "areaServed": { "@type": "State", "name": "Punjab" },
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "reviewCount": "50",
+    },
   },
-  "manufacturer": {
-    "@type": "Organization",
-    "name": "Shree Balaji Envirotech"
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Rice Husk Pellets",
+    "description": "Premium rice husk pellets with 3800-4200 kcal/kg calorific value. Ideal for industrial boilers, brick kilns, and textile mills in Punjab.",
+    "brand": { "@type": "Brand", "name": "Shree Balaji Envirotech" },
+    "manufacturer": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+    "material": "Rice husk",
+    "category": "Biomass Fuel",
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "Calorific Value", "value": "3800-4200 kcal/kg" },
+      { "@type": "PropertyValue", "name": "Bulk Density", "value": "~600 kg/m³" },
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "7000",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31",
+      "seller": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+    },
   },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "INR",
-    "price": "8000",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Shree Balaji Envirotech"
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Wood Pellets (Sawdust Pellets)",
+    "description": "High-grade wood pellets with 4200-4500 kcal/kg calorific value. Premium quality fuel for boilers and heating applications.",
+    "brand": { "@type": "Brand", "name": "Shree Balaji Envirotech" },
+    "manufacturer": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+    "material": "Sawdust, wood chips",
+    "category": "Biomass Fuel",
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "Calorific Value", "value": "4200-4500 kcal/kg" },
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "8500",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31",
+      "seller": { "@type": "Organization", "name": "Shree Balaji Envirotech" },
+    },
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "50"
+];
+
+// ─── BreadcrumbList builder ───
+const buildBreadcrumbSchema = (pathname: string, breadcrumbs?: { label: string; href: string }[]) => {
+  const items: { name: string; url: string }[] = [
+    { name: "Home", url: SITE_URL },
+  ];
+
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    breadcrumbs.forEach((crumb) => {
+      items.push({ name: crumb.label, url: `${SITE_URL}${crumb.href}` });
+    });
   }
+
+  // Add current page from pathname
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length > 0) {
+    const pageLabel = segments[segments.length - 1]
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+    items.push({ name: pageLabel, url: `${SITE_URL}${pathname}` });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url,
+    })),
+  };
 };
 
 const SEOHead = ({
@@ -116,6 +272,7 @@ const SEOHead = ({
   ogType = 'website',
   publishedDate,
   modifiedDate,
+  breadcrumbs,
 }: SEOHeadProps) => {
   const location = useLocation();
   const fullCanonicalUrl = canonicalUrl || `${SITE_URL}${location.pathname}`;
@@ -174,7 +331,7 @@ const SEOHead = ({
     updateMeta('geo.position', '30.2070;74.9455');
     updateMeta('ICBM', '30.2070, 74.9455');
 
-    // Add JSON-LD schemas
+    // ─── JSON-LD injection ───
     const addJsonLd = (id: string, schema: object) => {
       let script = document.querySelector(`script[data-schema-id="${id}"]`);
       if (!script) {
@@ -186,20 +343,36 @@ const SEOHead = ({
       script.textContent = JSON.stringify(schema);
     };
 
-    // Add schemas only on homepage
-    if (location.pathname === '/') {
-      addJsonLd('local-business', localBusinessSchema);
-      addJsonLd('organization', organizationSchema);
-      addJsonLd('product', productSchema);
+    // Site-wide schemas (every page)
+    addJsonLd('website', websiteSchema);
+    addJsonLd('organization', organizationSchema);
+    addJsonLd('local-business', localBusinessSchema);
+
+    // BreadcrumbList (every page except homepage)
+    if (location.pathname !== '/') {
+      addJsonLd('breadcrumb', buildBreadcrumbSchema(location.pathname, breadcrumbs));
+    } else {
+      document.querySelector('script[data-schema-id="breadcrumb"]')?.remove();
     }
 
-    // Cleanup schemas on unmount
+    // Product schemas (homepage + product-related pages)
+    const productPages = ['/', '/manufacturing-costs', '/equipment', '/buyers', '/blog/biomass-pellet-price-punjab-2025'];
+    if (productPages.includes(location.pathname)) {
+      productSchemas.forEach((schema, i) => {
+        addJsonLd(`product-${i}`, schema);
+      });
+    } else {
+      // Remove product schemas on non-product pages
+      productSchemas.forEach((_, i) => {
+        document.querySelector(`script[data-schema-id="product-${i}"]`)?.remove();
+      });
+    }
+
+    // Cleanup all schemas on unmount
     return () => {
-      if (location.pathname !== '/') {
-        document.querySelectorAll('script[data-schema-id]').forEach(el => el.remove());
-      }
+      document.querySelectorAll('script[data-schema-id]').forEach((el) => el.remove());
     };
-  }, [title, description, keywords, fullCanonicalUrl, ogImage, ogType, publishedDate, modifiedDate, location.pathname]);
+  }, [title, description, keywords, fullCanonicalUrl, ogImage, ogType, publishedDate, modifiedDate, location.pathname, breadcrumbs]);
 
   return null;
 };
