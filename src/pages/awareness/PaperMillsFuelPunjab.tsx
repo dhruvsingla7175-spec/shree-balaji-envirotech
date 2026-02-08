@@ -29,6 +29,7 @@ const PaperMillsFuelPunjab = () => {
         description="Punjab paper mills spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Supplier in Bathinda serving North India."
         keywords="paper mill fuel Punjab, biomass pellets paper industry, paper drying boiler fuel, kraft paper coal alternative, reduce fuel cost paper mill"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/paper-mills-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

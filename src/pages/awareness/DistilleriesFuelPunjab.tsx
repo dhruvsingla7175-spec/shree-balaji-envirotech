@@ -29,6 +29,7 @@ const DistilleriesFuelPunjab = () => {
         description="Punjab distilleries spending crores on coal annually. Switch to biomass pellets - save 25-35% on boiler fuel. Sustainable ethanol production solution."
         keywords="distillery fuel Punjab, biomass pellets distillery, ethanol production fuel, ENA boiler coal alternative, reduce fuel cost distillery"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/distilleries-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

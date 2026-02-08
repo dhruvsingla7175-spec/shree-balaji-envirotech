@@ -29,6 +29,7 @@ const RiceMillsFuelPunjab = () => {
         description="Punjab rice mills spending lakhs on coal for parboiling. Switch to biomass pellets - save 30-40% on boiler fuel. Supplier in Bathinda serving Amritsar belt."
         keywords="rice mill fuel Punjab, biomass pellets Amritsar, parboiling boiler fuel, rice mill coal alternative, reduce fuel cost rice mill"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/rice-mills-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

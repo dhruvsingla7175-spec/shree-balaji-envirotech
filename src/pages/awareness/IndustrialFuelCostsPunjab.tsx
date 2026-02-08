@@ -25,6 +25,7 @@ const IndustrialFuelCostsPunjab = () => {
         description="Punjab industries losing lakhs to rising coal & diesel costs. Switch to biomass pellets - save 20-40% on fuel. Local supplier in Bathinda. Call now."
         keywords="industrial fuel costs Punjab, reduce fuel expenses, biomass pellets Bathinda, coal alternative Punjab, save fuel costs industry"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/industrial-fuel-costs-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

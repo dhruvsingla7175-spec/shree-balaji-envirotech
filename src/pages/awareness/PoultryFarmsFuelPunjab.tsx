@@ -29,6 +29,7 @@ const PoultryFarmsFuelPunjab = () => {
         description="Punjab poultry farms spending lakhs on LPG and diesel heating. Switch to biomass pellets - save 40-50% on brooding fuel. Supplier in Bathinda."
         keywords="poultry farm fuel Punjab, biomass pellets poultry, brooder heating fuel, poultry LPG alternative, reduce heating cost poultry farm"
         canonicalUrl="https://shreebalajienvirotech.com/awareness/poultry-farms-fuel-punjab"
+        breadcrumbs={[{ label: 'Resources', href: '/blog' }]}
       />
 
       <AwarenessPageLayout

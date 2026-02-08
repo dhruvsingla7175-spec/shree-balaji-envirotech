@@ -39,6 +39,7 @@ const RiceHuskPellets = () => {
         canonicalUrl={`https://shreebalajienvirotech.com/blog/${post.slug}`}
         ogType="article"
         publishedDate={post.modifiedDate}
+        breadcrumbs={[{ label: 'Blog', href: '/blog' }]}
       />
 
       <BlogLayout
